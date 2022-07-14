@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shadi Kabajah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Analytical Skills; Data Science, SQL, Tableau - Web Developement; JavaScript, jQuery, HTML, CSS & More!">
+  <meta name="author" content="Shadi Kabajah">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/82a69cf835.js"></script>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="js/waterfall.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Kreon|Ubuntu+Mono" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/waterfall.css">
+
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
+    <link href="css/main.css" rel="stylesheet">
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-57165344-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body onLoad="start()">
+<div class="container">
+	<div class="row clearfix" id="header">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default navbar-inverse" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle slow" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i id="navX" class="fa fa-bars"></i></button>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#intro">home</a>
+						</li>
+						<li>
+							<a href="#examples">examples</a>
+						</li>
+						<li>
+							<a href="#tech">technologies</a>
+						</li>
+						<li>
+							<a href="#footer">contacts</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="row" id="intro">
+	  <div id="mySVG"></div>
+		<div class="col-md-12 column">
+			<div class="fadeInDown animated">
+				<img class="logo" src="img/logo_200_t.png"></div>
+				<h1>Shadi Kabajah</h1>
+				<div id="description">
+				    Analytical Skills; Data Science, SQL, Tableau
+				<br>Web Developement; JavaScript, jQuery, HTML, CSS
+				<br> & More!<br>
+			</div>
+			<div style="text-align: center;margin-top: 50px;"><a href="#examples"><i id="goDown" class="fa fa-angle-down"></i></a>
+			</div>
+		</div>
+
+			
+		
+	</div>
+	<div id="showup" class="popup zoomIn animated"><i id='closePopup' class="fa fa-times"></i><img alt="example" id="popUpImg" src="#"><br><a id="exampleLink" target ="_blank" href="">Click here to visit site</a>
+	</div>
+	<div class="row clearfix" id="examples">
+		<h2>Showcase Examples</h2>
+			<h5>Click on image to get more info;</h5>
+		
+		<div class="col-md-4 column example-col">
+			<h4>SQL Query</h4><h5>[Cities/ZipCodes]</h5>
+				<img alt="Zip code search" id="2" class="desaturate" src="media/2.png">
+				<h6 class="tooltip">Using a PHP form;<br>Query any zip code in the US from a MySQL database without using any foreign API.</h6>
+		</div>
+
+		<div class="col-md-4 column example-col">
+			<h4>Tableau</h4><h5>[Rent Prices]</h5>
+			<img alt="data visualization" id="4" class="desaturate" src="media/4.png">
+			<h6 class="tooltip">A tableau dashboard<br>to visualize rent prices in the US.</h6>
+		</div>
+
+		<div class="col-md-4 column example-col">
+			<h4>Google DataStudio</h4><h5>[User Analytics]</h5>
+				<img alt="RokuCast Analytics" id="5" class="desaturate" src="media/5.png">
+				<h6 class="tooltip">Created a dashboard using Google's new BI Tool; DataStudio, to help me track user activity on my chrome extension RokuCast.</h6>
+		</div>
+		
+		<div class="col-md-4 column example-col">
+			<h4>Maps</h4><h5>[Road Trip]</h5>
+				<img alt="Roadtrip_map" id="3" class="desaturate" src="media/3.png">
+				<h6 class="tooltip">Digital Map;
+				<br>Using Google My maps, I created a digital map to represent routes and stops I took during my roadtrip to southwest USA
+				<br>States include: CA-AZ-NM-TX-NV
+				<br>
+				<br>Pictures from roadtrip can be found on my instagram linked below.
+				</h6>
+		</div>
+		
+		<div class="col-md-4 column example-col">
+			<h4>Android App</h4><h5>[Talking Stick]</h5>
+				<img alt="Talking Stick App Demo" id="1" class="desaturate" src="media/1.png">
+				<h6 class="tooltip">Talking Stick App; Android app and mobile website, to moderate a conversation between two people, inspired by the Native American Talking Stick.</h6>
+		</div>
+
+		<div class="col-md-4 column example-col">
+			<h4>Microsoft Power BI</h4><h5>[Age Groups]</h5>
+				<img alt="Power BI" id="6" class="desaturate" src="media/6.png">
+				<h6 class="tooltip">US Population [by Age Group]<br> using Microsoft Power BI.</h6>
+		</div>
+	</div>
+	
+		<div class="row clearfix" id="theme">
+		<div class="col-md-12 col-sm-12 column">
+		<h2>Theme</h2>
+		<h5>click to change the typeface and color of the whole page:</h5>
+		  <div id="colors">
+		    <h6>color scheme</h6>
+			<span id="purple" style="background: #aa44aa;"></span>
+			<span id="yellow" style="background: #aaaa44;"></span>
+			<span id="cyan" style="background: #44aaaa"></span>
+		  </div>
+		  <div id ="font">
+			<h6>typeface</h6>
+			<span id="mono" style="font-family: 'Ubuntu Mono';">Mono</span>
+			<span id="serif" style="font-family: 'Kreon';">Serif</span>
+			<span id="sans" style="font-family: 'Josefin Sans';">Sans</span>
+		  </div>
+		<!--</div>-->
+		</div>
+	</div>
+
+				
+				
+	<div class="row clearfix" id="tech">
+		<div class="col-md-12 col-sm-12 column">
+			<h2>Technologies Used</h2>
+				<h5>Languages and libraries used, include;</h5>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>JavaScript</h4>
+					<img alt="javascript logo" class="desaturate" src="img/JavaScript.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>HTML/HTML5</h4>
+					<img alt="html5 logo" class="desaturate" src="img/HTML5.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>CSS/CSS3</h4>
+					<img alt="css3 logo" class="desaturate" src="img/css.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>jQuery</h4>
+					<img alt="jquery logo" class="desaturate" src="img/jQuery.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>BootStrap</h4>
+					<img alt="bootstrap logo" class="desaturate" src="img/BootStrap.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>PHP/MySQL</h4>
+					<img alt="php logo" class="desaturate" src="img/phpsql.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>Tableau</h4>
+					<img alt="tableau logo" class="desaturate" src="img/tableau.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>Data Studio</h4>
+					<img alt="DataStudio logo" class="desaturate" src="img/datastudio.png">
+			</div>
+			<div class="col-md-4 col-sm-4  col-xs-4 column tech-col">
+				<h4>Power BI</h4>
+					<img alt="Power BI logo" class="desaturate" src="img/powerbi.png">
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix" id="footer">
+		<div class="col-md-12 column">
+			<h2>Contacts</h2>
+				<h5>Feel free to reach out via form or other links</h5>
+			<div class="col-md-6 column">
+			<form action="mailer.php" class="form-group" method="post">
+				<div class="form-group">
+					 <label for="FirstName">Name </label>
+					 <input class="form-control" name="FirstName" type="text" />
+				</div>
+				<div class="form-group">
+					 <label for="email">Email</label>
+					 <input class="form-control" name="email" type="text" required />
+				</div>
+				<div class="form-group">
+					 <label for="message">Message</label>
+					 <textarea class="form-control" name="message" rows="3"></textarea>
+				</div>
+				<input class="btn btn-default" name="Submit" type="submit" value="Send Message">
+			</form>
+			</div>
+			<div class="col-md-6 column">
+				<div class="social">
+				<h5>My Resume</h5>
+					<a href="https://goo.gl/R9igL9">
+						<!-- <i class="fa fa-square" aria-hidden="true"></i> -->
+					<img alt="resume" class="desaturate footerpng" src="img/pdf.png">
+					</a>
+				<h5>Follow me</h5>
+                    <a href="mailto:shadi.kabajah@gmail.com" target="_blank">
+                    	<img alt="email" class="desaturate footerpng" src="img/email.png">
+						<!-- <i class="fa fa-envelope-square"></i></a> -->
+					<a href="https://www.linkedin.com/in/shadikabajah" target="_blank">
+						<!-- <i class="fa fa-linkedin-square"></i></a> -->
+						<img alt="linkedin" class="desaturate footerpng" src="img/linkedin.png">
+                    <a href="https://twitter.com/shadikabajah" target="_blank">
+                    	<!-- <i class="fa fa-twitter-square"></i></a> -->
+                    	<img alt="twitter" class="desaturate footerpng" src="img/twitter.png">
+                    <a href="https://instagram.com/shadi.kabajah/" target="_blank">
+                    	<!-- <i class="fa fa-instagram"></i></a> -->
+                    	<img alt="instagram" class="desaturate footerpng" src="img/instagram.png">
+
+            	</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<div class="row clearfix" id="signature">
+ 		<div class="col-md-12 column">
+ 			<a href="#intro"><i id="goUp" class="fa fa-chevron-circle-up"></i></a>
+ 			<h5>&copy; 2014 - 2018 Shadi Kabajah</h5>
+ 			<h6>All marks are the property of their respective owners.</h6>
+    	</div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
