@@ -116,7 +116,7 @@ h2 {
     transform: scale(1.5);
     background: #cccccc38;
     padding: 20px;
-    height: 700px;
+    height: 70px;
 }
 img.desaturate {
 	-webkit-filter: grayscale(90%);
