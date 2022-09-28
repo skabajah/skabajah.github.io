@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+    id="com.phonegap.talkingstick" 
+    version="1.0.0" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>TalkingStick</name>
+    <description>
+        Talking Stick App 
+        An easy way to moderate conversation.
+        Just set the number of users and session time
+        Choose LOCKED, for equal time between users
+        Or choose UNLOCKED for an unmoderated session
+        Click START when you're ready.
+        At the end, review your analytics for self-assessment
+    </description>
+    <author email="shadi.kabajah@gmail.com" href="http://shadikabajah.com">
+        Shadi Kabajah
+    </author>
+    <content src="index.html" />
+    <access origin="http://phonegap.com" subdomains="true" />
+    <icon src="img/talkingstick_logo-lg.png" />
+</widget>
