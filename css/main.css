@@ -33,6 +33,7 @@ body,h1,h2,h3,h4,h5,h6 {
 	height: 100px;
 	width: 100px;
 	background-color: #44aaaa;
+	border-radius: 5px;
 }
 #intro h1 {
 	color: #FFF;
