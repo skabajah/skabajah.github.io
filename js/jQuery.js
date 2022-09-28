@@ -90,16 +90,16 @@ $(document).ready(function() {
       $('#popUpImg').attr('src', this.src);
       var i = this.id;
       if (i == 1) {
-          var a = 'http://www.shadikabajah.com/talkingstick' //App
+          var a = '/talkingstick' //App
       }
       if (i == 2) {
-          var a = 'http://www.shadikabajah.com/zipcode.php' //SQL
+          var a = '/zipcode.php' //SQL
       }
       if (i == 3) {
           var a = 'https://goo.gl/SCnXxJ' // Maps
       }
       if (i == 4) {
-          var a = 'http://www.shadikabajah.com/tableau.html' //Tableau
+          var a = '/tableau.html' //Tableau
       }
       if (i == 5) {
           var a = 'https://datastudio.google.com/open/1CPVgmWShy3-GjkK1KyPIbfD0F85_2muO' //DatStudio
