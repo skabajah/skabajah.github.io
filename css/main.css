@@ -114,7 +114,7 @@ h2 {
 /*	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 70px;*/
-	/*transition: .7s ease all;*/
+	transition: 1s ease all; 
 }
 #tech img:hover {
     transition: transform .7s;
