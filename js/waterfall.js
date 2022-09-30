@@ -1,5 +1,5 @@
 
-var interval = 42; /* less is faster */
+var interval = 50; /* less is faster */
 var loc = 3;
 var w = window.screen.width;
 var h = window.screen.height;
@@ -14,7 +14,7 @@ function start() {
 
     paper = Raphael("mySVG");
     paper.rect(0, 0, w, h).attr(
-        'fill', 'none'
+        // 'fill', 'none', 'rx', '50'
         );
 
     setInterval(moveRectangles, interval);
@@ -50,9 +50,9 @@ function moveRectangles() {
         var size = (Math.random() +0.5) * rectsize; // random size for rectangles
         var newRect = paper.rect(newX, 0, size, size).attr({
             "fill": "none", 
-            "stroke":"white",
-            "stroke-width":"4", 
-            "rx":"15"
+            "stroke":"gray",
+            "stroke-width":"3", 
+            "rx":"50"
         });
         handleClick = function (event) {
             hits++;
