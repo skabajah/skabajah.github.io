@@ -49,7 +49,7 @@ function moveRectangles() {
         var newX = Math.random() * w; // width
         var size = (Math.random() +0.5) * rectsize; // random size for rectangles
         var newRect = paper.rect(newX, 0, size, size).attr({
-            "fill": "none", "stroke":"white", "stroke-width":"4"
+            "fill": "none", "stroke":"white", "stroke-width":"4", rx="15"
         });
         handleClick = function (event) {
             hits++;
