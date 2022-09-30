@@ -52,7 +52,7 @@ function moveRectangles() {
             "fill": "none", 
             "stroke":"white",
             "stroke-width":"4", 
-            "rx"="15"
+            "rx":"15"
         });
         handleClick = function (event) {
             hits++;
