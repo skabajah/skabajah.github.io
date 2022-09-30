@@ -69,6 +69,7 @@ body,h1,h2,h3,h4,h5,h6 {
     padding: 10px;
     /*border: solid 1px #ccc;*/
     margin: 20px 30px;
+    display: inline-block;
 }
 #colors {
 	width: 100%;
