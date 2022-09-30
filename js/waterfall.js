@@ -1,5 +1,5 @@
 
-var interval = 50; /* less is faster */
+var interval = 20; /* less is faster */
 var loc = 3;
 var w = window.screen.width;
 var h = window.screen.height;
@@ -48,7 +48,7 @@ function moveRectangles() {
 
         var newX = Math.random() * w; // width
         var size = (Math.random() +0.5) * rectsize; // random size for rectangles
-        var newRect = paper.rect(newX, 0, size, size, 15 ).attr({
+        var newRect = paper.rect(newX, 0, size, size, 10 ).attr({
             "fill": "none",  // background color 
             "stroke":"gray", // shape color 
             "stroke-width":"3"  // shape width 

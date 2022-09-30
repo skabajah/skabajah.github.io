@@ -83,15 +83,14 @@ body,h1,h2,h3,h4,h5,h6 {
 #sans, #mono, #serif {
     color: #ddd;
     font-size: 15px;
-    background: #555;
-    border-radius: 0;
-    /*margin: 10px;*/
+    background: #949494;
+     /*margin: 10px;*/
     padding: 10px;
 /*     float: left; */
-    border: solid 1px #ccc;
+    border: solid 1px #7a7a7a;
     min-width: 50px  !important;
     min-height: 50px !important;
-    border-radius: 0px !important;
+    border-radius: 5px !important;
 }
 h2 {
 	margin: 60px 0 20px 0;
@@ -110,15 +109,16 @@ h2 {
 	top: 115px;
 }
 #tech img {
-	height: 85px;
+	height: 65px;
+    width: 120px;
 /*	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 70px;*/
 	transition: 1s ease all; 
 }
 #tech img:hover {
-    transition: transform .7s;
-    transform: scale(1.5);
+    transition: transform .7s ease all;
+    /*transform: scale(1.5);*/
     background: #cccccc38;
     padding: 20px;
     height: 70px;
