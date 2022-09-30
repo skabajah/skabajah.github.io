@@ -48,11 +48,11 @@ function moveRectangles() {
 
         var newX = Math.random() * w; // width
         var size = (Math.random() +0.5) * rectsize; // random size for rectangles
-        var newRect = paper.rect(newX, 0, size, size).attr({
-            "fill": "none", 
-            "stroke":"gray",
-            "stroke-width":"3", 
-            "rx":"50"
+        var newRect = paper.rect(newX, 0, size, size, 15 ).attr({
+            "fill": "none",  // background color 
+            "stroke":"gray", // shape color 
+            "stroke-width":"3"  // shape width 
+           
         });
         handleClick = function (event) {
             hits++;
