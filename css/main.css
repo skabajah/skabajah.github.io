@@ -441,6 +441,12 @@ div#bs-example-navbar-collapse-1 {
 .xpWfed, .T2dutf, .nYdzXd {
 	display: none; 
 } 
+iframe {
+    border: none;
+    height: 560px;
+    padding: 20px 4px;
+    overflow: hidden;
+}
 
 @media (max-width: 767px) {
 	.navbar-nav {
