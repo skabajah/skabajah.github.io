@@ -437,6 +437,9 @@ div#bs-example-navbar-collapse-1 {
 	float: right;
 }
 
+.xpWfed {
+	display: none; 
+} 
 
 @media (max-width: 767px) {
 	.navbar-nav {
