@@ -438,8 +438,8 @@ div#bs-example-navbar-collapse-1 {
 }
 
 /* hide extra form lines */
-.xpWfed, .T2dutf, .nYdzXd {
-	display: none; 
+.xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
+	display: none !important; 
 } 
 iframe {
     border: none;
