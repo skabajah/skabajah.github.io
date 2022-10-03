@@ -437,7 +437,8 @@ div#bs-example-navbar-collapse-1 {
 	float: right;
 }
 
-.xpWfed, .T2dutf {
+/* hide extra form lines */
+.xpWfed, .T2dutf, .nYdzXd {
 	display: none; 
 } 
 
