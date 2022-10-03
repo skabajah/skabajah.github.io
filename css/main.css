@@ -115,6 +115,7 @@ h2 {
 	margin-right: 5%;
 	margin-bottom: 70px;*/
 	transition: 1s ease all; 
+	padding: 10px; 
 }
 #tech img:hover {
     transition: transform .7s ease all;
