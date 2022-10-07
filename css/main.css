@@ -450,19 +450,19 @@ iframe {
     overflow: hidden;
 }
 
+/* for smaller screens */ 
 @media (max-width: 767px) {
+	
 	.navbar-nav {
 		float: left;
 		text-align: left;
 	}
-	/*#description {*/
-	/*    color: #ccc;*/
-	/*    font-size: 16px;*/
- /*   	margin: 2em 1em;*/
-	/*}*/
 
 	div#bs-example-navbar-collapse-1 {
             min-height:200px;
-        }
+	}
+	
+	iframe {
+		padding: 0;   
 	}
 }
