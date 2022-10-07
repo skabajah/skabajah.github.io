@@ -439,8 +439,9 @@ div#bs-example-navbar-collapse-1 {
 }
 
 /* hide extra form lines */
-.xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
+.Dq4amc, .xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
 	display: none !important; 
+	visibility: hidden;
 } 
 iframe {
     border: none;
