@@ -267,8 +267,12 @@ h5 {
 	margin: 2em 0 0 0;
 }
 
+#signature h5 { 
+	color: #e6e6e6; 
+}
 #signature h6 {
-    margin-bottom: 50px;
+	margin-bottom: 3em;
+	color: #e6e6e6; 
 }
 
 .slow {
