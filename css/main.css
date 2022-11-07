@@ -49,10 +49,13 @@ h1,h2,h3 {
 	background: #4aa;
 	font-family: 'Kreon', monospace !important;
 	font-size: 36px;
-	color: white;
-	margin: 6%;
-	margin-top: 10%;
+	color: white; 
+	margin: 1em;
+	margin-top: 4em;
 	display: -webkit-inline-flex;
+	min-width: 100px;
+	min-height: 100px;
+	justify-content: center;
 
 } 
 #intro h1 {
