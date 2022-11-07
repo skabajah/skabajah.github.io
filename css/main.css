@@ -465,7 +465,7 @@ iframe {
 }
 
 /* for smaller screens */ 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
 	
 	.navbar-nav {
 		float: left;
