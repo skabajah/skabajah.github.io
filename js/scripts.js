@@ -22,7 +22,7 @@ $("#mono").click(function(){
 	
 $(".sun").click(function(){
 	$('body').append(
-	'<style>#intro, #signature  { background-color: #eee; }h1, h6, h5, label, #description, i , .navbar-inverse .navbar-nav>li>a {color: black !important;} #footer , div#bs-example-navbar-collapse-1  { background-color: #fff; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}</style>'
+	'<style>#intro, #signature  { background-color: #eee; }h1, h6, h5, label, #description, i , .navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer , div#bs-example-navbar-collapse-1  { background-color: #fff; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}</style>'
 	).hide().fadeIn(1000);   
 	});	
 	
