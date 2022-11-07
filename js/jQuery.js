@@ -1,3 +1,5 @@
+// skabajah
+
 $(document).ready(function() {
     var h = $(window).innerHeight();
     var w = $(window).innerWidth();
