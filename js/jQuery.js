@@ -95,16 +95,12 @@ $(document).ready(function() {
       if (i == 2) {
           var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
       }
-//       if (i == 3) {
-//           var a = 'https://goo.gl/SCnXxJ' // Maps
-//       }
-      if (i == 4) {
+ 
+      if (i == 3) {
           var a = 'https://public.tableau.com/app/profile/skabajah/viz/SingleFamilyRent/Dashboard' //Rent
       }
-//       if (i == 5) {
-//           var a = 'https://datastudio.google.com/open/1CPVgmWShy3-GjkK1KyPIbfD0F85_2muO' //DatStudio
-//       }
-      if (i == 6) {
+ 
+      if (i == 4) {
           var a = 'https://tinyurl.com/4hamdkah'  // Powe BI
       }
      
