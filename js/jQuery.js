@@ -103,7 +103,7 @@ $(document).ready(function() {
       }
  
       if (i == 4) {
-          var a = 'https://tinyurl.com/4hamdkah'  // Powe BI
+          var a = 'https://public.tableau.com/app/profile/skabajah/viz/CAAdjustedGrossIncomeAGI/Dashboard'  // AGI
       }
      
       $('#exampleLink').attr('href', a);
