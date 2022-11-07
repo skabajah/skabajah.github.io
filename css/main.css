@@ -500,6 +500,9 @@ iframe {
 	background: #444;
     	color: white;
 }
+.moon:hover {
+    background: #bbb !important;
+}
 
 
 
