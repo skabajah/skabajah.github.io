@@ -354,6 +354,7 @@ a#returnHome {
 }
 a#exampleLink {
 	color: #fff;
+	font-size: 1.5em; 
 }
 a#exampleLink:hover {
 	color: #44aaaa;
@@ -377,6 +378,7 @@ a#exampleLink:hover {
 	opacity: 1;
 	font-size: 1em;
 	text-align: left;
+	font-size: 1.5em; 
 }
 i.fa.fa-info {
 	position: relative;
