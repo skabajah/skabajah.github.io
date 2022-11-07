@@ -227,7 +227,7 @@ h5 {
 }
 #footer label {
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.5em;
 }
 .social {
 	padding: 5%;
@@ -371,6 +371,7 @@ a#exampleLink:hover {
 	color: #fff;
 	background-color: #44aaaa;
 	border: none;
+	font-size: 1.5em;
 }
 .tooltip {
 	background: rgba(68, 68, 68, 0.88);
