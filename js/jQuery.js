@@ -90,22 +90,22 @@ $(document).ready(function() {
       $('#popUpImg').attr('src', this.src);
       var i = this.id;
       if (i == 1) {
-          var a = '/talkingstick' //App
+          var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
       }
       if (i == 2) {
-          var a = '/zipcode.php' //SQL
+          var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
       }
-      if (i == 3) {
-          var a = 'https://goo.gl/SCnXxJ' // Maps
-      }
+//       if (i == 3) {
+//           var a = 'https://goo.gl/SCnXxJ' // Maps
+//       }
       if (i == 4) {
-          var a = '/tableau.html' //Tableau
+          var a = 'https://public.tableau.com/app/profile/skabajah/viz/SingleFamilyRent/Dashboard' //Rent
       }
-      if (i == 5) {
-          var a = 'https://datastudio.google.com/open/1CPVgmWShy3-GjkK1KyPIbfD0F85_2muO' //DatStudio
-      }
+//       if (i == 5) {
+//           var a = 'https://datastudio.google.com/open/1CPVgmWShy3-GjkK1KyPIbfD0F85_2muO' //DatStudio
+//       }
       if (i == 6) {
-          var a = 'https://app.powerbi.com/view?r=eyJrIjoiZDcyZGIxMWMtNWNmZi00N2RmLWJmZGItNTBiMjU2ZDNjNzgyIiwidCI6ImU4NWFhZGI5LWNhYjQtNDc2YS1iNzhiLTEzYTgyNzFjNWQ1NSIsImMiOjZ9'
+          var a = 'https://tinyurl.com/4hamdkah'  // Powe BI
       }
      
       $('#exampleLink').attr('href', a);
