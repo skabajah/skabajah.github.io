@@ -497,17 +497,8 @@ iframe {
 
 
 .moon {
-	position: absolute;
-	font-size: 35px;
-	min-width: 45px;
-	display: flex;
-	justify-content: center;
-	color: #444;
-	padding: 1px;
-	background: #eee;
-	display: none; 
-	cursor:pointer;
-
+	background: #444;
+    	color: white;
 }
 
 
