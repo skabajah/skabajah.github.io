@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
     $(".moon").click(function(){
         $(this).toggleClass("sun");
-        $("#extra").prop("onclick", null);
+        $("#extra").remove();
     }); 
 
   $("#goDown").hover(function() {
