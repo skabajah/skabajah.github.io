@@ -261,7 +261,7 @@ h5 {
 }
 #signature {
 	background-color: #222;
-	border: solid 1px #222;
+	border: none;
 }
 #signature i {
 	margin: 2em 0 0 0;
