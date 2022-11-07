@@ -65,8 +65,8 @@ h1,h2,h3 {
 }
 #description {
 	color: #ccc;
-	font-size: 1.5em;
-	margin: 100px 0;
+	font-size: 1.3em;
+	margin: 2em 15px;
 	/*text-align: left;*/
 }
 #theme h3,#theme h5,#theme h6 {
