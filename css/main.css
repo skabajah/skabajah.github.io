@@ -462,7 +462,7 @@ div#bs-example-navbar-collapse-1 {
 }
 
 /* hide extra form lines */
-.Dq4amc, .xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
+/* .Dq4amc, .xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
 	display: none !important; 
 	visibility: hidden;
 } 
@@ -471,7 +471,7 @@ iframe {
     height: 650px;
     padding: 20px 4px;
     overflow: hidden;
-}
+} */
 
 /* for smaller screens */ 
 @media (max-width: 768px){
