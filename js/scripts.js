@@ -20,7 +20,7 @@ $("#mono").click(function(){
 	$('body').append("<style>body,h1,h2,h3,h4,h5,h6{font-family: 'Ubuntu Mono', monospace;}</style>").hide().fadeIn(1000);   
 	});
 	
-$("#day").click(function(){
+$(".sun").click(function(){
 	$('body').append(
 	'<style>#intro, #signature  { background-color: #eee; }h1, h6, h5, label, #description, i , .navbar-inverse .navbar-nav>li>a {color: black !important;} #footer , div#bs-example-navbar-collapse-1  { background-color: #fff; }</style>'
 	).hide().fadeIn(1000);   
