@@ -46,8 +46,11 @@ $(document).ready(function() {
 
   });
    
-    $("#toggletheme").click(function(){
-        $(".sun").toggleClass("moon");
+    $(".sun").click(function(){
+        $(this).toggleClass("moon");
+    });
+    $(".moon").click(function(){
+        $(this).toggleClass("sun");
     }); 
 
   $("#goDown").hover(function() {
