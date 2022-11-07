@@ -1,5 +1,8 @@
 
 /*
+author: skabajah
+
+
 font-family: 'Kreon', serif;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
@@ -425,8 +428,7 @@ th {
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
 	border-bottom: 5px #4d4d4d solid;
-	padding: 30px; 
-	font-size: 30px; 
+ 
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -478,5 +480,10 @@ iframe {
 	
 	iframe {
 		padding: 0;   
+	}
+	.navbar-inverse .navbar-nav>li>a {
+		 
+		padding: 30px; 
+		font-size: 30px; 
 	}
 }
