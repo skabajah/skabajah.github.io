@@ -492,6 +492,7 @@ iframe {
 	color: #444;
 	padding: 1px;
 	background: #eee;
+	cursor:pointer;
 }
 
 
@@ -505,6 +506,8 @@ iframe {
 	padding: 1px;
 	background: #eee;
 	display: none; 
+	cursor:pointer;
+
 }
 
 
