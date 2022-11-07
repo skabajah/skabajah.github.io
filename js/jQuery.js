@@ -46,7 +46,9 @@ $(document).ready(function() {
 
   });
    
-   
+    $("#toggletheme").click(function(){
+        $(".sun").toggleClass("moon");
+    }); 
 
   $("#goDown").hover(function() {
       $(this).addClass("bounce animated");
