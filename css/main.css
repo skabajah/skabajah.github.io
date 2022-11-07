@@ -425,6 +425,8 @@ th {
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
 	border-bottom: 5px #4d4d4d solid;
+	padding: 40px; 
+	font-size: 34px; 
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -471,7 +473,7 @@ iframe {
 	}
 
 	div#bs-example-navbar-collapse-1 {
-            min-height:200px;
+            min-height:450px;
 	}
 	
 	iframe {
