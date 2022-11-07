@@ -171,6 +171,7 @@ img.desaturate:hover {
 #examples h4 {
 	margin: 30px 0 10px;
 	color: #44aaaa;
+	font-size: 2em; 
 }
 #examples img {
 	width: 70%;
