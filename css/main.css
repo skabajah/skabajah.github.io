@@ -496,9 +496,16 @@ iframe {
 }
 
 
-.moon {
+.moon { 
 	background: #444;
-    	color: white;
+	color: white;
+	position: absolute;
+	font-size: 35px;
+	min-width: 45px;
+	display: flex;
+	justify-content: center;
+	padding: 1px;
+	cursor: pointer;
 }
 .moon:hover {
     background: #bbb !important;
