@@ -3,7 +3,7 @@
  	// variables
  	var h = $(window).innerHeight();
  	var w = $(window).innerWidth();
- 	var t = "2022-11-07";
+ 	var t = "3000";
   console.log('t:',t);
  	//  intro 
  	$("#intro").css("height", h);
@@ -66,7 +66,7 @@
  	$(".moon").click(function() {
  		t = "moon";
  		console.log('t:',t);
- 		$(".extra").remove().fadeIn(1000);
+ 		$(".extra").remove().fadeIn(3000);
         $(".sun").css("display", "flex");
         $(".moon").css("display", "none");
  	});
