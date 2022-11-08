@@ -3,7 +3,7 @@
  	// variables
  	var h = $(window).innerHeight();
  	var w = $(window).innerWidth();
- 	var t = "default";
+ 	var t = "2022-11-07";
   console.log('t:',t);
  	//  intro 
  	$("#intro").css("height", h);
