@@ -1,6 +1,7 @@
 //  skabajah
 
 $(document).ready(function() {
+	
 $("#purple").click(function(){
 	$('body').append('<style>h2,#examples h4,a#exampleLink:hover,#footer i:hover, #signature i:hover,#closePopup:hover{color:#aa44aa;} .btn-default,.logo{background-color:#aa44aa;}.navbar-inverse .navbar-nav>li>a:hover{border-bottom: 5px solid #aa44aa;}#intro{border-bottom: solid 10px #aa44aa;}</style>').hide().fadeIn(1000);   
 	});
@@ -19,5 +20,6 @@ $("#sans").click(function(){
 $("#mono").click(function(){
 	$('body').append("<style>body,h1,h2,h3,h4,h5,h6{font-family: 'Ubuntu Mono', monospace;}</style>").hide().fadeIn(1000);   
 	});
-	
+
+});	
 
