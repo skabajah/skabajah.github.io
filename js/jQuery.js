@@ -4,6 +4,7 @@
  	var h = $(window).innerHeight();
  	var w = $(window).innerWidth();
  	var t = 0;
+  console.log(t);
  	//  intro 
  	$("#intro").css("height", h);
  	if (w < h) {
