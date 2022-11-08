@@ -4,7 +4,7 @@
  	var h = $(window).innerHeight();
  	var w = $(window).innerWidth();
  	var t = 0;
-  console.log(t);
+  console.log('t:',t);
  	//  intro 
  	$("#intro").css("height", h);
  	if (w < h) {
@@ -57,12 +57,12 @@
  	//  darkmode toggle 
  	$(".sun").click(function() {
  		$(this).removeClass("sun").addClass("moon");
- 		console.log(t);
+ 		console.log('t:',t);
  		$('body').append('<div  class="extra"><style>#intro, #signature  { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}</style></div>').hide().fadeIn(1000);
  	});
  	$(".moon").click(function() {
  		t = 1;
- 		console.log(t);
+ 		console.log('t:',t);
  		$(".extra").remove();
  		$(".moon").removeClass("moon").addClass("sun");
  	});
