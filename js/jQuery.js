@@ -38,14 +38,7 @@ $(document).ready(function() {
       $("#bs-example-navbar-collapse-1" ).toggle('slow', function() {
         $(this).toggleClass('');
        });
-    // $('#theme').toggleClass("theme2"); // .hide().show('slow');
-    // $('#theme').toggleClass("theme1"); // .hide().show('slow');
-
-    // $('.theme2').css({"visibility": "visible" });
-
-
-  });
-     
+  
 //     darkmode toggle 
     $(".sun").click(function(){
         $(this).removeClass( "sun" ).addClass( "moon" );
@@ -58,14 +51,16 @@ $(document).ready(function() {
     $(".moon").click(function(){
         $(".extra").remove();
         $(".moon").removeClass( "moon" ).addClass( "sun" );
-  
-    }); 
+      }); 
+	  
+//  end theme 	  
 
   $("#goDown").hover(function() {
       $(this).addClass("bounce animated");
   }, function() {
       $(this).removeClass("bounce animated");
   });
+	  
   $(window).scroll(function() {
       var h = $(window).innerHeight();
       var s = $(window).scrollTop();
