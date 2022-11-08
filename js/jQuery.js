@@ -66,7 +66,7 @@
  	$(".moon").click(function() {
  		t = "moon";
  		console.log('t:',t);
- 		$(".extra").remove();
+ 		$(".extra").remove().fadeIn(1000);
         $(".sun").css("display", "flex");
         $(".moon").css("display", "none");
  	});
