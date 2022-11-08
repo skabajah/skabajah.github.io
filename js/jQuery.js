@@ -45,12 +45,13 @@ $(document).ready(function() {
 
 
   });
-   
+     
+//     darkmode toggle 
     $(".sun").click(function(){
-        $(this).toggleClass("moon");
+        $(this).removeClass( "sun" ).addClass( "moon" );
     });
     $(".moon").click(function(){
-        $(this).toggleClass("sun");
+        $(this).removeClass( "moon" ).addClass( "sun" );
         $("#extra").remove();
     }); 
 
