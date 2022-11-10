@@ -120,7 +120,7 @@ h2 {
 	color: #44aaaa;
 }
 #tech {
-	background-color: #EEE;
+	background-color: #e1e1e1;
 	color: #FFF;
 	min-height: 500px;
 	margin: 0;
@@ -162,7 +162,7 @@ img.desaturate:hover {
 	
 }
 #examples {
-	background-color: #FFF;
+	background-color: #eee;
 	color: #FFF;
 	min-height: 400px;
 	margin: 0;
@@ -260,7 +260,8 @@ h5 {
 	background-color: transparent;
 }
 #signature {
-	background-color: #222;
+/* 	background-color: #222; */
+	background-color: #3a4b4b;
 	border: none;
 }
 #signature i {
