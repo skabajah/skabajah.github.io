@@ -61,7 +61,7 @@
 
         t = "day" ; 
  		console.log('t:',t);
- 		$('body').append('<div  class="extra"><style>#intro, #signature  { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}.tooltip {background: #f5f5f5cf;}.popup {background: #dfdfdf;} a#exampleLink {color: #555;} </style></div>').hide().fadeIn(1000);
+ 		$('body').append('<div  class="extra"><style>#intro, #signature { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}#examples {background: #FFF;}.tooltip {background: #f5f5f5cf;}.popup {background: #dfdfdf;} a#exampleLink {color: #555;} </style></div>').hide().fadeIn(1000);
  	});
  	$(".moon").click(function() {
  		t = "moon";
