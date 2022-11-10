@@ -508,8 +508,12 @@ iframe {
 	padding: 1px;
 	cursor: pointer;
 }
-.moon:hover, .sun:hover, i:hover {
+
+.moon:hover, .sun:hover  {
     background: #4aa !important;
+}
+i:hover {
+    color: #4aa !important;
 }
 
 
