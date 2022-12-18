@@ -133,7 +133,7 @@ h2 {
 }
 #tech img {
 	height: 65px;
-    width: 120px;
+    	width: 120px;
 /*	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 70px;*/
@@ -162,7 +162,7 @@ img.desaturate:hover {
 	
 }
 #examples {
-	background-color: #eee;
+	background-color: #444;
 	color: #FFF;
 	min-height: 400px;
 	margin: 0;
@@ -212,7 +212,7 @@ h5 {
 /*	max-width: 50%;*/
 /*}*/
 #footer {
-	background-color: #333;
+	background-color: #444;
 	color: #FFF;
 	height: auto;
 	margin: 0;
@@ -260,8 +260,7 @@ h5 {
 	background-color: transparent;
 }
 #signature {
-/* 	background-color: #222; */
-	background-color: #3a4b4b;
+	background-color: #333;
 	border: none;
 }
 #signature i {
