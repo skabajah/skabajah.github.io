@@ -381,10 +381,7 @@ a#exampleLink:hover {
 }
 .btn-default {
 	float: right; 
-/* 	color: #fff;
 	background-color: #44aaaa;
-	border: none;
-	font-size: 1.5em; */
 }
 .tooltip {
 	background: rgba(68, 68, 68, 0.88);
