@@ -218,12 +218,10 @@ h5 {
 	color: #FFF;
 	height: auto;
 	margin: 0;
-	padding: 0;
+	padding: 0; 
 }
 
-
-}
-#FormDiv {
+div#FormDiv {
 	padding: 0 5% 5% 5%;
 }
 
