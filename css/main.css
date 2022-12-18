@@ -351,7 +351,13 @@ div#emailSent, div#zipcodes {
 	font-size: 1.5em;
 	color: #fff;
 }
- 
+
+
+div#resume {
+    background: #d8d8d8;
+}
+
+
 a#returnHome {
     position: fixed;
     top: .5em;
