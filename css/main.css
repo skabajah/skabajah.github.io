@@ -19,6 +19,10 @@ h1,h2,h3 {
 	font-family: 'Josefin Sans';
 }
 
+h5 #resume {
+	color: #444;
+}
+
 #header {
 	color: #FFF;
 	margin: 0;
