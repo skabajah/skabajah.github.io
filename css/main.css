@@ -19,6 +19,10 @@ h1,h2,h3 {
 	font-family: 'Josefin Sans';
 }
 
+h5 {
+	padding: 20px 0;
+	color:white; 
+}
 
 #header {
 	color: #FFF;
@@ -214,10 +218,7 @@ img.desaturate:hover {
 /*	padding-bottom: 30px;*/
 /*	margin-top: 80px;*/
 /*}*/
-h5 {
-	padding: 20px 0;
-	color:white; 
-}
+
 /*#all_devices img {*/
 /*	max-width: 50%;*/
 /*}*/
