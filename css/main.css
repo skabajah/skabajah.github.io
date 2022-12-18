@@ -540,7 +540,7 @@ i:hover {
 	}
 
 	div#bs-example-navbar-collapse-1 {
-            min-height:450px;
+            min-height:515px;
 	}
 	
 	iframe {
@@ -554,7 +554,7 @@ i:hover {
 	
 	div#toggletheme {
 		position: absolute;
-		top: 365px;
+		top: 445px;
 		left: 30px;
 	}
 }
