@@ -486,14 +486,15 @@ iframe {
 /* theme night/day */ 
 .sun {
 	position: absolute;
-	font-size: 35px;
-	min-width: 45px;
-	display: flex;
-	justify-content: center;
+	font-size: 28px;
+	min-width: 40px;
 	color: #444;
-	padding: 1px;
+	padding: 0px;
 	background: #eee;
-	cursor:pointer;
+	cursor: pointer;
+	display: table;
+	line-height: normal;
+	min-height: 40px;
 }
  
 
@@ -501,11 +502,12 @@ iframe {
 	background: #444;
 	color: white;
 	position: absolute;
-	font-size: 35px;
-	min-width: 45px;
+	font-size: 28px;
+	min-width: 40px;
+	min-height: 40px;
 	display: none;
 	justify-content: center;
-	padding: 1px;
+	padding: 0px;
 	cursor: pointer;
 }
 
