@@ -19,9 +19,6 @@ h1,h2,h3 {
 	font-family: 'Josefin Sans';
 }
 
-h5 #resume {
-	color: #444;
-}
 
 #header {
 	color: #FFF;
@@ -73,10 +70,18 @@ h5 #resume {
 	margin: 2em 15px;
 	/*text-align: left;*/
 }
+
+#resume h5 {
+	color: #444;
+}
+
+
 #theme h3,#theme h5,#theme h6 {
     color: #ccc;
     margin: 10px 0;
 }
+
+
 #theme {
     background-color: #333;
     min-height: 400px;
