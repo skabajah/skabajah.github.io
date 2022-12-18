@@ -212,6 +212,7 @@ h5 {
 /*#all_devices img {*/
 /*	max-width: 50%;*/
 /*}*/
+
 #footer {
 	background-color: #444;
 	color: #FFF;
@@ -233,6 +234,7 @@ form {
 label {
 	font-weight: normal;
 	font-size: 1.5em;
+	display:none; 
 }
 .social {
 	padding: 5%; 
@@ -385,10 +387,11 @@ a#exampleLink:hover {
 	color: #44aaaa;
 }
 .btn-default {
-	color: #fff;
+	float: right; 
+/* 	color: #fff;
 	background-color: #44aaaa;
 	border: none;
-	font-size: 1.5em;
+	font-size: 1.5em; */
 }
 .tooltip {
 	background: rgba(68, 68, 68, 0.88);
