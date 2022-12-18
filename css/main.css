@@ -207,6 +207,7 @@ img.desaturate:hover {
 /*}*/
 h5 {
 	padding: 20px 0;
+	color:white; 
 }
 /*#all_devices img {*/
 /*	max-width: 50%;*/
@@ -218,8 +219,11 @@ h5 {
 	margin: 0;
 	padding: 0;
 }
-#footer h5 {
-	color: #EEE;
+
+/* #footer h5 {
+	color: #EEE; 
+*/
+
 }
 #footer form {
 	width: 70%;
@@ -231,10 +235,9 @@ h5 {
 	font-size: 1.5em;
 }
 .social {
-	padding: 5%;
-/*	background-color: #222;
-	border-top: solid 1px #444;*/
+	padding: 5%; 
 }
+
 #footer i, #signature i {
 	color: #FFF;
 	font-size: 50px;
@@ -267,9 +270,14 @@ h5 {
 	margin: 2em 0 0 0;
 }
 
+
+/* 
 #signature h5 { 
 	color: #e6e6e6; 
-}
+} 
+*/
+
+
 #signature h6 {
 	margin-bottom: 3em;
 	color: #e6e6e6; 
