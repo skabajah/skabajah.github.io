@@ -225,12 +225,12 @@ h5 {
 */
 
 }
-#footer form {
+form {
 	width: 70%;
 	margin: 40px auto 40px;
 	text-align: left;
 }
-#footer label {
+label {
 	font-weight: normal;
 	font-size: 1.5em;
 }
