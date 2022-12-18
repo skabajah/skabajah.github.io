@@ -54,10 +54,13 @@
  			$(this).toggleClass('');
  		});
  	});
+  
+  
+  
  	//  darkmode toggle 
  	$(".sun").click(function() {
  		$(".sun").css("display", "none");
-        $(".moon").css("display", "flex");
+        $(".moon").css("display", "table");
 
         t = "day" ; 
  		console.log('t:',t);
@@ -67,15 +70,20 @@
  		t = "moon";
  		console.log('t:',t);
  		$(".extra").remove().fadeIn(3000);
-        $(".sun").css("display", "flex");
+        $(".sun").css("display", "table");
         $(".moon").css("display", "none");
  	});
+  
+  
  	//  down chevron   
  	$("#goDown").hover(function() {
  		$(this).addClass("bounce animated");
  	}, function() {
  		$(this).removeClass("bounce animated");
  	});
+  
+  
+  
  	// minimize nav-bar 
  	$(window).scroll(function() {
  		var h = $(window).innerHeight();
@@ -116,6 +124,8 @@
  			});
  		}
  	});
+  
+  
  	// pop examples 
  	$('#examples img').click(function() {
  		$('#showup').css('display', 'block');
