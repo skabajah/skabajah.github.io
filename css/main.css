@@ -357,6 +357,9 @@ div#resume {
     padding: 0 0 5% 0;
 }
 
+#resume img {
+    max-width: 92%;
+}
 
 a#returnHome {
     position: fixed;
