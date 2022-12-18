@@ -221,21 +221,16 @@ h5 {
 	padding: 0;
 }
 
-/* #footer h5 {
-	color: #EEE; 
-*/
 
 }
-form {
-	width: 70%;
-	margin: 40px auto 40px;
-	text-align: left;
+#div-form {
+	padding: 0 5% 5% 5%;
 }
+
 label {
-	font-weight: normal;
-	font-size: 1.5em;
 	display:none; 
 }
+
 .social {
 	padding: 5%; 
 }
@@ -273,11 +268,7 @@ label {
 }
 
 
-/* 
-#signature h5 { 
-	color: #e6e6e6; 
-} 
-*/
+ 
 
 
 #signature h6 {
@@ -345,11 +336,13 @@ a:link, a:visited{
 #closePopup:hover{
 	color: #44aaaa;
 }
+
 #popUpImg {
 	max-height: 80%;
 	max-width: 75%;
 	margin: 2% auto;
 }
+
 div#emailSent, div#zipcodes {
 	background: #555;
 	height: 100%;
@@ -427,14 +420,17 @@ th {
     background-color: #44aaaa;
     color: #ffffff;
 }
+
 .col-md-6.column {
     padding: 0px;
     border: 0;
 }
+
 .footerpng{
 	width: 50px;
 	margin: 5%;
 }
+
 .container,.col-md-12.column {
 	padding-right: 0;
 	padding-left: 0;
@@ -442,9 +438,11 @@ th {
 	width: 100%;
 
 }
+
 .navbar-nav {
 	float: right;
 }
+
 .navbar-inverse {
 	position: fixed;
 	width: 100%;
@@ -456,6 +454,7 @@ th {
 	height: 100px;
 	/*opacity: .8;*/
 }
+
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
 	border-bottom: 5px #4d4d4d solid;
@@ -465,14 +464,17 @@ th {
 .navbar-inverse .navbar-nav>li>a:hover {
 	border-bottom: 5px solid #44aaaa;
 }
+
 .navbar-toggle {
 	border: none;
 	margin-bottom: 0;
 	background: #666;
 }
+
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 	border: none;
 }
+
 div#bs-example-navbar-collapse-1 {
     position: fixed;
     width: 100%;
@@ -485,17 +487,7 @@ div#bs-example-navbar-collapse-1 {
 	float: right;
 }
 
-/* hide extra form lines */
-/* .Dq4amc, .xpWfed, .T2dutf, .nYdzXd, .m7w29c , .blxCBd {
-	display: none !important; 
-	visibility: hidden;
-} 
-iframe {
-    border: none;
-    height: 650px;
-    padding: 20px 4px;
-    overflow: hidden;
-} */
+ 
 
 /* theme night/day */ 
 .sun {
