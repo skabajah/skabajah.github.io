@@ -48,6 +48,9 @@ $('img').click(function(){
 $('img').click(function(){
  $('#player2').attr('src', this.alt);
 });
+});$('img').click(function(){
+$('h6').text(this.id);
+});
 $('img').click(function(){
  $('video').removeClass( 'media-document' )
  $('video').removeClass( 'mac' )
@@ -60,6 +63,7 @@ $('img').click(function(){
 <body>
 <div id='wrapper' >
 <div id='section' >
+<h6>TV</h6>
 <iframe id='player2' src=' 'autoplay='1' allow='fullscreen'></iframe>
 </div>
 <div id='section' >
