@@ -42,22 +42,23 @@ min-width:100% !important;
 <script src='https://code.jquery.com/jquery-3.6.3.js'></script></script>
 <script>
 $( document ).ready(function() {
-$('img').click(function(){
- $('#player').attr('src', this.alt);
+    $('img').click(function(){
+     $('#player').attr('src', this.alt);
+    });
+
+    $('img').click(function(){
+        $('#player2').attr('src', this.alt);
+        $('h6').text(this.id);
+    });
+
+    $('img').click(function(){
+     $('video').removeClass( 'media-document' )
+     $('video').removeClass( 'mac' )
+     $('video').removeClass( 'video' )
+     $('video').addClass( 'NEW' )
+    });
 });
-$('img').click(function(){
- $('#player2').attr('src', this.alt);
-});
-});$('img').click(function(){
-$('h6').text(this.id);
-});
-$('img').click(function(){
- $('video').removeClass( 'media-document' )
- $('video').removeClass( 'mac' )
- $('video').removeClass( 'video' )
- $('video').addClass( 'NEW' )
-});
-});
+
 </script>
 </head>
 <body>
