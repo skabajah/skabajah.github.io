@@ -9,21 +9,22 @@
     width: 76px;
     height: 76px;
     margin: 14px;
-    border: solid 1px #c1c1c1;
-    border-radius: 10px;
+    border: solid 1px #e4e4e4;
+    border-radius: 50%; 
     background: white;
     }
     h3 {
-    border-bottom: solid;
-    font-family: 'Arial';
+    border-bottom: solid 1px gray;
+    font-family: monospace;
     float: none;
+    margin: 0;
+    padding: 3px;
     }
     #section, #section_v {
     float: left;
     width: 330px;
-    border: 1px solid lightgrey;
     background: #f1f1f1;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
     }
@@ -40,14 +41,19 @@
     }
     #section_v {
     position: fixed;
-    background: black;
-    border-radius: 0;
+    background: #141414;
     color: white;
     width: 340px;
     margin: 5px;
     }
     #channels {
-    margin-top:300px;
+    margin-top:230px;
+    }
+    h6 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0px 0px 3px 6px;
+    font-family: monospace;
     }
 </style>
   <script src='https://code.jquery.com/jquery-3.6.3.js'></script> 
@@ -75,43 +81,43 @@
     <div id='wrapper' >
     <div id='section_v' >
     <h6>TV</h6>
-     <video id='player2' src=' 'autoplay='1' allow='fullscreen'></video>
+     <video id='player2' src=' 'autoplay='1' allow='fullscreen' controls></video>
     </div>
     <div id='channels' >
     <div id='section' >
     <h3>Variety</h3>
         
-         <img id='Mtv'  alt='https://1537084837.rsc.cdn77.org/1537084837/tracks-v2a1/mono.m3u8'  src='https://pbs.twimg.com/profile_images/1217009489158733830/ACg50HnC_400x400.jpg'  />
-         <img id='Mtv One'  alt='https://live.3cd.io/v1/broadcast/one/playlist.m3u8'  src='https://pbs.twimg.com/profile_images/1470833560152162306/Y6TRlbDS_400x400.jpg'  />
-         <img id='Otv'  alt='http://62.182.82.104/OTV/tracks-v1a1/mono.m3u8?token=test'  src='https://pbs.twimg.com/profile_images/1268796709410344965/fk4QcwYW_400x400.jpg'  />
+         <img id='MTV Lebanon'  alt='https://1537084837.rsc.cdn77.org/1537084837/tracks-v2a1/mono.m3u8'  src='https://pbs.twimg.com/profile_images/1217009489158733830/ACg50HnC_400x400.jpg'  />
+         <img id='MTV One'  alt='https://live.3cd.io/v1/broadcast/one/playlist.m3u8'  src='https://pbs.twimg.com/profile_images/1470833560152162306/Y6TRlbDS_400x400.jpg'  />
+         <img id='OTV'  alt='http://62.182.82.104/OTV/tracks-v1a1/mono.m3u8?token=test'  src='https://pbs.twimg.com/profile_images/1268796709410344965/fk4QcwYW_400x400.jpg'  />
          <img id='Roya'  alt='https://roya.daioncdn.net/royatv/royatv.m3u8?app=8c1e143a-39cf-40b4-acb2-e78faa1f322d&ce=3'  src='https://pbs.twimg.com/profile_images/1566836452356497412/4gSioHLL_400x400.jpg'  />
-         <img id='Jo'  alt='https://jrtv-live.ercdn.net/jordanhd/jordanhd.m3u8'  src='https://pbs.twimg.com/profile_images/1543487307575169026/bt0Yihlj_400x400.jpg'  />
-         <img id='Nahar'  alt='https://62.182.82.104/Al_Nahar_Tv/tracks-v1a1/mono.m3u8?token=test'  src='https://pbs.twimg.com/profile_images/1435576535403085826/g0Mnrz3V_400x400.jpg'  />
+         <img id='Jordan'  alt='https://jrtv-live.ercdn.net/jordanhd/jordanhd.m3u8'  src='https://pbs.twimg.com/profile_images/1543487307575169026/bt0Yihlj_400x400.jpg'  />
+         <img id='Al-Nahar'  alt='http://62.182.82.104/Al_Nahar_Tv/tracks-v1a1/mono.m3u8?token=test'  src='https://pbs.twimg.com/profile_images/1435576535403085826/g0Mnrz3V_400x400.jpg'  />
     </div>
     <div id='section' >
     <h3>mbc</h3>
-         <img id='Mbc'  alt='https://shls-mbcdramaksa-ak.akamaized.net/out/v1/84ab37e99d6e4b16b33c6600f94f6ccb/index.m3u8'  src='https://pbs.twimg.com/profile_images/1523247784199176194/wuBhdrf7_400x400.jpg'  />
-         <img id='Mbc 4'  alt='https://shls-masr-ak.akamaized.net/out/v1/c08681f81775496ab4afa2bac7ae7638/index.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MBC_4_TV_Channel_Logo.png/240px-MBC_4_TV_Channel_Logo.png'  />
-         <img id='Mbc 5'  alt='https://shls-mbc5-prod-dub.shahid.net/out/v1/2720564b6a4641658fdfb6884b160da2/index_1.m3u8'  src='https://pbs.twimg.com/profile_images/1523334126610362370/CP_YkNha_400x400.jpg'  />
-         <img id='Mbc Masr'  alt='https://shls-masr-prod-dub.shahid.net/out/v1/b7093401da27496797a8949de23f4578/index_2.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/MBC_Masr_Logo.png/240px-MBC_Masr_Logo.png'  />
+         <img id='mbc'  alt='https://shls-mbcdramaksa-ak.akamaized.net/out/v1/84ab37e99d6e4b16b33c6600f94f6ccb/index.m3u8'  src='https://pbs.twimg.com/profile_images/1523247784199176194/wuBhdrf7_400x400.jpg'  />
+         <img id='mbc 4'  alt='https://shls-masr-ak.akamaized.net/out/v1/c08681f81775496ab4afa2bac7ae7638/index.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MBC_4_TV_Channel_Logo.png/240px-MBC_4_TV_Channel_Logo.png'  />
+         <img id='mbc 5'  alt='https://shls-mbc5-prod-dub.shahid.net/out/v1/2720564b6a4641658fdfb6884b160da2/index_1.m3u8'  src='https://pbs.twimg.com/profile_images/1523334126610362370/CP_YkNha_400x400.jpg'  />
+         <img id='mbc Masr'  alt='https://shls-masr-prod-dub.shahid.net/out/v1/b7093401da27496797a8949de23f4578/index_2.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/MBC_Masr_Logo.png/240px-MBC_Masr_Logo.png'  />
          <img id='Dubai'  alt='https://dmisxthvll.cdn.mgmlcdn.com/dubaitvht/smil:dubaitv.stream.smil/chunklist_b1500000.m3u8'  src='https://pbs.twimg.com/profile_images/1616005113553866753/Fc0YNtYo_400x400.jpg'  />
          <img id='Abu Dhabi'  alt='https://admdn2.cdn.mangomolo.com/adtv/smil:adtv.stream.smil/chunklist.m3u8'  src='https://pbs.twimg.com/profile_images/1526478412285722627/_UK4wMLb_400x400.jpg'  />
     </div>
     <div id='section' >
     <h3>Rotana</h3>
-         <img id='Rotana Hd'  alt='https://shls-rotanaplus-prod-dub.shahid.net/out/v1/1fc6103458be480b96e6a574b00fe1c0/index.m3u8'  src='https://media0009.elcinema.com/tvguide/1365_1.png'  />
+         <img id='Rotana HD'  alt='https://shls-rotanaplus-prod-dub.shahid.net/out/v1/1fc6103458be480b96e6a574b00fe1c0/index.m3u8'  src='https://media0009.elcinema.com/tvguide/1365_1.png'  />
          <img id='Rotana Music'  alt='https://rotanastudios-rotanamusic-1-eu.xiaomi.wurl.tv/09a2d4d3e01adfb90635502287f05809.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/8/86/Rotana_Music_New_Logo.png'  />
          <img id='Rotana Drama'  alt='https://rotanastudios-rotanadrama-1-eu.xiaomi.wurl.tv/bb20f06deb32b5161cd66405a37c08a2.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/archive/f/fe/20220123165536%21Rotana_Drama_New_Logo.png'  />
          <img id='Rotana Comedy'  alt='https://rotanastudios-rotanacomedy-1-eu.xiaomi.wurl.tv/playlist.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Rotana_Comedy_Logo.png/280px-Rotana_Comedy_Logo.png'  />
-         <img id='Rotana Cinema Eg'  alt='https://rotanastudios-rotanacinema-1-eu.xiaomi.wurl.tv/4e7420225751cb2d25d185bd3f12723a.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/archive/1/1f/20211030140950%21Rotana_Cinema_EG_New.png'  />
-         <img id='Rotana Cinema Sa'  alt='https://shls-rotanacinema-ksa-prod-dub.shahid.net/out/v1/6cee1c57ea7841e697eb15cefc98e0a6/index.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/3/3e/%D8%B1%D9%88%D8%AA%D8%A7%D9%86%D8%A7_%D8%B3%D9%8A%D9%86%D9%85%D8%A7_ksa.jpg'  />
+         <img id='Rotana Cinema EG'  alt='https://rotanastudios-rotanacinema-1-eu.xiaomi.wurl.tv/4e7420225751cb2d25d185bd3f12723a.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/archive/1/1f/20211030140950%21Rotana_Cinema_EG_New.png'  />
+         <img id='Rotana Cinema SA'  alt='https://shls-rotanacinema-ksa-prod-dub.shahid.net/out/v1/6cee1c57ea7841e697eb15cefc98e0a6/index.m3u8'  src='https://upload.wikimedia.org/wikipedia/commons/3/3e/%D8%B1%D9%88%D8%AA%D8%A7%D9%86%D8%A7_%D8%B3%D9%8A%D9%86%D9%85%D8%A7_ksa.jpg'  />
     </div>
     <div id='section' >
     <h3>News</h3>
-         <img id='Jazeera'  alt='https://live-hls-web-aja.getaj.net/AJA/02.m3u8'  src='https://pbs.twimg.com/profile_images/981819775817957377/VVKcF_Y6_400x400.jpg'  />
-         <img id='Arabiya'  alt='https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiya_720p_chunks.m3u8'  src='https://pbs.twimg.com/profile_images/1358715269565321217/ovwOcJkQ_400x400.jpg'  />
-         <img id='Bloomberg Ar'  alt='https://svs.itworkscdn.net/bloomberarlive/bloomberg.smil/playlist_dvr.m3u8'  src='https://pbs.twimg.com/profile_images/1369015078889066497/PruG2LvP_400x400.jpg'  />
-         <img id='Sky News Ar'  alt='https://stream.skynewsarabia.com/hls/sna.m3u8'  src='https://pbs.twimg.com/profile_images/1604907328242962433/P_79at43_400x400.jpg'  />
+         <img id='Al-Jazeera'  alt='https://live-hls-web-aja.getaj.net/AJA/02.m3u8'  src='https://pbs.twimg.com/profile_images/981819775817957377/VVKcF_Y6_400x400.jpg'  />
+         <img id='Al-Arabiya'  alt='https://live.alarabiya.net/alarabiapublish/alarabiya.smil/alarabiya_720p_chunks.m3u8'  src='https://pbs.twimg.com/profile_images/1358715269565321217/ovwOcJkQ_400x400.jpg'  />
+         <img id='Bloomberg Arabic'  alt='https://svs.itworkscdn.net/bloomberarlive/bloomberg.smil/playlist_dvr.m3u8'  src='https://pbs.twimg.com/profile_images/1369015078889066497/PruG2LvP_400x400.jpg'  />
+         <img id='Sky news Arabic'  alt='https://stream.skynewsarabia.com/hls/sna.m3u8'  src='https://pbs.twimg.com/profile_images/1604907328242962433/P_79at43_400x400.jpg'  />
     </div>
     </div>
     </div>
