@@ -133,7 +133,7 @@ h2 {
 	color: #44aaaa;
 }
 #tech {
-	background-color: #e1e1e1;
+	background-color: #fafafa;
 	color: #FFF;
 	min-height: 500px;
 	margin: 0;
@@ -175,7 +175,7 @@ img.desaturate:hover {
 	
 }
 #examples {
-	background-color: #444;
+	background-color: #e8e8e8;
 	color: #FFF;
 	min-height: 400px;
 	margin: 0;
@@ -185,6 +185,9 @@ img.desaturate:hover {
 	margin: 30px 0 10px;
 	color: #44aaaa;
 	font-size: 2em; 
+}
+#examples h5 {
+	color: #666;
 }
 #examples img {
 	width: 70%;
