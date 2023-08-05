@@ -525,11 +525,11 @@ div#bs-example-navbar-collapse-1 {
 	cursor: pointer;
 }
 
-.moon:hover, .sun:hover  {
-    background: #4aa !important;
+.moon:hover, .sun:hover,   {
+    background: #80c5ea !important;
 }
-i:hover {
-    color: #4aa !important;
+{
+    color: #80c5ea !important;
 }
 
 
