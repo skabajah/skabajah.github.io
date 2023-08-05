@@ -28,7 +28,7 @@ h5 {
 	color: #FFF;
 	margin: 0;
 	padding: 0;
-	background-color: #44aaaa;
+	background-color: #80c5ea;
 	height: 0;
 }
 #intro {
@@ -36,7 +36,7 @@ h5 {
 	height: auto;
 	margin: 0;
 	padding: 0;
-	border-bottom: solid 10px #44aaaa;
+	border-bottom: solid 10px #80c5ea;
 	overflow: hidden;
 	background-color: #444;
 }
@@ -45,13 +45,13 @@ h5 {
 	margin-top: 10%;
 	height: 100px;
 	width: 100px;
-	background-color: #44aaaa;
+	background-color: #80c5ea;
 	border-radius: 5px;
 }
 #logo2 {
 	border-radius: 10px;
 	padding: 22px;
-	background: #4aa;
+	background: #80c5ea;
 	font-family: 'Kreon', monospace !important;
 	font-size: 36px;
 	color: white; 
@@ -130,7 +130,7 @@ h5 {
 }
 h2 {
 	margin: 60px 0 20px 0;
-	color: #44aaaa;
+	color: #80c5ea;
 }
 #tech {
 	background-color: #fafafa;
@@ -183,7 +183,7 @@ img.desaturate:hover {
 }
 #examples h4 {
 	margin: 30px 0 10px;
-	color: #44aaaa;
+	color: #80c5ea;
 	font-size: 2em; 
 }
 #examples h5 {
@@ -254,14 +254,14 @@ label {
 }
 #footer i:hover, #signature i:hover {
 	opacity: 1;
-	color: #44aaaa;
+	color: #80c5ea;
 }
 .social h4 {
 	margin: 1em 2em;;
 	color: #FFF;
 }
 .social a{
-	color: #44aaaa;
+	color: #80c5ea;
 }
 .social h6 {
 	margin: 30px 0;
@@ -345,7 +345,7 @@ a:link, a:visited{
 	width: 100%;
 }
 #closePopup:hover{
-	color: #44aaaa;
+	color: #80c5ea;
 }
 
 #popUpImg {
@@ -388,11 +388,11 @@ a#exampleLink {
 	font-size: 1.5em; 
 }
 a#exampleLink:hover {
-	color: #44aaaa;
+	color: #80c5ea;
 }
 .btn-default {
 	float: right; 
-	background-color: #44aaaa;
+	background-color: #80c5ea;
 }
 .tooltip {
 	background: rgba(68, 68, 68, 0.88);
@@ -425,7 +425,7 @@ tr {
 }
 th {
     font-weight: normal;
-    background-color: #44aaaa;
+    background-color: #80c5ea;
     color: #ffffff;
 }
 
@@ -470,7 +470,7 @@ th {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-	border-bottom: 5px solid #44aaaa;
+	border-bottom: 5px solid #80c5ea;
 }
 
 .navbar-toggle {
