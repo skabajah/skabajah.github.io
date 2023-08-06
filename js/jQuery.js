@@ -6,7 +6,7 @@
  	var t = "3000";
   console.log('t:',t);
  	//  intro 
- 	$("#intro").css("height", h);
+ 	$("#intro_old").css("height", h);
  	if (w < h) {
  		console.log("now");
  		$('.tooltip').css({
@@ -58,29 +58,29 @@
   
   
  	//  darkmode toggle 
- 	$(".sun").click(function() {
- 		$(".sun").css("display", "none");
-        $(".moon").css("display", "table");
+ 	// $(".sun").click(function() {
+ 	// 	$(".sun").css("display", "none");
+  //       $(".moon").css("display", "table");
 
-        t = "day" ; 
- 		console.log('t:',t);
- 		$('body').append('<div  class="extra"><style>#intro, #signature, #tech { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}#examples {background: #FFF;}.tooltip {background: #f5f5f5cf;}.popup {background: #dfdfdf;} a#exampleLink {color: #555;} </style></div>').hide().fadeIn(1000);
- 	});
- 	$(".moon").click(function() {
- 		t = "moon";
- 		console.log('t:',t);
- 		$(".extra").remove().fadeIn(3000);
-        $(".sun").css("display", "table");
-        $(".moon").css("display", "none");
- 	});
+  //       t = "day" ; 
+ 	// 	console.log('t:',t);
+ 	// 	$('body').append('<div  class="extra"><style>#intro, #signature, #tech { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}#examples {background: #FFF;}.tooltip {background: #f5f5f5cf;}.popup {background: #dfdfdf;} a#exampleLink {color: #555;} </style></div>').hide().fadeIn(1000);
+ 	// });
+ 	// $(".moon").click(function() {
+ 	// 	t = "moon";
+ 	// 	console.log('t:',t);
+ 	// 	$(".extra").remove().fadeIn(3000);
+  //       $(".sun").css("display", "table");
+  //       $(".moon").css("display", "none");
+ 	// });
   
   
  	//  down chevron   
- 	$("#goDown").hover(function() {
- 		$(this).addClass("bounce animated");
- 	}, function() {
- 		$(this).removeClass("bounce animated");
- 	});
+ 	// $("#goDown").hover(function() {
+ 	// 	$(this).addClass("bounce animated");
+ 	// }, function() {
+ 	// 	$(this).removeClass("bounce animated");
+ 	// });
   
   
   
@@ -99,6 +99,8 @@
  			$("#showup").hide("slow");
  		}
  	});
+
+
  	// resize  functions 
  	$(window).resize(function() {
  		var h = $(window).innerHeight();
@@ -143,7 +145,13 @@
  		if (i == 4) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/CAAdjustedGrossIncomeAGI/Dashboard' // AGI
  		}
+
  		$('#exampleLink').attr('href', a);
+    
+    if (i="none" ) {
+      $('#exampleLink').remove(); 
+    }
+
  	});
  	// close examples 
  	$('#closePopup').click(function() {
