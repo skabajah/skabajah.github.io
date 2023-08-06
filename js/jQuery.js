@@ -105,7 +105,7 @@
  	$(window).resize(function() {
  		var h = $(window).innerHeight();
  		var w = $(window).innerWidth();
- 		$("#intro").css("height", h);
+ 		$("#intro_old").css("height", h);
  		if (w < h) {
  			$('.tooltip').css({
  				"width": "100%",
