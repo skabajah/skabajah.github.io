@@ -137,15 +137,18 @@
     
     if (i=="deardata" ) {
       $('#exampleLink').remove(); 
-      $('#popUpImg').attr('src', 'media/deardata2.JPG');
+      $('#popUpImg').attr('src', 'media/deardata.gif');
     }
 
  		if (i == 1) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
+      $('#popUpImg').attr('src', 'media/lego.gif');
 
  		}
  		if (i == 2) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
+      $('#popUpImg').attr('src', 'media/covid.gif');
+
  		}
  		if (i == 3) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/SingleFamilyRent/Dashboard' //Rent
