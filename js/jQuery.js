@@ -132,9 +132,17 @@
  	$('#examples img').click(function() {
  		$('#showup').css('display', 'block');
  		$('#popUpImg').attr('src', this.src);
+
  		var i = this.id;
+    
+    if (i=="deardata" ) {
+      $('#exampleLink').remove(); 
+      $('#popUpImg').attr('src', 'media/p2.png');
+    }
+
  		if (i == 1) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
+
  		}
  		if (i == 2) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
@@ -145,18 +153,18 @@
  		if (i == 4) {
  			var a = 'https://public.tableau.com/app/profile/skabajah/viz/CAAdjustedGrossIncomeAGI/Dashboard' // AGI
  		}
+   
+    $('#exampleLink').attr('href', a);
 
- 		$('#exampleLink').attr('href', a);
     
-    if (i="none" ) {
-      $('#exampleLink').remove(); 
-    }
 
  	});
+
  	// close examples 
  	$('#closePopup').click(function() {
  		$('#showup').css('display', 'none');
  	});
+
  	// go back up 
  	$(function() {
  		$('a[href*=#]:not([href=#])').click(function() {
