@@ -137,7 +137,7 @@
     
     if (i=="deardata" ) {
       $('#exampleLink').remove(); 
-      $('#popUpImg').attr('src', 'media/deardata.jpg');
+      $('#popUpImg').attr('src', 'media/deardata.JPG');
     }
 
  		if (i == 1) {
