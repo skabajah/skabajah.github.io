@@ -152,6 +152,8 @@
     if (i=="deardata" ) {
       // $('#exampleLink').remove(); 
       $('#popUpImg').attr('src', 'media/deardata.gif');
+      // $('#DearDataCarousel').toggleClass('hidden', 'popup');
+
     }
 
     if (i=="twonumbers" ) {
