@@ -465,4 +465,7 @@ div#bs-example-navbar-collapse-1 {
 		top: 445px;
 		left: 30px;
 	}
+	div#bs-example-navbar-collapse-1 {
+		min-height: 100% !important;
+	}
 }
