@@ -331,6 +331,7 @@ a#exampleLink:hover {
 }
 .tooltip {
 	background: var(--coffee);
+	opacity: .95;
 	color: #fff;
 	padding: 50px 20px;
 	z-index: 900;
@@ -436,6 +437,7 @@ div#bs-example-navbar-collapse-1 {
     min-height: 50px;
 /*    background: #555555 ;*/
     background: var(--coffee) ;
+    opacity: .95;
 }
 .navbar-header {
 	float: right;
