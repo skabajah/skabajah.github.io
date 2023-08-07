@@ -146,33 +146,38 @@
  	// pop examples 
  	$('#examples img').click(function() {
  		$('#showup').css('display', 'block');
- 		$('#popUpImg').attr('src', this.src);
 
  		var i = this.id;
     
     if (i=="deardata" ) {
-      $('#exampleLink').remove(); 
+      // $('#exampleLink').remove(); 
       $('#popUpImg').attr('src', 'media/deardata.gif');
     }
 
+    if (i=="twonumbers" ) {
+      $('#popUpImg').attr('src', this.src);
+    }
+
  		if (i == 1) {
- 			var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
+ 			// var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
       $('#popUpImg').attr('src', 'media/lego.gif');
 
  		}
  		if (i == 2) {
- 			var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
+ 			// var a = 'https://public.tableau.com/app/profile/skabajah/viz/testCOVID-19/COVID19' //Covid
       $('#popUpImg').attr('src', 'media/covid.gif');
 
  		}
- 		if (i == 3) {
- 			var a = 'https://public.tableau.com/app/profile/skabajah/viz/SingleFamilyRent/Dashboard' //Rent
- 		}
- 		if (i == 4) {
- 			var a = 'https://public.tableau.com/app/profile/skabajah/viz/CAAdjustedGrossIncomeAGI/Dashboard' // AGI
- 		}
+ 		// if (i == 3) {
+ 		// 	var a = 'https://public.tableau.com/app/profile/skabajah/viz/SingleFamilyRent/Dashboard' //Rent
+    //       $('#popUpImg').attr('src', this.src);
+
+ 		// }
+ 		// if (i == 4) {
+ 		// 	var a = 'https://public.tableau.com/app/profile/skabajah/viz/CAAdjustedGrossIncomeAGI/Dashboard' // AGI
+ 		// }
    
-    $('#exampleLink').attr('href', a);
+    // $('#exampleLink').attr('href', a);
 
  	});
 
