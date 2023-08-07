@@ -275,14 +275,14 @@ a:link, a:visited{
 	display: none;
 }
 #closePopup {
-	font-size: 3em;
+	font-size: 2em;
 	color: #fff;
 	float: right;
 	text-align: right;
 	padding: .5em;
 	z-index: 10;
 	cursor: pointer;
-	width: 100%;
+	width: 2em;
 }
 /*#closePopup:hover{
 	color: var(--celestial-blue);
@@ -341,7 +341,6 @@ a#exampleLink:hover {
 	width: 25%;
 	height: 100%;
 	display: none;
-	opacity: 1;
 	font-size: 1em;
 	text-align: left;
 	font-size: 1.5em; 
