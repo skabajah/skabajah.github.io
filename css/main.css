@@ -73,8 +73,7 @@
 
  #logo2 { 
      padding: 22px;
-     background: var(--coffee);
-     /* font-family: 'Josefin Sans', monospace !important; */ 
+     background: var(--coffee); 
      font-size: 36px;
      color: white;
      margin-top: 4em;
