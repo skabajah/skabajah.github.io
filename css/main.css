@@ -4,7 +4,7 @@
  font-family: 'Josefin Sans', sans-serif;
  font-family: 'Ubuntu Mono', monospace;
  */
- body,h1,h2,h3,h4,h5,h6 {
+ body,h1,h2,h3,h4,h5,h6,span {
      border: 0;
      margin: 0;
      padding: 0;
@@ -74,7 +74,7 @@
  #logo2 { 
      padding: 22px;
      background: var(--coffee);
-     font-family: 'Josefin Sans', monospace !important;
+     /* font-family: 'Josefin Sans', monospace !important; */ 
      font-size: 36px;
      color: white;
      margin-top: 4em;
