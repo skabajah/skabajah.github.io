@@ -44,6 +44,7 @@
      margin: 30px 0;
 }
  #signature h6 {
+     margin-top: revert-layer;
      margin-bottom: 3em;
      color: #e6e6e6;
 }
