@@ -38,7 +38,7 @@
 }
  h5 {
      padding: 20px 0;
-     color:var(--coffee);
+     color:var(--battleship-gray);
 }
  .social h6 {
      margin: 30px 0;
@@ -237,7 +237,7 @@
 }
 
  #signature {
-     background-color: var(--french-gray);
+     background-color: var(--coffee);
      border: none;
 }
 
