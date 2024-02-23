@@ -111,8 +111,7 @@
 
 /* pop up */ 
 
- #popUpImg {
-/*     position: fixed;*/
+ #popUpImg { 
      left: 0;
      top:0;
      z-index: -1;
@@ -123,8 +122,7 @@
      background: var(--examples);
      opacity: .95;
      color: var(--battleship-gray);
-     padding: 20px;
-/*     z-index: 10;*/
+     padding: 20px; 
      position: fixed;
      bottom: 2.8em;
      left: 0 ;
@@ -134,8 +132,7 @@
      text-align: left;
      font-size: 1.5em;
 }
-.popup {
-/*     background-color: var(--battleship-gray);*/
+.popup { 
      background-color: white;
      width: 75%;
      height: 100%;
@@ -162,8 +159,7 @@
      border-radius: 4px;
      background: var(--cadet-gray);
      padding: 9px 10px;
-     margin: 8px 15px 15px 0;
-/*     z-index: 20;*/
+     margin: 8px 15px 15px 0; 
 }
 
 
@@ -223,6 +219,8 @@
      padding: 5%;
 }
 
+
+
  #footer i, #signature i {
      color: #FFF;
      font-size: 50px;
@@ -243,6 +241,12 @@
      border: 0;
      background-color: transparent;
 }
+
+#signature i {
+    margin: 0;
+    padding-top: 70px;
+}
+
 
  #signature {
      background-color: var(--coffee);
