@@ -36,6 +36,11 @@
      position: relative;
      top: 115px;
 }
+
+#examples h4 { 
+    position: unset;
+}
+
  h5 {
      padding: 20px 0;
      color:var(--battleship-gray);
