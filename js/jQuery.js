@@ -51,32 +51,7 @@
 
 
 
-  
-  
- 	//  darkmode toggle 
- 	// $(".sun").click(function() {
- 	// 	$(".sun").css("display", "none");
-  //       $(".moon").css("display", "table");
-
-  //       t = "day" ; 
- 	// 	console.log('t:',t);
- 	// 	$('body').append('<div  class="extra"><style>#intro, #signature, #tech { background-color: #eee;} h1,h6,h5,label,#description,i,.navbar-inverse .navbar-nav>li>a {color: #333 !important;} #footer, div#bs-example-navbar-collapse-1 { background-color: #fefefe; }button.navbar-toggle.slow.collapsed { background: #b3b3b3;}#navX {color: #FFF;}#examples {background: #FFF;}.tooltip {background: #f5f5f5cf;}.popup {background: #dfdfdf;} a#exampleLink {color: #555;} </style></div>').hide().fadeIn(1000);
- 	// });
- 	// $(".moon").click(function() {
- 	// 	t = "moon";
- 	// 	console.log('t:',t);
- 	// 	$(".extra").remove().fadeIn(3000);
-  //       $(".sun").css("display", "table");
-  //       $(".moon").css("display", "none");
- 	// });
-  
-  
- 	//  down chevron   
- 	// $("#goDown").hover(function() {
- 	// 	$(this).addClass("bounce animated");
- 	// }, function() {
- 	// 	$(this).removeClass("bounce animated");
- 	// });
+   
   
 
   // NAVIGATION 
@@ -115,32 +90,7 @@
  	});
 
 
- 	// resize  functions 
- 	// $(window).resize(function() {
- 	// 	var h = $(window).innerHeight();
- 	// 	var w = $(window).innerWidth();
- 	// 	$("#intro_old").css("height", h);
- 	// 	if (w < h) {
- 	// 		$('.tooltip').css({
- 	// 			"width": "100%",
- 	// 			"height": "30%"
- 	// 		});
- 	// 		$('.popup').css({
- 	// 			"width": "100%"
- 	// 		});
- 	// 	}
- 	// 	if (w > h) {
- 	// 		console.log("back");
- 	// 		$('.tooltip').css({
- 	// 			"width": "25%",
- 	// 			"height": "100%"
- 	// 		});
- 	// 		$('.popup').css({
- 	// 			"width": "75%"
- 	// 		});
- 	// 	}
- 	// });
-  
+ 	 
   // EXAMPLES 
 
  	// pop examples 
@@ -158,7 +108,13 @@
 
     if (i=="twonumbers" ) {
       $('#popUpImg').attr('src', this.src);
+    } 
+   
+   if (i=="Zipcodes" ) {
+      $('#popUpImg').attr('src', this.src);
     }
+
+   
 
  		if (i == 1) {
  			// var a = 'https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020' //Elections
