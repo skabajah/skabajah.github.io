@@ -110,7 +110,7 @@
       $('#popUpImg').attr('src', this.src);
     } 
    
-   if (i=="Zipcodes" ) {
+   if (i=="zipcodes" ) {
       $('#popUpImg').attr('src', this.src);
     }
 
