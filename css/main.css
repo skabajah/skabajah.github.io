@@ -279,10 +279,12 @@
      transition: all 0.4s ease-in-out;
 }
 
- .row {
-     text-align: center;
-     margin-right: 0;
-     margin-left: 0;
+  
+.row {
+    text-align: center;
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+    width: 90%;
 }
 
 
@@ -395,11 +397,11 @@
 }
 
  .navbar-nav {
-     float: right;
+     float: left;
 }
  .navbar-inverse {
      position: fixed;
-     width: 100%;
+     width: 90%;
      display: block;
      background-color: transparent;
      border: none;
@@ -432,16 +434,15 @@
      border: none;
 }
  div#bs-example-navbar-collapse-1 {
-     position: fixed;
-     width: 100%;
-     top: 0;
-     z-index: -1;
-     min-height: 50px;
-    /* background: #555555 ;
-    */
-     background: var(--coffee) ;
-     background: #a2a2a2   ;
-     opacity: .95;
+    /*background: var(--coffee) ;*/
+    position: absolute;
+    width: 100%;
+    top: 2px;
+    z-index: -1;
+    background: #a2a2a2;
+    opacity: .93;
+    height: 215px;
+    border-radius: 10px;
 }
  .navbar-header {
      float: right;
