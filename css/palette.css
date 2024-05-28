@@ -2,20 +2,25 @@
 :root {
 
 	--french-gray:
-	#AAA5AC;
+	/*#AAA5AC;*/
+		#eee;
 
 	--battleship-gray:
-	#72867C;
+	/*#72867C;*/
+		#111;
 
 	--white:
-	#FCFBFA;
+	/*#FCFBFA;*/
+	#fff;
 
 	--pale-purple:
-	#E8D2E0;
+	/*#E8D2E0;*/
+	#eee; 
 
 
 	--coffee:
-	#756064;
+	/*#756064;*/
+	#88AEBD;
 
 
 	--cadet-gray:
@@ -23,13 +28,16 @@
 
 
 	--celestial-blue:
-	#5292C0;
+	/*#5292C0;*/
+	#88AEBD;
 
 	--tea-rose:
-	#c1cfc1;
+	/*#c1cfc1;*/
+	#eee; 
 	
 	--examples:
-	#ece9e6; 
+	/*#ece9e6; */
+	#fff; 
 
 }
 
