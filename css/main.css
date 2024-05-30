@@ -450,6 +450,7 @@
      background: var(--celestial-blue) !important;
      font-size: 1 em;
      border: solid white 1px !important;
+     color: white; 
 }
  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
      border: none;
