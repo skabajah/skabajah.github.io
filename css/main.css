@@ -448,9 +448,11 @@
 }
  button {
      background: var(--celestial-blue) !important;
-     font-size: 1 em;
+     font-size: 20px;
      border: solid white 1px !important;
-     color: white; 
+     color: white;
+     width: 50px;
+     height: 50px ;
 }
  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
      border: none;
