@@ -186,7 +186,7 @@
 /* TECHNOLOGIES */
  #tech {
      background-color: var(--white);
-     min-height: 500px;
+     min-height: 350px;
      margin: 0;
      padding: 0;
      border-bottom: solid 10px var(--cadet-gray);
