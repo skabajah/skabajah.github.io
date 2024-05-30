@@ -128,7 +128,7 @@
 }
 
  .tooltip {
-     background: var(--examples);
+     background: #f0f0f0;
      opacity: .95;
      color: var(--battleship-gray);
      padding: 20px; 
