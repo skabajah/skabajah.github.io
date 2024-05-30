@@ -229,7 +229,7 @@
 }
 
  .social {
-     padding: 5%;
+     padding-bottom: 10px;
 }
 
 
@@ -377,13 +377,21 @@
 }
  .footerpng{
      width: 50px;
-     margin: 5%;
+     margin: 20px 7% 30px;
+     filter: grayscale(.8);
+     border: solid 0.5px;
+     border-radius: 100%;
+}
+.footerpng:hover {
+     filter: grayscale(0.2);
+
 }
  .new_container,.col-md-12.column {
      padding-right: 0;
      padding-left: 0;
      border-radius: 0;
      width: 100%;
+}
 }
 
 
