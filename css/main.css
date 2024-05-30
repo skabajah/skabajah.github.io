@@ -112,7 +112,10 @@
      width: 70%;
      margin-bottom: 50px;
      transition: .7s ease all;
+     border: solid 1px rgb(210, 210, 210);
+     padding: 10px;
 }
+	 
  #examples img:hover {
      cursor: zoom-in;
 }
