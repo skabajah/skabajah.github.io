@@ -218,7 +218,13 @@
      height: auto;
      margin: 0;
      padding: 0;
+     padding-bottom: 50px;
 }
+#footer h4 { 
+    font-size: 0.95em !important;
+    top:  10px; 
+
+ }
 
  div#FormDiv {
      padding: 0 5% 5% 5%;
@@ -376,14 +382,17 @@
      border: 0;
 }
  .footerpng{
-     width: 50px;
-     margin: 20px 7% 30px;
-     filter: grayscale(.8);
-     border: solid 0.5px;
-     border-radius: 100%;
+    width: 50px;
+    /*margin: 20px 7% 30px;*/
+    filter: brightness(0.5);
+    border: solid 0.5px gray;
+    border-radius: 0;
+    padding: 5px;
 }
 .footerpng:hover {
-     filter: grayscale(0.2);
+     filter: invert(0.2);
+     background: #dddddd;
+
 
 }
  .new_container,.col-md-12.column {
