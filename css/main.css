@@ -193,7 +193,7 @@
 }
  #tech img {
      height: 65px;
-     width: 120px;
+     /* width: 120px; */
      transition: 1s ease all;
      padding: 10px;
 }
