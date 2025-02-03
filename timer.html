@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOP Stopwatch</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            transition: background-color 0.5s;
+        }
+        #stopwatch {
+            font-size: 6em;
+            margin-top: 20%;
+            transition: color 0.5s;
+        }
+        button {
+            font-size: 1.2rem;
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .flash {
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0% {
+                color: white;
+            }
+            50% {
+                color: black;
+            }
+            100% {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>AOP Stopwatch</h1>
+    <div id="stopwatch">0:00</div>
+    <button onclick="toggleTimer()">Play</button>
+
+    <script>
+        let timer;
+        let startTime;
+        let elapsedTime = 0;
+        let running = false;
+
+        // Define thresholds in seconds
+        const GREEN_THRESHOLD  = 60 * 1;    // 1 min
+        const YELLOW_THRESHOLD = 60 * 2;    // 2 mins
+        const RED_THRESHOLD    = 60 * 2.75; // 2:45
+        const BLACK_THRESHOLD  = 60 * 3;    // 3 mins 
+
+        // Define colors as hex values
+        let green =     "#009E60";
+        let yellow =    "#E4D00A";
+        let red =       "#FF5733";
+        let black =     "#000000"; 
+
+        function toggleTimer() {
+            const playPauseButton = document.querySelector("button");
+            
+            if (running) {
+                pauseTimer();
+                playPauseButton.textContent = "Play";  // Change button text to "Play"
+            } else {
+                startTimer();
+                playPauseButton.textContent = "Pause";  // Change button text to "Pause"
+            }
+        }
+
+        function startTimer() {
+            if (!running) {
+                startTime = Date.now() - elapsedTime;
+                timer = setInterval(updateTimer, 1000); // Update every 1000ms (1 second)
+                running = true;
+            }
+        }
+
+        function pauseTimer() {
+            if (running) {
+                clearInterval(timer);
+                elapsedTime = Date.now() - startTime;
+                running = false;
+            }
+        }
+
+        function updateTimer() {
+            elapsedTime = Date.now() - startTime;
+            let totalSeconds = Math.floor(elapsedTime / 1000); // Convert to seconds
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
+
+            // Format the display with leading zeros
+            document.getElementById('stopwatch').textContent = 
+                `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            // Change background color based on elapsed time and thresholds
+            if (totalSeconds >= BLACK_THRESHOLD) {
+                document.body.style.backgroundColor = black;
+                document.getElementById('stopwatch').classList.add("flash");
+                document.querySelector('h1').style.color = "white";  // Set header color to white
+            } else if (totalSeconds >= RED_THRESHOLD) {
+                document.body.style.backgroundColor = red;
+                document.getElementById('stopwatch').classList.remove("flash");
+                document.querySelector('h1').style.color = "";  // Reset header color
+            } else if (totalSeconds >= YELLOW_THRESHOLD) {
+                document.body.style.backgroundColor = yellow;
+                document.getElementById('stopwatch').classList.remove("flash");
+                document.querySelector('h1').style.color = "";  // Reset header color
+            } else if (totalSeconds >= GREEN_THRESHOLD) {
+                document.body.style.backgroundColor = green;
+                document.getElementById('stopwatch').classList.remove("flash");
+                document.querySelector('h1').style.color = "";  // Reset header color
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.getElementById('stopwatch').classList.remove("flash");
+                document.querySelector('h1').style.color = "";  // Reset header color
+            }
+        }
+    </script>
+</body>
+</html>
