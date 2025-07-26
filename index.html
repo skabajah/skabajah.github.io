@@ -1,238 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
+  <meta charset="utf-8" />
+  <title>skabajah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Big Data Analytics, SQL, Snowflake, Tableau, Web Development; JavaScript, jQuery, HTML, CSS & More!" />
+  <meta name="author" content="skabajah" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
+  <link rel="stylesheet" href="css/g2.css">
 
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-TP21R0VPV9');
-		</script>
-			
-			
-		<meta charset="utf-8">
-		<title>skabajah</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" content="Big Data Analytics, SQL, Snowflake, Tableau, Web Developement; JavaScript, jQuery, HTML, CSS & More!">
-		<meta name="author" content="skabajah">
+</head>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://use.fontawesome.com/82a69cf835.js"></script>
+<body>
+  <nav>
+    <button class="hamburger" aria-label="Toggle navigation menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="nav-links"> 
+      <a href="#intro" class="intro">intro</a>
+      <a href="#examples" class="examples">showcase</a>
+      <a href="#tech" class="tech">technologies</a>
+      <a href="#footer" class="footer">contacts</a>
+    </div>
+  </nav>
+ 
 
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jQuery.js"></script>
-		<script type="text/javascript" src="js/raphael-min.js"></script>
-		<script type="text/javascript" src="js/waterfall.js"></script>
+ <!-- SPLIT --> 
+
+  <section id="intro">
+    <div id="logo_div"><span id="logo2">SK</span></div>
+    <div id="intro_text">
+      <h1>Shadi Kabajah</h1>
+      <p id="description">
+This portfolio offers a glimpse into some of the projects I can build. For now, you’ll find examples of AI extensions, data visualizations, and demos using Tableau and SQL — but there’s definitely more to the story.
+<br><br>
+Feel free to reach out via email—my contact info is below—or connect with me on LinkedIn. I’d love to hear from you!
+      </p>
+    </div>
+  </section>
 
 
-		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Kreon|Ubuntu+Mono" rel="stylesheet">
 
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+<!-- SPLIT --> 
+
+<section id="examples">
+  <h2>showcase</h2>
+  <h5>Explore some of my work, grouped by theme.</h5>
+
+  <!-- AI | Chrome Extensions -->
+  <div class="group-block" data-group-id="ai-extensions">
+    <h3 class="group-title">AI | Google Gemini</h3>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/gemini.png" alt="Gemini on the Side">
+      </div>
+      <div class="project-info">
+        <h4>Gemini - Chrome Extension</h4>
+        <p>This custom Chrome extension uses Gemini’s AI and Google Apps Script to detect the content type of the current page—whether it’s a news article, job description, or other—and generates tailored summaries. For news articles, it creates bullet-point highlights including publisher info; for job descriptions, it summarizes key requirements. This intelligent context-aware summarization helps users quickly grasp essential information without leaving the browser.</p>
+        <a href="media/gemini.png" target="_blank">View Larger</a>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/gmailaddon.png" alt="Gemini Gmail Add-on">
+      </div>
+      <div class="project-info">
+        <h4>Gemini - Gmail Add-on</h4>
+        <p>I developed a Gmail sidebar add-on powered by Gemini’s AI that scans incoming emails to identify tasks specifically assigned to me. It then extracts and presents these tasks as concise bullet-point summaries, allowing me to quickly understand which emails require my attention and which can be deferred. This streamlined approach improves inbox management by helping me prioritize actionable items and stay organized.</p>
+        <a href="media/gmailaddon.png" target="_blank">View Larger</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Tableau | Visualizations -->
+  <div class="group-block" data-group-id="tableau-viz">
+    <h3 class="group-title">Data Visualizations | Tableau</h3>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/1.png" alt="Elections LEGO">
+      </div>
+      <div class="project-info">
+        <h4>Elections LEGO</h4>
+        <p>This visualization uses LEGO bricks and dots to represent U.S. presidential elections from 2012, 2016, and 2020. Each dot corresponds to an electoral vote, arranged by state and year, with color coding for party affiliation. The stacked LEGO pieces create a tactile, intuitive way to compare electoral outcomes across three election cycles, highlighting shifts in voter support and the evolving political landscape over time. 
+      </p>
+        <a href="https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020" target="_blank">View on Tableau</a>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/California2018.png" alt="Zip Codes Periodic Table">
+      </div>
+      <div class="project-info">
+        <h4>California Gubernatorial Election, 2018</h4>
+        <p>This Tableau Sankey chart visualizes how California counties voted in the 2018 gubernatorial election. Each flow represents the shift in voter support from previous trends to the final outcome, with band width showing relative county size. By focusing on movement rather than geography, the viz reveals regional voting patterns and highlights where shifts in party support occurred across the state.</p>
+        <a href="https://public.tableau.com/app/profile/skabajah/viz/CaliforniaGubernatorialElection2018/California2018" target="_blank">View on Tableau</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Handcrafted | Data Art -->
+  <div class="group-block" data-group-id="handcrafted-art">
+    <h3 class="group-title">Data Visualizations | Freehand</h3>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/p1.png" alt="Dear Data">
+      </div>
+      <div class="project-info">
+        <h4>Dear Data</h4>
+        <p>Inspired by “Dear Data,” I created a handcrafted project to track and visualize my experience with gout. Over several weeks, I manually logged meals, hydration, medication, pain levels, and sleep — translating each into a visual language of symbols and color. The result was a series of postcards that revealed patterns and correlations I wouldn’t have seen in a traditional dashboard, turning personal health data into a tool for reflection and insight.</p>
+        <a href="media/deardata_full.JPG" target="_blank">View Larger</a>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/TwoNumbers.png" alt="Two Numbers">
+      </div>
+      <div class="project-info">
+        <h4>Two Numbers</h4>
+        <p>
+        This project explores how far creativity can go with strict constraints. I challenged myself to create six entirely different visualizations using only two numbers: 37 and 75. Through manual sketches, playful layouts, and minimal tools, I reimagined their relationship as ratios, distances, intersections, and contrasts. What began as a curiosity exercise turned into a meditation on structure, meaning, and the beauty of limitations in design.
+        </p>
+        <a href="media/TwoNumbers.png" target="_blank">View Larger</a>
+      </div>
+    </div>
 
 
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/waterfall.css">
+     <!-- Analytics Systems | Automation -->
+  <div class="group-block" data-group-id="analytics-automation">
+    <h3 class="group-title">SQL</h3>
 
-		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
-		<link href="css/palette.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
+    
 
-		<script type="text/javascript" src="js/scripts.js"></script>
+    <div class="project-row">
+      <div class="project-img">
+        <img src="media/cityfinder.png" alt="City Finder">
+      </div>
+      <div class="project-info">
+        <h4>ZIP Code Lookup Tool</h4>
+        <p>Built a custom PHP web app that lets users input one or multiple U.S. ZIP codes and instantly query a MySQL database for city, state, and location type. Designed the front end using Bootstrap for responsive layout and clean UX. Deployed on a free PHP hosting service with full backend integration. Data sourced from data.gov.</p>
+        <a href="media/sql.gif" target="_blank">View Demo</a>
+      </div>
+    </div>
+  </div>
 
-		<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			  ga('create', 'UA-57165344-1', 'auto');
-			  ga('send', 'pageview');
-		</script>
 
-		  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		  <!--[if lt IE 9]>
-		    <script src="js/html5shiv.js"></script>
-		  <![endif]-->
-	</head>
+  </div>
+</section>
 
-	<body onLoad="start()">
-		
-		<!-- New Section -  nav -->
-		<div class="new_container">
-			<div class="row clearfix" id="header">
-				<div class="col-md-12 column">
-				<nav class="navbar navbar-default navbar-inverse" role="navigation">
-					<div class="navbar-header">
-						 <button type="button" class="navbar-toggle slow" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								 <i id="navX" class="fa fa-bars"></i>
-						</button>
-					</div>
-						
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
-						<ul class="nav navbar-nav">
-							<li>
-								<a href="#intro">home</a>
-							</li>
 
-							<li>
-								<a href="#tech">technologies</a>
-							</li>
 
-							<li>
-								<a href="#examples">showcase</a>
-							</li>
-						
-							<li>
-								<a href="#footer">contacts</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
 
-		<!-- New Section - intro  -->
-		<div class="row" id="intro">
-			<div class="col-md-12 column">
-				<div class="fadeInDown animated">
-					<div id="logo_div">
-						<span id="logo2">SK</span>    
-					</div>
-				</div>
-				<h1>S. Kabajah</h1>
-				<div id="description">
-				    Welcome to my portfolio! <br>
-				    <br>Explore my expertise in Big Data Analytics and Web Development, <br>showcasing a variety of technologies and projects.
-				</div> 
-			</div> 
-		</div>
+<!-- SPLIT --> 
 
-		<div id="showup" class="popup zoomIn animated"><i id='closePopup' class="fa fa-times"></i><img alt="example" id="popUpImg" src="#"></div>
 
-	 	<!-- New Section - tech  -->
-	    <div class="row clearfix" id="tech">
-	        <div class="col-md-12 col-sm-12 column">
-	            <h2>technologies</h2>
-	            <h5>Some of the tools and technologies I use.</h5>
 
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>Tableau/BI</h4>
-	                    <img alt="tableau logo" class="desaturate" src="img/tableau.svg">
-	            </div>
-	            
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>SQL/Snowflake</h4>
-	                    <img alt="Snowflake logo" class="desaturate" src="img/snow.svg">
-	            </div>
+  <section id="tech">
+    <h2>technologies</h2>
+    <h5>Some of the tools and technologies I use:</h5>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <h4>Tableau/BI</h4>
+        <img alt="tableau logo" src="img/tableau.svg" />
+      </div>
+      <div class="tech-item">
+        <h4>SQL/Snowflake</h4>
+        <img alt="Snowflake logo" src="img/snow.svg" />
+      </div>
+      <div class="tech-item">
+        <h4>AWS/S3</h4>
+        <img alt="AWS S3 logo" src="img/s3.svg" />
+      </div>
+      <div class="tech-item">
+        <h4>JavaScript</h4>
+        <img alt="javascript logo" src="img/js.svg" />
+      </div>
+      <div class="tech-item">
+        <h4>HTML/HTML5</h4>
+        <img alt="html5 logo" src="img/html5.svg" />
+      </div>
+      <div class="tech-item">
+        <h4>CSS/CSS3</h4>
+        <img alt="css3 logo" src="img/css3.svg" />
+      </div>
+    </div>
+  </section>
 
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>AWS/S3</h4>
-	                    <img alt="AWS S3 logo" class="desaturate" src="img/s3.svg">
-	            </div>
-	            
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>JavaScript</h4>
-	                    <img alt="javascript logo" class="desaturate" src="img/js.svg">
-	            </div>
 
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>HTML/HTML5</h4>
-	                    <img alt="html5 logo" class="desaturate" src="img/html5.svg">
-	            </div>
 
-	            <div class="col-md-2 col-sm-4  col-xs-4 column tech-col">
-	                <h4>CSS/CSS3</h4>
-	                    <img alt="css3 logo" class="desaturate" src="img/css3.svg">
-	            </div> 
-	        </div>
-	    </div>
-	 
-		<!-- New Section - showcase  -->
-		<div class="row clearfix" id="examples">
-			<h2>showcase</h2>
-				<h5>Explore some of my work.
-				<br>Click on image to get more info: </h5> 
-	 		 
-	 		 	<div class="col-md-6 column example-col">
-					<h3>Dear Data</h3>	 			 
-						<img alt="Dear Data" id="deardata" class="desaturate" src="media/p1.png">
-						<h6 class="tooltip">With boundless curiosity and colored pens, I tracked my food intake, uric acid levels, and pain thresholds. 
-							My data-driven journey unveiled an enigmatic correlation between my dietary choices and gout. Inspired by the Dear Data Project.</h6>
-				</div>
+<!-- SPLIT --> 
 
-				<div class="col-md-6 column example-col">
-					<h3>Two Numbers</h3>
-		 			 	<img alt="TWO NUMBERS" id="twonumbers" class="desaturate" src="media/TwoNumbers.png">
-						<h6 class="tooltip">
-							Embarking on a whimsical journey, I crafted six enchanting visual tales, 
-							each weaving the numbers 37 and 75 into vibrant, imaginative worlds of their own.</h6>
-				</div>
-			
-				<div class="col-md-6 column example-col">
-					<h3>Elections Lego</h3>
-						<img alt="2020 Elections" id="1" class="desaturate" src="media/1.png">
-						<h6 class="tooltip">
-							A custom LEGO map of the United States intricately showcasing the results of the 2020, 2016, 
-							and 2012 presidential elections. 
-							Explore further to uncover insightful analysis, shedding light on the pivotal swing states 
-							that shaped these historic political events.</h6>
-				</div>
-				
-				<div class="col-md-6 column example-col">
-					<h3>ZipCodes</h3>
-						<img alt="zipcodes" id="zipcodes" class="desaturate" src="media/zipcodes.png">
-						<h6 class="tooltip">
-							The "Periodic Table of Zip Codes" visualization on Tableau Public creatively organizes zip code data into a structured grid, 
-							resembling the periodic table of elements.</h6>
-				</div>
-		</div> 
 
-		<!-- New Section - contact  -->
-		<div class="row clearfix" id="footer">
-			<div class="col-md-12 column">
-				<h2>contacts</h2>
-					<h5>Whether you have a question, a project in mind, or just want to connect, I’d love to hear from you!</h5>
-	 
-					<div class="social">
-						<h5>Connect with me via: </h5>
 
-			            <div class="col-md-4  col-sm-4 col-xs-4 ">
-							<a href="mailto:skabajah@icloud.com" target="_blank">
-								<img alt="email" class="desaturate footerpng" src="img/email.png"></a>
-							<h4>Email</h4>
-						</div>
+  <section id="footer">
+    <h2>contacts</h2>
+    <h5>Whether you have a question, a project in mind, or just want to connect, I’d love to hear from you!</h5>
+    <div class="social">
+      <div>
+        <a href="mailto:skabajah@icloud.com" target="_blank" rel="noopener noreferrer">
+          <img alt="email" class="footerpng" src="img/email.png" />
+        </a>
+        <h4>Email</h4>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/skabajah" target="_blank" rel="noopener noreferrer">
+          <img alt="linkedin" class="footerpng" src="img/linkedin.png" />
+        </a>
+        <h4>LinkedIn</h4>
+      </div>
+      <div>
+        <a href="https://public.tableau.com/app/profile/skabajah" target="_blank" rel="noopener noreferrer">
+          <img alt="tableau" class="footerpng" src="img/t.png" />
+        </a>
+        <h4>Tableau Public</h4>
+      </div>
+    </div>
+  </section>
 
-						<div class="col-md-4  col-sm-4 col-xs-4 ">
-							<a href="https://www.linkedin.com/in/skabajah" target="_blank">
-								<img alt="linkedin" class="desaturate footerpng" src="img/linkedin.png"></a>
-							<h4>LinkedIn</h4>
-						</div>
-						
-						<div class="col-md-4  col-sm-4 col-xs-4 ">
-							<a href="https://public.tableau.com/app/profile/skabajah" target="_blank">
-								<img alt="tableau" class="desaturate footerpng" src="img/t.png"></a>
-							<h4>Tableau Public</h4>
- 						</div>
+<!-- SPLIT --> 
 
-		 			</div>
-	 		</div>
-	 	</div>
-	 				
-		<!-- New Section - footer  -->
-	 	<div class="row clearfix" id="signature">
-	 		<div class="col-md-12 column">
-	 			<a href="#intro"><i id="goUp" class="fa fa-chevron-circle-up"></i></a>
-	 			<h6>Copyright &copy; 2014 - 2025 S. Kabajah
-	 			<br>All rights reserved
-	 			<br>All trademarks, logos, and brand names are the property of their respective owners.</h6>
-	    	</div>
-	    </div>
 
-	  
-		<link href="css/main.css" rel="stylesheet">
-	</body>
+  <section id="signature">
+    <a href="#intro" title="Back to top" aria-label="Back to top">
+      <svg id="goUp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#0a9396" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="16 12 12 8 8 12" />
+        <line x1="12" y1="16" x2="12" y2="8" />
+      </svg>
+    </a>
+    <h6>
+      Copyright &copy; 2014 - 2025 S. Kabajah<br />
+      All rights reserved<br />
+      All trademarks, logos, and brand names are the property of their respective owners.
+    </h6>
+  </section>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/g2.js"></script>
+</body>
 </html>

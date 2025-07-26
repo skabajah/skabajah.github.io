@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+
+
+ 
+/* Add this at the very top of your g2.css file */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+:root {
+  /* Colors */
+  --blue: #4285F4;
+  --red: #DB4437;
+  --yellow: #F4B400;
+  --green: #0F9D58;
+  --purple: #8854C2;
+
+  /* Theme Colors */
+  --color-primary-brand: var(--blue); /* Main blue for links, buttons */
+  --color-accent: var(--green); /* Green for hover, highlight */
+  --color-background-light: #eee; /* like light background */
+  --color-background-section-alt: #F1F3F4; /* Slightly darker light gray for sections */
+  --color-background-dark: #3C4043; 
+  --color-background-darker: #202124; /* Even darker for signature */
+  --color-text-dark: #202124; /* Near-black for main text */
+  --color-text-light: #FFFFFF; /* White for light text */
+  --color-text-muted: #9AA0A6; /* Softer muted text for copyright */
+  --color-card-main: #FFFFFF; /* Cards typically white */
+  --color-card-back-bg: var(--red); /* Using red for the back of the flip card */
+  --color-card-back-text: #FFFFFF;  
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif; /* Roboto for body */
+  color: var(--color-text-dark);
+  line-height: 1.7;
+  margin: 0;
+  background: var(--color-background-light);
+  background: white;
+
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  /* If you specifically want Century Gothic and are sure it's available or embedded: */
+  /* font-family: 'Century Gothic', Century, sans-serif; */
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* For your logo text, if it's still SHADI */
+#logo2 {
+  /*font-family: 'Lato', sans-serif;  Using Lato for consistency with headers */
+  font-size: 3.8rem;
+  color: var(--color-text-light);
+  font-weight: bold;
+}
+
+
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 0;
+
+/* testing */ 
+  max-width: 80vw;
+  margin:  auto; 
+}
+ 
+/* --- Top Navigation --- */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 1rem 3rem;  
+  z-index: 1000;
+  display: flex;  
+  justify-content: space-between; 
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 5px 0 rgba(0,0,0,.23); 
+
+}
+
+.nav-brand {
+  text-decoration: none;
+  color: var(--color-primary-brand);
+  /*font-family: 'Josefin Sans', sans-serif; /* Use heading font for brand */*/
+  font-weight: bold;
+  font-size: 1.4rem; /* Larger brand font */
+  padding: 0; /* Remove default padding if any */
+}
+
+.nav-links {
+  display: flex; /* Make nav-links a flex container for its children */
+  gap: 3rem; /* Space between the actual links */
+  transition: all 0.3s ease-in-out;
+}
+
+nav a { /* This rule now applies to links inside .nav-links and .nav-brand */
+  text-decoration: none;
+  color: var(--color-primary-brand);
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+
+  padding: 12px;
+  margin: -12px !important;
+}
+
+nav a:hover {
+  background-color: #dedede;
+}
+
+.intro {
+  color: var(--green);
+}
+
+.examples {
+  color: var(--blue);
+}
+
+.tech {
+  color: var(--yellow);
+}
+
+.footer {
+  color: var(--red);
+}
+
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50px; /* Width of the hamburger icon */
+  height: 45px; /* Height of the hamburger icon */
+  z-index: 1001; /* Ensure it's above other elements if needed */
+}
+
+.hamburger .bar {
+  display: block;
+  width: 100%;
+  height: 3px; /* Thickness of each bar */
+  /*background-color: var(--color-primary-brand); /* Color of the bars */*/
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.bar { 
+  background: var(--red); 
+}
+
+/* Styles for when hamburger is active (for animation) */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(11px) rotate(45deg); /* Adjust based on bar height/spacing */
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0; /* Middle bar fades out */
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg); /* Adjust based on bar height/spacing */
+}
+
+
+
+/* --- Intro Section --- */
+#intro {
+  display: flex;
+  flex-direction: row;  /* change from column to row */
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  padding: 6rem 2rem;
+  background: white;
+  gap:  1rem ;
+}
+
+#logo_div {
+  width: 150px;
+  height: 150px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0; /* remove bottom margin for horizontal layout */
+  margin-right: 2rem; /* add some space to the right */
+  animation: pulse 1s infinite alternate;
+  flex-shrink: 0; /* keep logo size fixed */
+}
+
+
+#intro h1 {
+    /*background-color: #0f9d5838;*/
+    /*max-width: 80%;*/
+    margin: auto;
+    padding: 8px;
+}
+
+#intro_text {
+  max-width: 800px;
+  text-align: left;
+  border-left: solid;
+  padding-left: 3rem;
+}
+
+ 
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+#description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  color: black;
+}
+
+
+/* --- Showcase Section - Project Display Styles --- */
+#examples {
+    border-top: solid 8px var(--blue);
+
+  background: white; /* Assuming examples section was white or very light */
+  /*background: #0f9d5830;*/
+}
+
+#examples h2 , #examples  h3 {
+  color: var(--blue);
+}
+
+#examples h3 {
+    background-color: #4285f438;
+    /*max-width: 80%;*/
+    margin: auto;
+    padding: 8px;
+    font-size: 12pt;
+}
+#examples  h4 {
+  color: black;
+}
+
+
+
+
+.project-row {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  align-items: stretch; /* stretch children to equal height */
+
+}
+
+
+/* Alternate layout for even rows */
+.project-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-img {
+  flex: 2;
+  border: solid 1px #eee;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+ }
+
+.project-info {
+  flex: 1;
+  padding: 10px;
+  background-color: #fafafa; /* your gray background */
+  display: flex;
+  flex-direction: column; /* optional, if you want vertical layout inside */
+  justify-content: center;  /* vertically center content */
+
+    border-radius: 35px;
+    border: solid 1px #eee;
+}
+
+.project-info h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.project-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+ 
+
+/*to clean old*/
+.group-block {
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.group-title {
+  font-size: 2rem;
+  color: var(--color-primary-brand);
+  margin-bottom: 2rem;
+}
+
+/* This container now acts as the flexible grid for the flip cards */
+.carousel-container {
+  display: flex;
+  flex-wrap: wrap; /* NEW: Allow projects to wrap onto multiple lines */
+  justify-content: center; /* Center the projects within the container */
+  align-items: flex-start; /* Align items to the start of the cross-axis */
+  gap: 2rem; /* NEW: Add a gap between project cards for spacing */
+  /* Removed position: relative; as buttons are gone */
+  /* Removed align-items: center; and justify-content: center; if redundant with flex-wrap */
+}
+
+/* The viewport and track elements are still useful for grouping, but their carousel-specific styles are gone */
+.carousel-viewport {
+  /* No longer needs overflow, width, max-width for carousel behavior */
+  /* Reverting to a simple container behavior */
+  display: contents; /* Makes children participate in flex layout of .carousel-container */
+}
+
+.carousel-track {
+  /* This element now simply contains the cards without carousel-specific transformations */
+  display: flex; /* Keep flex to manage inner flip-cards */
+  flex-wrap: wrap; /* Ensure flip cards wrap within this track */
+  justify-content: center; /* Center cards within the track */
+  align-items: flex-start; /* Align items to the start of the cross-axis */
+  gap: 2rem; /* Consistent gap with the container */
+  /* Removed transition: transform... */
+  /* Removed width: fit-content; */
+  padding: 0; /* Remove padding as gap on container handles it */
+}
+
+/* Flip Card Base */
+.flip-card {
+  width: 480px;
+  height: 360px;
+  perspective: 1000px;
+  /* Removed margin: 0 1rem; as gap property on containers handles spacing */
+  position: relative;
+  flex-shrink: 0; /* Ensures cards don't shrink below their base width unless necessary */
+  box-sizing: border-box;
+  background: white; 
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  /*box-shadow: 0 0 6px var(--color-shadow-light);*/
+  background: var(--color-white);
+  backface-visibility: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: grayscale(70%);
+  transition: filter 0.3s ease;
+}
+.flip-card-front img:hover,
+.flip-card-back img:hover {
+  filter: none;
+}
+
+.flip-card-back {
+  background: var(--color-card-main);
+  color: var(--color-text-light);
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h4 {
+  color: var(--color-card-main);
+  margin-top: 0;
+}
+.flip-card-back h4 {
+  color: var(--color-text-light);
+  margin-top: 0;
+}
+
+.tooltip {
+  font-family: 'Roboto Condensed';
+}
+
+.flip-card-front .tooltip {
+  color: var(--color-text-dark);
+  margin-bottom: 0;
+}
+.flip-card-back .tooltip {
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}
+
+
+/* --- Technologies Used Section --- */
+#tech {
+  background: #4285f41f;
+  background: white; 
+    border-top: solid 8px  var(--yellow);
+
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-item {
+  /*background: #d6cdb44d;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 0px;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--color-shadow-strong);
+}
+
+.tech-item img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+
+
+/* --- Contact Section --- */
+#footer {
+  /*background: var(--color-background-dark);*/
+  border-top: solid 8px var(--red);
+  background: white;
+  color: var(--color-text-light);
+  color : black;
+  padding: 4rem 2rem; /* Consistent padding */
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly; /* Changed to space-evenly for uniform spacing */
+  /* The 'gap' property can be kept as a fallback minimum, but space-evenly handles distribution */
+  /* gap: 3.5rem; */
+  margin-top: 2rem;
+  max-width: 650px; /* Adjusted max-width slightly to ensure comfortable spacing */
+  margin-left: auto; /* Centers the social container itself */
+  margin-right: auto; /* Centers the social container itself */
+  align-items: flex-start; /* Ensures items align to the top if their content heights vary */
+
+}
+
+.social div {
+  text-align: center;
+  /* Add a min-width to ensure visual uniformity of the "boxes", even with varying text lengths */
+  min-width: 110px; /* Adjust this value as needed to comfortably fit "LinkedIn" and other text */
+  flex-shrink: 0; /* Prevents the boxes from shrinking on smaller screens */
+  box-sizing: border-box; /* Include padding/border in the width */
+  padding:  10px; 
+  border:  solid 1px #eeeeee40;
+  background: #ffffff30;
+  width: 1em;
+  height: 7em;
+}
+
+
+.social h4 {
+  margin: 0;
+  font-size: 10pt;
+  font-weight: normal; 
+}
+
+.social a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  display: flex; /* Make the anchor a flex container */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center image and text within the anchor */
+}
+
+/*.social */
+img.footerpng {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 0.5rem; /* Space between image and text */
+  transition: transform 0.2s ease-out;
+  /*filter: grayscale(100%);*/
+  opacity: 0.8;
+  border-radius: 5px;
+  filter: invert(100%);
+  padding: 8px;
+  border:  solid 1px #eee;
+
+}
+
+.social img.footerpng:hover {
+  transform: translateY(-4px);
+  filter: grayscale(0%);
+  opacity: 1;
+  background: #aaa;
+}
+
+
+/* --- Footer Signature --- */
+#signature {
+  background: var(--color-background-darker);
+  background: #eee;
+  color: var(--color-text-muted);
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  min-height: 25vh;
+  min-width: 100vw;
+}
+
+h6 {
+  font-weight: 200;
+  font-size: 7pt;
+  color : #111;
+}
+
+#goUp {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+  stroke: gray ;
+}
+
+#goUp:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: row; /* Keep row for brand and hamburger */
+    /*padding: 1.2rem 1.5rem;  Adjusted padding for mobile */
+    /*background: rgba(230, 230, 230, 0.90);  */
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links by default on small screens */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    position: absolute; /* Position relative to nav */
+    top: 100%; /* Below the nav bar */
+    left: 0;
+    background: rgba(255, 255, 255, 0.90);  
+    /*box-shadow: 0 5px 10px var(--color-shadow-light);*/
+    padding: 4rem 0;
+    z-index: 999; /* Below hamburger, above content */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show navigation links when active */
+  }
+
+  .nav-links a {
+    padding: 1rem 6rem;  
+    text-align: left; /* Align text left in dropdown */
+    width: 100%; /* Make links take full width of dropdown */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on small screens */
+  }
+
+
+ .project-row {
+    flex-direction: column !important;
+  }
+
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns per row for smaller screens */
+    gap: 1.5rem; /* Even smaller gap */
+  }  
+ 
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+
+
+  section {
+    padding: 3rem 1rem;
+  }
+  .tech-grid {
+    gap: 1rem;
+  }
+
+  #intro {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  #logo_div {
+     margin: 0 auto 2rem auto;  
+  }
+
+  #intro_text {
+    border:  none; 
+    padding: 0;
+    text-align: center;
+  }
+
+   .tech-grid {
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 1.5rem; /* Even smaller gap */
+  }  
+
+}
