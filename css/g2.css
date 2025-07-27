@@ -45,13 +45,21 @@ body {
 
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
   /* If you specifically want Century Gothic and are sure it's available or embedded: */
   /* font-family: 'Century Gothic', Century, sans-serif; */
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
+
+h5 {
+  font-size: 10pt;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-family: 'Roboto';
+}
+
 
 /* For your logo text, if it's still SHADI */
 #logo2 {
@@ -68,10 +76,9 @@ section {
   padding: 4rem 2rem;
   text-align: center;
   margin-bottom: 0;
-
-/* testing */ 
   max-width: 80vw;
   margin:  auto; 
+  min-height: 50vh;
 }
  
 /* --- Top Navigation --- */
@@ -244,14 +251,19 @@ nav a:hover {
 
 #examples h3 {
     background-color: #4285f438;
-    /*max-width: 80%;*/
-    margin: auto;
+    margin: 5rem auto 0;
     padding: 8px;
     font-size: 12pt;
+    border-radius: 20px;
 }
 #examples  h4 {
   color: black;
+  font-size: 12pt;
 }
+
+#examples  h5 {
+    margin-bottom: -1rem;
+ }
 
 
 
@@ -266,22 +278,32 @@ nav a:hover {
 }
 
 
-/* Alternate layout for even rows */
-.project-row:nth-child(even) {
+/* Alternate layout for even rows */ 
+/*.project-row:nth-child(even) {*/
+/*.project-row:nth-child(4) {*/
+/*.project-row:nth-child(1) {
+  flex-direction: row-reverse;
+}*/
+
+.project-row.reverse {
   flex-direction: row-reverse;
 }
 
+
 .project-img {
   flex: 2;
-  border: solid 1px #eee;
+  border: solid 1px #7c7c7c20;
   border-radius: 35px;
   overflow: hidden;
 }
 
 .project-img img {
-  width: 100%;
-  height: 100%;
- }
+  width: 100%;        /* Image fills the width of the container */
+  height: auto;       /* Height adjusts automatically to keep aspect ratio */
+  object-fit: contain; /* Optional: Ensures entire image fits inside if container is fixed size */
+  display: block;     /* Remove inline gap below images */
+}
+
 
 .project-info {
   flex: 1;
@@ -290,9 +312,8 @@ nav a:hover {
   display: flex;
   flex-direction: column; /* optional, if you want vertical layout inside */
   justify-content: center;  /* vertically center content */
-
-    border-radius: 35px;
-    border: solid 1px #eee;
+  border-radius: 35px;
+  border: solid 1px #7c7c7c20;
 }
 
 .project-info h4 {
@@ -301,8 +322,10 @@ nav a:hover {
 }
 
 .project-info p {
-  margin-bottom: 12px;
-  font-size: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: left;
+  font-size: 11pt;
   color: #333;
 }
 
@@ -312,135 +335,17 @@ nav a:hover {
   font-weight: 500;
 }
  
-
-/*to clean old*/
-.group-block {
-  margin-bottom: 4rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
+/*SVG line*/
+.svg-line {
+    width: 55vw;
+    margin: auto;
+}
+ 
+.reverse-line {
+  transform: scaleY(-1);
 }
 
-.group-title {
-  font-size: 2rem;
-  color: var(--color-primary-brand);
-  margin-bottom: 2rem;
-}
 
-/* This container now acts as the flexible grid for the flip cards */
-.carousel-container {
-  display: flex;
-  flex-wrap: wrap; /* NEW: Allow projects to wrap onto multiple lines */
-  justify-content: center; /* Center the projects within the container */
-  align-items: flex-start; /* Align items to the start of the cross-axis */
-  gap: 2rem; /* NEW: Add a gap between project cards for spacing */
-  /* Removed position: relative; as buttons are gone */
-  /* Removed align-items: center; and justify-content: center; if redundant with flex-wrap */
-}
-
-/* The viewport and track elements are still useful for grouping, but their carousel-specific styles are gone */
-.carousel-viewport {
-  /* No longer needs overflow, width, max-width for carousel behavior */
-  /* Reverting to a simple container behavior */
-  display: contents; /* Makes children participate in flex layout of .carousel-container */
-}
-
-.carousel-track {
-  /* This element now simply contains the cards without carousel-specific transformations */
-  display: flex; /* Keep flex to manage inner flip-cards */
-  flex-wrap: wrap; /* Ensure flip cards wrap within this track */
-  justify-content: center; /* Center cards within the track */
-  align-items: flex-start; /* Align items to the start of the cross-axis */
-  gap: 2rem; /* Consistent gap with the container */
-  /* Removed transition: transform... */
-  /* Removed width: fit-content; */
-  padding: 0; /* Remove padding as gap on container handles it */
-}
-
-/* Flip Card Base */
-.flip-card {
-  width: 480px;
-  height: 360px;
-  perspective: 1000px;
-  /* Removed margin: 0 1rem; as gap property on containers handles spacing */
-  position: relative;
-  flex-shrink: 0; /* Ensures cards don't shrink below their base width unless necessary */
-  box-sizing: border-box;
-  background: white; 
-}
-
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  cursor: pointer;
-}
-
-.flip-card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  /*box-shadow: 0 0 6px var(--color-shadow-light);*/
-  background: var(--color-white);
-  backface-visibility: hidden;
-  padding: 1rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.flip-card-front img,
-.flip-card-back img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-  filter: grayscale(70%);
-  transition: filter 0.3s ease;
-}
-.flip-card-front img:hover,
-.flip-card-back img:hover {
-  filter: none;
-}
-
-.flip-card-back {
-  background: var(--color-card-main);
-  color: var(--color-text-light);
-  transform: rotateY(180deg);
-}
-
-.flip-card-front h4 {
-  color: var(--color-card-main);
-  margin-top: 0;
-}
-.flip-card-back h4 {
-  color: var(--color-text-light);
-  margin-top: 0;
-}
-
-.tooltip {
-  font-family: 'Roboto Condensed';
-}
-
-.flip-card-front .tooltip {
-  color: var(--color-text-dark);
-  margin-bottom: 0;
-}
-.flip-card-back .tooltip {
-  color: var(--color-text-light);
-  margin-bottom: 0;
-}
 
 
 /* --- Technologies Used Section --- */
@@ -449,6 +354,10 @@ nav a:hover {
   background: white; 
     border-top: solid 8px  var(--yellow);
 
+}
+
+#tech h2 , #tech  h3 {
+  color: var(--yellow);
 }
 
 .tech-grid {
@@ -491,6 +400,10 @@ nav a:hover {
   color: var(--color-text-light);
   color : black;
   padding: 4rem 2rem; /* Consistent padding */
+}
+
+#footer h2 , #footer  h3 {
+  color: var(--red);
 }
 
 .social {
@@ -634,10 +547,10 @@ h6 {
   }  
  
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
 
