@@ -1,59 +1,53 @@
-# Skabajah Portfolio
+# Shadi Kabajah Portfolio v2
 
-Welcome to my personal portfolio site — a curated collection of projects showcasing my work in data analytics, visualization, and web development. Built using HTML, CSS, JavaScript, and hosted with GitHub Pages.
+Welcome to my personal portfolio site — a curated collection of projects showcasing my work in data analytics, visualization, and web development. Built using HTML, CSS, and JavaScript, and hosted with GitHub Pages.
 
-🔗 **Live site:** [https://skabajah.github.io](https://skabajah.github.io)
+Live site: https://skabajah.github.io
 
----
+## What You'll Find
 
-## 📁 What You'll Find
+- Data projects – Algorithmic trading, customer analytics, elections data, and more  
+- Visualizations – Tableau dashboards, storytelling visuals, and interactive charts  
+- Code and tools – SQL pipelines, Python and R scripts, and frontend experiments  
+- Design work – Front-end components, layout experiments, SVG paths, and custom flows  
+- Business strategy – Financial models and MBA fieldwork with real clients
 
-- **Data Projects** – Algorithmic trading, customer analytics, elections data, and more  
-- **Visualizations** – Tableau dashboards, storytelling visuals, and interactive charts  
-- **Code & Tools** – SQL pipelines, Python and R scripts, and frontend experiments  
-- **Design Work** – Front-end components, layout experiments, SVG paths and custom flows  
+## Featured Projects
 
----
+- Park Smart – Prototype of a mobile app to help drivers find legal parking. Created wireframes and decision logic.  
+- NPV Expansion Analysis – MBA project advising a manufacturing firm on production expansion. Built scenarios, developed an NPV model, and presented findings to the CEO.  
+- Dear Data – Hand-drawn data visualization project exploring personal health metrics week by week.
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
-index.html          → Main landing page  
-css/                → Styling files  
-js/                 → JavaScript logic  
-img/                → Assets and SVGs  
-projects/           → Individual project cards or templates  
-README.md           → This file  
+index.html          - Main landing page  
+css/                - Styling files  
+js/                 - JavaScript logic  
+img/                - Assets and images  
+projects/           - Project-specific HTML/CSS/JS  
+README.md           - This file
 ```
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+* HTML, CSS, JavaScript  
+* Responsive design with Flexbox and media queries  
+* Tableau Public  
+* GitHub Pages for hosting
 
-- HTML5 / CSS3 / JavaScript  
-- Responsive Design (Flexbox, Media Queries)  
-- SVG + Inline Animation  
-- Tableau Public  
-- GitHub Pages Hosting  
+## Running Locally
 
----
-
-## ▶️ Running Locally
-
-```bash
+```
 git clone https://github.com/skabajah/skabajah.github.io.git  
 cd skabajah.github.io  
-open index.html  # or use Live Server in VS Code
+open index.html   (or open in browser with Live Server)
 ```
 
-Or just visit: [https://skabajah.github.io](https://skabajah.github.io)
+Or just visit: https://skabajah.github.io
 
----
+## Contact
 
-## 💬 Connect with Me
-
-- [LinkedIn](https://www.linkedin.com/in/skabajah)  
-- [Tableau Public](https://public.tableau.com/app/profile/skabajah)  
-- ✉️ skabajah@icloud.com  
-
-Thanks for visiting!
+* LinkedIn: https://www.linkedin.com/in/skabajah  
+* Tableau Public: https://public.tableau.com/app/profile/skabajah  
+* Email: skabajah@icloud.com
