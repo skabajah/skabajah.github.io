@@ -324,8 +324,18 @@ nav a:hover {
 .project-img img {
   width: 100%;        /* Image fills the width of the container */
   height: auto;       /* Height adjusts automatically to keep aspect ratio */
-  object-fit: contain; /* Optional: Ensures entire image fits inside if container is fixed size */
+  object-fit: contain;  
   display: block;     /* Remove inline gap below images */
+}
+
+
+img.project-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  /*border-radius: 8px;*/
 }
 
 
