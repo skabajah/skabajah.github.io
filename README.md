@@ -1,4 +1,4 @@
-# Shadi Kabajah Portfolio
+# Skabajah Portfolio
 
 Welcome to my personal portfolio site — a curated collection of projects showcasing my work in data analytics, visualization, and web development. Built using HTML, CSS, JavaScript, and hosted with GitHub Pages.
 
