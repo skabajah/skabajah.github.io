@@ -481,17 +481,15 @@ img.footerpng {
   transition: transform 0.2s ease-out;
   opacity: 0.8;
   border-radius: 10px;
-  filter: invert(100%);
   padding: 8px;
-  border:  solid 1px #eee;
-
+  border: solid 1px #db4537bf;
 }
 
 .social img.footerpng:hover {
   transform: translateY(-4px);
-  filter: grayscale(0%);
+  /*filter: grayscale(0%);*/
   opacity: 1;
-  background: #aaa;
+  background: #db45371f;
 }
 
 
