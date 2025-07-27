@@ -563,6 +563,11 @@ h6 {
     flex-direction: column !important;
   }
 
+  .project-img,
+  .project-info { 
+    border-radius: 15px; 
+  }
+
   .tech-grid {
     grid-template-columns: repeat(3, 1fr); /* 2 columns per row for smaller screens */
     gap: 1.5rem; /* Even smaller gap */
