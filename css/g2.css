@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
 
 
- 
+
 /* Add this at the very top of your g2.css file */
 html {
   box-sizing: border-box;
@@ -99,7 +99,7 @@ nav {
 
 .nav-links {
   display: flex; /* Make nav-links a flex container for its children */
-  gap: 3rem; /* Space between the actual links */
+  gap: 5rem; /* Space between the actual links */
   transition: all 0.3s ease-in-out;
 }
 
@@ -110,12 +110,12 @@ nav a { /* This rule now applies to links inside .nav-links and .nav-brand */
   font-size: 1.05rem;
   transition: color 0.3s ease;
 
-  padding: 12px;
-  margin: -12px !important;
+  padding: 1rem;
+  margin: -1rem !important;
 }
 
 nav a:hover {
-  background-color: #dedede;
+  background-color: #dedede50;
 }
 
 .intro {
