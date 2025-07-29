@@ -438,10 +438,10 @@ img.project-gif {
 
 .social {
   display: flex;
-  justify-content: center;   
-  max-width: 650px;
+  justify-content: flex-end;   
+  ma/*x-width: 650px;
   margin: auto;
-  gap:  1rem;
+  gap:  1re*/m;
 
 }
 
@@ -461,6 +461,7 @@ img.project-gif {
   font-size: 9pt;
   font-weight: normal; 
   font-family: 'Roboto Condensed';
+  display: none;
 }
 
 .social a {
@@ -473,8 +474,8 @@ img.project-gif {
 
 /*.social */
 img.footerpng {
-  width: 80px;
-  height: 80px;
+  width: 3rem;
+  height: 3rem;
   margin-bottom: 0.5rem; /* Space between image and text */
   transition: transform 0.2s ease-out;
   opacity: 0.8;
@@ -488,7 +489,7 @@ img.footerpng {
   transform: translateY(-4px);
   /*filter: grayscale(0%);*/
   opacity: 1;
-  background: #db45371f;
+  background: #0f9d582b; 
 }
 
 
@@ -605,5 +606,9 @@ h6 {
     grid-template-columns: repeat(2, 1fr);  
     gap: 1.5rem; /* Even smaller gap */
   }  
+
+  .social { 
+    justify-content: center;    
+  }
 
 }
