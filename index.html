@@ -6,24 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="description" content="Big Data Analytics, SQL, Snowflake, Tableau, Web Development; JavaScript, jQuery, HTML, CSS & More!" />
   <meta name="author" content="skabajah" />
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
-
+ 
   <link rel="stylesheet" href="css/g2.css">
+ 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+
 
 </head>
 
 <body>
+
   <nav>
     <button class="hamburger" aria-label="Toggle navigation menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
-    <div class="nav-links"> 
+
+    <div class="nav-links">
       <a href="#intro" class="intro">intro</a>
       <a href="#tech" class="tech">technologies</a>
-      <a href="#examples" class="examples">showcase</a> 
+
+      <div class="nav-dropdown">
+        <a href="#examples" class="examples">
+          showcase
+          <span class="chevron">
+            <!-- <i class="fas fa-chevron-down"></i> -->
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+          </span>
+        </a>
+
+      
+        <div class="sub-nav">
+          <a href="#examples-projects" class="subnav-link">AI | Google Gemini</a>
+          <a href="#examples-prototyping" class="subnav-link">Product Design</a>
+          <a href="#examples-financial-modeling" class="subnav-link">Financial Modeling</a>
+          <a href="#examples-tableau-viz" class="subnav-link">Data Visualizations | Tableau</a>
+          <a href="#examples-handcrafted-art" class="subnav-link">Data Visualizations | Freehand</a>
+        </div>
+
+
+
+      </div>
     </div>
   </nav>
  
@@ -53,12 +82,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
         </a>
         <h4>LinkedIn</h4>
       </div>
-<!--       <div>
-        <a href="https://public.tableau.com/app/profile/skabajah" target="_blank" rel="noopener noreferrer">
-          <img alt="tableau" class="footerpng" src="img/tableau.svg" />
-        </a>
-        <h4>Tableau Public</h4>
-      </div> -->
+
     </div>
 
 
@@ -111,7 +135,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
   <h5>And this is what I can do with those technologies:</h5>
 
   <!-- AI | Chrome Extensions -->
-  <div class="group-block" data-group-id="ai-extensions">
+<div class="group-block" data-group-id="ai-extensions" id="examples-projects">
     <h3 class="group-title">AI | Google Gemini</h3>
 
 
@@ -148,7 +172,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
 
 
   <!-- Park Smart Project -->
-  <div class="group-block" data-group-id="prototyping">
+<div class="group-block" data-group-id="prototyping" id="examples-prototyping">
     <h3 class="group-title">Product Design</h3>
 
     <div class="project-row  ">
@@ -165,7 +189,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
 
 
   <!-- Financial Modeling | NPV Analysis -->
-<div class="group-block" data-group-id="financial-modeling">
+<div class="group-block" data-group-id="financial-modeling" id="examples-financial-modeling">
   <h3 class="group-title">Financial Modeling</h3>
 
   <div class="project-row reverse ">
@@ -182,7 +206,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
  
 
   <!-- Tableau | Visualizations -->
-  <div class="group-block" data-group-id="tableau-viz">
+<div class="group-block" data-group-id="tableau-viz" id="examples-tableau-viz">
     <h3 class="group-title">Data Visualizations | Tableau</h3>
 
     <div class="project-row    ">
@@ -208,7 +232,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
 
     <div class="project-row ">
       <div class="project-img">
-        <img src="gif/sankey.gif" alt="Zip Codes Periodic Table"
+        <img src="gif/sankey.gif" alt="sankey"
         class="project-gif" loading="lazy">
       </div>
       <div class="project-info ">
@@ -220,7 +244,7 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
   </div>
 
   <!-- Handcrafted | Data Art -->
-  <div class="group-block" data-group-id="handcrafted-art">
+<div class="group-block" data-group-id="handcrafted-art" id="examples-handcrafted-art">
     <h3 class="group-title">Data Visualizations | Freehand</h3>
 
     <div class="project-row  " >
@@ -334,16 +358,16 @@ Feel free to reach out via email or connect with me on LinkedIn. I’d love to h
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/g2.js"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
+  	<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TP21R0VPV9');
-    </script>
-      
-      
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-TP21R0VPV9');
+		</script>
+			
+			
 </body>
 </html>
