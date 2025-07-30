@@ -150,6 +150,12 @@ nav a:hover {
 }
  
 
+a.subnav-link:hover {
+    padding: 12px !important;
+    margin: -12px !important;
+}
+
+
 
 .chevron {
   display: inline-block;
@@ -659,6 +665,9 @@ h6 {
 
   .social { 
     justify-content: center;    
+  }
+  a.subnav-link {
+    padding: 1rem 3rem !important;
   }
 
 }
