@@ -2,7 +2,7 @@
 
 _Last updated: Sep 2025_
 
-AI Summarizer v2 (“the Extension”) respects your privacy and is committed to protecting your data. This Privacy Policy explains how the Extension collects, uses, and protects the information you provide when using it.
+AI Summarizer (“the Extension”) respects your privacy and is committed to protecting your data. This Privacy Policy explains how the Extension collects, uses, and protects the information you provide when using it.
 
 ## Information We Collect
 
@@ -24,7 +24,7 @@ The Extension requires permissions to access the active web page content and to 
 
 ## Your Consent
 
-By using AI Summarizer v2, you consent to the processing of your selected text content as described in this Privacy Policy.
+By using AI Summarizer, you consent to the processing of your selected text content as described in this Privacy Policy.
 
 ## Contact Us
 
