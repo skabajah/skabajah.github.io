@@ -5,64 +5,64 @@ https://live-hls-web-aja-fa.getaj.net/AJA/03.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/bqRC3sl.png" group-title="1-AKHBAR",111) Al Sharq
 https://bcovlive-a.akamaihd.net/0b75ef0a49e24704a4ca023d3a82c2df/ap-south-1/6203311941001/profile_2/chunklist.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Al-Arabiya_new_logo.svg/512px-Al-Arabiya_new_logo.svg.png" group-title="1-AKHBAR",116) Al Arabiya
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1253747809964220417/hlXdYr5k_400x400.jpg" group-title="1-AKHBAR",121) Al Arabiya
 https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/SvjU4h6.png" group-title="1-AKHBAR",121) SkyNews Arabia
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1302532298022232067/F8egvgY__400x400.jpg" group-title="1-AKHBAR",131) SkyNews Arabia
 https://stream.skynewsarabia.com/hls/sna.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/TRT_Arabi_logo.svg/512px-TRT_Arabi_logo.svg.png" group-title="1-AKHBAR",131) TRT
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1882172588773756928/6n_STPDQ_400x400.jpg" group-title="1-AKHBAR",141) TRT
 https://tv-trtarabi.medya.trt.com.tr/master_720.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/YMqWEe4.png" group-title="1-AKHBAR",141) Al Araby
-https://alaraby.cdn.octivid.com/alaraby/smil:alaraby.stream.smil/chunklist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/YMqWEe4.png" group-title="1-AKHBAR",151) Al Araby
+https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7f/Palestine_Satellite_Channel_Logo.png" group-title="2-LEVANT",201) PSC
+#EXTINF:-1 tvg-logo="https://www.pbc.ps/wp-content/uploads/2021/08/pbc_logo_w256.png" group-title="2-LEVANT",201) PSC
 https://pbc.furrera.ps/palestinehd/tracks-v2a1/mono.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/5/56/MeKan_33_logo_2017.png" group-title="2-LEVANT",206) Makan
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18107/images/logod.jpg" group-title="2-LEVANT",211) Makan
 https://makan.media.kan.org.il/hls/live/2024680/2024680/source1_4k/chunklist.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/0XozB5N.png" group-title="2-LEVANT",211) Jordan
+#EXTINF:-1 tvg-logo="https://i.imgur.com/0XozB5N.png" group-title="2-LEVANT",221) Jordan
 https://jrtv-live.ercdn.net/jordanhd/jordanhd_720p.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6e/Royatv.png" group-title="2-LEVANT",221) Roya
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6e/Royatv.png" group-title="2-LEVANT",231) Roya
 https://royatv-live.daioncdn.net/royatv/royatv_720p.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/5l7kw0b.png" group-title="2-LEVANT",231) Amman
+#EXTINF:-1 tvg-logo="https://media0084.elcinema.com/tvguide/1298_1.png" group-title="2-LEVANT",241) Amman
 https://ammantv-live.ercdn.net/ammantvhd/ammantvhd_720p.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/8a/Al-Mamlaka_TV_logo.png" group-title="2-LEVANT",235) Mamlaka
-https://bcovlive-a.akamaihd.net/4109c7ba30fd4a44ad9afe917c67a8c8/eu-central-1/6415809151001/playlist.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/RMaLsmi.png" group-title="2-LEVANT",241) Syria
+#EXTINF:-1 tvg-logo="https://i.imgur.com/RMaLsmi.png" group-title="2-LEVANT",251) Syria
 https://svs.itworkscdn.net/syriatvlive/syriatv.smil/syriatvpublish/syriatv_720p/chunks_dvr.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.althania.tv/images/logo2.png" group-title="2-LEVANT",242) Syria 2
+#EXTINF:-1 tvg-logo="https://syriandocdays.dk/wp-content/uploads/2025/08/syria-2-logo-with-color-grading-03.png" group-title="2-LEVANT",261) Syria 2
 https://live.kwikmotion.com/syriatv02live/syriatv02.smil/syriatv02publish/syriatv02_720p/chunks.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/xPoycVY.png" group-title="2-LEVANT",251) Lana
+#EXTINF:-1 tvg-logo="https://i.imgur.com/xPoycVY.png" group-title="2-LEVANT",271) Lana
 https://p-ltv.akamaized.net/ltv/ltv.m3u8
+
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/660075338794336256/5S2UuE7F_400x400.png" group-title="2-LEVANT",281) Voice of Lebanon
+https://svs.itworkscdn.net/vdltvlive/vdltv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.mtv.com.lb/images/header/logo-header.jpg" group-title="2-LEVANT",291) MTV
 https://media.mtv.com.lb/v1/broadcast/mtv/playlist.m3u8
 
+
+
+
 #EXTINF:-1 tvg-logo="https://www.mtv.com.lb/images/header/onetv-logo.webp" group-title="3-MUSIC",301) MTV One
 https://media.mtv.com.lb/v1/broadcast/one/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/krp3kgv.png" group-title="3-MUSIC",331) Nogoum
-https://nogoumtv.nrpstream.com/hls/0/stream.m3u8
-
-#EXTINF:-1 tvg-logo="https://arabica-tv.com/wp-content/uploads/2022/07/cropped-Arabica-tv-Logo-1.png" group-title="3-MUSIC",341) Arabica
-http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/o6HSfNg.png" group-title="3-MUSIC",351) Aghani
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1763364320736374784/R0-5gNFW_400x400.jpg" group-title="3-MUSIC",311) Aghani
 https://streaming-a-1035.cdn.nextologies.com/6zj8y5nemi8a32vyjjbkv0oqx/77pcakd8reik3g8qdqnexlkmq/playlist.m3u8
 
+#EXTINF:-1 tvg-logo="https://arabica-tv.com/wp-content/uploads/2022/07/cropped-Arabica-tv-Logo-1.png" group-title="3-MUSIC",321) Arabica
+http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Ho8N310.png" group-title="3-MUSIC",331) M+
+https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/m-plus/master.m3u8
 
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JkDD3bK.png" group-title="3-MUSIC",371) Panorama FM
+#EXTINF:-1 tvg-logo="https://i.imgur.com/JkDD3bK.png" group-title="3-MUSIC",341) Panorama FM
 https://d6izdil55uftn.cloudfront.net/out/v1/0a06d1d6377c47edbd48721ed724bd08/index.m3u8
 
 
@@ -71,24 +71,14 @@ https://d6izdil55uftn.cloudfront.net/out/v1/0a06d1d6377c47edbd48721ed724bd08/ind
 
 
 
-
-
-
-#EXTINF:-1 tvg-logo="https://ums.com.eg/wp-content/uploads/2023/04/on-sqr-2.png" group-title="4-EGYPT",431) ON E
-https://bcovlive-a.akamaihd.net/3dc60bab470f4c9fbf00408ecb7c3d7a/eu-west-1/6057955906001/profile_0/chunklist.m3u8
-
-
-
-
-
-
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/MBC_Masr_Logo.png/240px-MBC_Masr_Logo.png" group-title="4-EGYPT",461) MBC Masr
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/MBC_Masr_Logo.png/240px-MBC_Masr_Logo.png" group-title="4-EGYPT",401) MBC Masr
 https://mbc1-enc.edgenextcdn.net/out/v1/d5036cabf11e45bf9d0db410ca135c18/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/MBC_Masr_2_Logo.svg/171px-MBC_Masr_2_Logo.svg.png" group-title="4-EGYPT",462) MBC Masr 2
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/MBC_Masr_2_Logo.svg/171px-MBC_Masr_2_Logo.svg.png" group-title="4-EGYPT",411) MBC Masr 2
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-2/754931856515075b0aabf0e583495c68/index.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/bl9ie9u.png" group-title="4-EGYPT",421) Hayat
+https://uvotv-aniview.global.ssl.fastly.net/10010/dvr/hls/alhayathd/playlist.m3u8
 
 
 
@@ -98,86 +88,111 @@ https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-2/754931856515075b0a
 
 
 
-#EXTINF:-1 tvg-logo="https://media0070.elcinema.com/tvguide/1399_1.png" group-title="5-MEDIA",536) MBC Drama Egypt
+
+
+
+
+
+
+
+
+
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/V7I0MVf.png" group-title="5-DRAMA",501) Roya Drama
+https://playlist.fasttvcdn.com/pl/a2le4pbpa6rpzv147haf4w/drama/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/g5PWnqp.png" group-title="5-DRAMA",511) MBC Drama
+https://mbc1-enc.edgenextcdn.net/out/v1/b0b3a0e6750d4408bb86d703d5feffd1/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://media0070.elcinema.com/tvguide/1399_1.png" group-title="5-DRAMA",521) MBC Drama Egypt
 https://shls-live-enc.edgenextcdn.net/out/v1/08eca926a78a41339b8010c882410307/index.m3u8
 
 
 
 
-#EXTINF:-1 tvg-logo="https://media0075.elcinema.com/tvguide/1218_1.png" group-title="5-MEDIA",552) Rotana Aflam
-https://cdn1.iptvcdn.tv/mcnc/ROTANA_AFLAMPLUS/playlist.m3u8?token=demo
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/cTLj7Yt.png" group-title="5-MEDIA",561) Aflam
+
+
+
+
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/cTLj7Yt.png" group-title="6-AFLAM",601) Aflam
 https://shls-live-enc.edgenextcdn.net/out/v1/0044dd4b001a466c941ad77b04a574a2/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/81/Mbc1logo.png" group-title="6-GULF",601) MBC 1
+#EXTINF:-1 tvg-logo="https://media0075.elcinema.com/tvguide/1218_1.png" group-title="6-AFLAM",611) Rotana Aflam
+https://cdn1.iptvcdn.tv/mcnc/ROTANA_AFLAMPLUS/playlist.m3u8?token=demo
+
+
+
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/81/Mbc1logo.png" group-title="7-GULF",701) MBC 1
 https://mbc1-enc.edgenextcdn.net/out/v1/0965e4d7deae49179172426cbfb3bc5e/index.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/n9mSHuP.png" group-title="7-GULF",711) MBC 2
+http://213.57.91.138:8000/play/a05k
 
-
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MBC_4_TV_Channel_Logo.png/600px-MBC_4_TV_Channel_Logo.png" group-title="6-GULF",614) MBC 4
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MBC_4_TV_Channel_Logo.png/600px-MBC_4_TV_Channel_Logo.png" group-title="7-GULF",721) MBC 4
 https://tgn.bozztv.com/eshgtv-trn09/ga-mchannel4/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/fRWaDyF.png" group-title="6-GULF",615) MBC 5
+#EXTINF:-1 tvg-logo="https://i.imgur.com/fRWaDyF.png" group-title="7-GULF",731) MBC 5
 https://tgn.bozztv.com/eshgtv-trn09/ga-mchannel5/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9JSQglj.png" group-title="6-GULF",621) SBC
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9JSQglj.png" group-title="7-GULF",741) SBC
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-sbc/90e09c0c28db26435799b4a14892a167/index.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Gp5mNea.png" group-title="7-GULF",751) AlAraby 2
+https://live.kwikmotion.com/alaraby2live/alaraby2.smil/playlist.m3u8
 
-
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Gp5mNea.png" group-title="6-GULF",641) AlAraby 2
-https://alaraby.cdn.octivid.com/alaraby2n/smil:alaraby2n.stream.smil/chunklist.m3u8
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_Dubai_TV.png" group-title="6-GULF",651) Dubai
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_Dubai_TV.png" group-title="7-GULF",761) Dubai
 https://dmieigthvllta.cdn.mgmlcdn.com/dubaitvht/smil:dubaitv.stream.smil/chunklist_b1500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Dubaione-logo.png/480px-Dubaione-logo.png" group-title="6-GULF",652) Dubai One
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Dubaione-logo.png/480px-Dubaione-logo.png" group-title="7-GULF",771) Dubai One
 https://dminnvllta.cdn.mgmlcdn.com/dubaione/smil:dubaione.stream.smil/chunklist_b1800000.m3u8
 
-#EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/p287034d.png" group-title="7-US",701) Test Kitchen
-https://jmp2.uk/plu-5e84f54a82f05300080e6746.m3u8
 
-#EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/p287034d.png" group-title="7-US",702) Test Kitchen 2
+
+
+
+
+
+#EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/p287034d.png" group-title="8-US",801) Test Kitchen
 https://amg01420-americastestkitchen-amg01420c1-xumo-us-878.playouts.now.amagi.tv/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://searchvectorlogo.com/wp-content/uploads/2020/03/cooks-country-logo-vector.png" group-title="7-US",703) Cooks Country
+#EXTINF:-1 tvg-logo="https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/e5/e5/3e/e5e53eee-7eb1-47ac-1e99-0b0ab020e9e2/AppIcon-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg" group-title="8-US",811) Cooks Country
 https://amg01420-amg01420c5-xumo-us-3817.playouts.now.amagi.tv/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5ce5a8954311f992edbe1da2/thumbnail.jpg" group-title="7-US",711) Logo
+#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5ce5a8954311f992edbe1da2/thumbnail.jpg" group-title="8-US",821) Logo
 https://jmp2.uk/plu-5ce5a8954311f992edbe1da2.m3u8
 
-#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10057_dark_360w_270h.png" group-title="7-US",716) Bravo Vault
+#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10057_dark_360w_270h.png" group-title="8-US",831) Bravo Vault
 https://xumo-xumoent-vc-114-x0p7i.fast.nbcuni.com/live/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.ytimg.com/vi/Uf_FEx7CCUA/maxresdefault.jpg" group-title="7-US",741) NBC Comedy Vault
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1184884762369900544/_P6FdsPA_400x400.jpg" group-title="8-US",841) NBC Comedy Vault
 https://xumo-xumoent-vc-105-z0vpm.fast.nbcuni.com/live/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://thedesk.net/wp-content/uploads/2024/06/BLANK-SNL-Vault-Updated-Graphic-Samsung-TV-WEBP-TD.webp" group-title="7-US",742) SNL Vault
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1840239784809164800/peOuKyxG_400x400.jpg" group-title="8-US",851) SNL Vault
 https://xumo-xumoent-vc-103-d3uqt.fast.nbcuni.com/live/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5c2d64ffbdf11b71587184b8/thumbnail.jpg" group-title="7-US",751) TV Land Sitcoms
+#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/5c2d64ffbdf11b71587184b8/thumbnail.jpg" group-title="8-US",861) TV Land Sitcoms
 https://jmp2.uk/plu-5c2d64ffbdf11b71587184b8.m3u8
 
-#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11164_dark_360w_270h.png" group-title="7-US",763) TNT
+#EXTINF:-1 tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11164_dark_360w_270h.png" group-title="8-US",871) TNT
 https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/de/WUSA_9_logo.png" group-title="8-NEWS",801) CBS 9
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1542966726643662849/ueFSM1sv_400x400.jpg" group-title="9-NEWS",921) CBS 9
 https://livevideo.tegnadigital.com/wusa/v1/master/f9c1bf9ffd6ac86b6173a7c169ff6e3f4efbd693/WUSA/elvs/live.m3u8
 
-#EXTINF:-1 tvg-logo="https://image.roku.com/developer_channels/prod/8fa2395178d18465ab0c7650913e674acc9afab003b2904a7bafbec02b3cab19.png" group-title="8-NEWS",821) CBSN
+#EXTINF:-1 tvg-logo="https://m.media-amazon.com/images/I/41WdJb50GNL.png" group-title="9-NEWS",931) CBSN
 https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/54ff7ba69222cb1c2624c584/thumbnail.jpg" group-title="8-NEWS",831) Bloomberg
+#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/54ff7ba69222cb1c2624c584/thumbnail.jpg" group-title="9-NEWS",941) Bloomberg
 http://dai.google.com/linear/hls/event/PwTJe4aZRvSBjbWY7_VSzA/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/320px-CNN.svg.png" group-title="8-NEWS",841) CNN
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1669780523911110656/K9gaaM1g_400x400.jpg" group-title="9-NEWS",951) CNN
 https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/JZt2qh5.png" group-title="8-NEWS",851) NBC Now
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1776065140263157760/HwdTwNVp_400x400.jpg" group-title="9-NEWS",961) NBC Now
 https://xumo-drct-nbcnn-ir8ze.fast.nbcuni.com/live/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1567510144015106049/6L5e_S1N_400x400.jpg" group-title="8-NEWS",871) Al Jazeera (en)
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1567510144015106049/6L5e_S1N_400x400.jpg" group-title="9-NEWS",971) Al Jazeera (en)
 https://live-hls-web-aje.getaj.net/AJE/02.m3u8
