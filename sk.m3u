@@ -1,8 +1,8 @@
 #EXTM3U 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/ar/thumb/7/71/Aljazeera.svg/288px-Aljazeera.svg.png" group-title="1-AKHBAR",101) Al Jazeera
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1152887558151507970/I8mYC0Ar_400x400.jpg" group-title="1-AKHBAR",101) Al Jazeera
 https://live-hls-web-aja-fa.getaj.net/AJA/03.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/bqRC3sl.png" group-title="1-AKHBAR",111) Al Sharq
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1618203518585765889/iT33BF34_400x400.jpg" group-title="1-AKHBAR",111) Al Sharq
 https://bcovlive-a.akamaihd.net/0b75ef0a49e24704a4ca023d3a82c2df/ap-south-1/6203311941001/profile_2/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1253747809964220417/hlXdYr5k_400x400.jpg" group-title="1-AKHBAR",121) Al Arabiya
@@ -14,7 +14,7 @@ https://stream.skynewsarabia.com/hls/sna.m3u8
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1882172588773756928/6n_STPDQ_400x400.jpg" group-title="1-AKHBAR",141) TRT
 https://tv-trtarabi.medya.trt.com.tr/master_720.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/YMqWEe4.png" group-title="1-AKHBAR",151) Al Araby
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1961816041568313344/oA00t5PK_400x400.jpg" group-title="1-AKHBAR",151) Al Araby
 https://live.kwikmotion.com/alaraby1live/alaraby_abr/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.pbc.ps/wp-content/uploads/2021/08/pbc_logo_w256.png" group-title="2-LEVANT",201) PSC
@@ -185,7 +185,7 @@ https://livevideo.tegnadigital.com/wusa/v1/master/f9c1bf9ffd6ac86b6173a7c169ff6e
 #EXTINF:-1 tvg-logo="https://m.media-amazon.com/images/I/41WdJb50GNL.png" group-title="9-NEWS",931) CBSN
 https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://images.pluto.tv/channels/54ff7ba69222cb1c2624c584/thumbnail.jpg" group-title="9-NEWS",941) Bloomberg
+#EXTINF:-1 tvg-logo="https://www.batteryguyz.com/cdn/shop/articles/DG1Ruupb_400x400_f5d89b0d-b867-4670-b1d0-8dd4fad7a448.jpg" group-title="9-NEWS",941) Bloomberg
 http://dai.google.com/linear/hls/event/PwTJe4aZRvSBjbWY7_VSzA/master.m3u8
 
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1669780523911110656/K9gaaM1g_400x400.jpg" group-title="9-NEWS",951) CNN
