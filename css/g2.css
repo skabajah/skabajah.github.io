@@ -515,7 +515,8 @@ img.project-gif {
   font-size: 9pt;
   font-weight: normal; 
   font-family: 'Roboto Condensed';
-  display: none;
+  /*display: none;*/
+  color: #5c5c5c;
 }
 
 .social a {
