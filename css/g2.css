@@ -449,7 +449,7 @@ img.project-gif {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   max-width: 910px;
   margin: 0 auto;
@@ -623,11 +623,6 @@ h6 {
   .project-info { 
     border-radius: 15px; 
   }
-
-  .tech-grid {
-    grid-template-columns: repeat(3, 1fr); /* 2 columns per row for smaller screens */
-    gap: 1.5rem; /* Even smaller gap */
-  }  
  
   h1 {
     font-size: 2rem;
