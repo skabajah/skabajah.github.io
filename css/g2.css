@@ -469,14 +469,28 @@ img.project-gif {
 .tech-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px var(--color-shadow-strong);
+
 }
 
 .tech-item img {
-  width: 60px;
-  height: 60px;
+    width: 96px;
+    height: 96px;
+    border: solid 0px;
+    border-radius: 15px;
+    padding: 15px;
+    background: #8d8d8d1a;
  }
-
-
+/* Dynamic background based on file name */
+img[src*="tableau"]     { background-color: #8d8d8d1a; }
+img[src*="postgresql"]  { background-color: #AFC4D888; }
+img[src*="snowflake"]   { background-color: #B9E4F888; }
+img[src*="python"]      { background-color: #cbcbcb61; }
+img[src*="r.svg"]       { background-color: #B5C9F188; }
+img[src*="s3"]          { background-color: #bf9e9a5e; }
+img[src*="apps_script"] { background-color: #BEE3C788; }
+img[src*="js"]          { background-color: #f7df1e; }
+img[src*="html"]        { background-color: #F4B09A88; }
+img[src*="css"]         { background-color: #A9D0EF88; }
 
 /* --- Contact Section --- */
 #footer {
