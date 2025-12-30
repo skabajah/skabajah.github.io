@@ -122,7 +122,7 @@ function playItem(item) {
 
   els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
-  els.npMeta.textContent = `${views} • ${item.PublishDate || ""}`;
+  els.npMeta.textContent = `Views: ${views} • Published: ${item.PublishDate || ""}`;
   
   document.querySelectorAll('.card').forEach(c => {
     c.classList.toggle('active', c.getAttribute('data-id') === id);
