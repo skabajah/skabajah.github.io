@@ -111,12 +111,14 @@ html, body {
   font-style: italic;
   font-family: serif;
   line-height: 1;
+  color: #ff0033;
 }
 
 .npMeta {
   font-size: 14px;
   color: var(--muted);
   margin-top: -5px;
+  color: #bebebe;
 }
 
 .playerFrameWrap {
