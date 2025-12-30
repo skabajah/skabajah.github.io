@@ -121,7 +121,7 @@ html, body {
 .playerFrameWrap {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  /*padding-top: 56.25%;*/
   background: #000;
   border-radius: var(--radius);
   overflow: hidden;
