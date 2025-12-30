@@ -95,7 +95,6 @@ html, body {
 }
 
 .npTitle {
-  font-weight: 700;
   font-size: 28px;
   display: flex;
   align-items: center;
@@ -195,9 +194,9 @@ html, body {
 }
 
 .cardRank {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--accent);
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #E91E63;
 }
 
 .main-footer {
