@@ -1,5 +1,6 @@
 const CSV_FILE = "Master_Arabic_Top_2025.csv";
 
+// MAPPING: These 'id' values now match the strings in your CSV 'Region' column exactly
 const REGIONS = [
   { id: "All Regions", label: "Global Top 20" },
   { id: "egypt_sudan", label: "Egypt & Sudan" },
@@ -18,12 +19,13 @@ const els = {
 
 let bgBackdrop = document.getElementById("bgBackdrop");
 let rows = [];
-let activeRegion = null;
+let activeRegion = "All Regions";
 let activeVideoId = null;
 let currentIndex = 0;
 let currentList = [];
 let ytPlayer = null;
 
+// YouTube API Initialization
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player('player', {
     height: '100%',
@@ -33,10 +35,12 @@ function onYouTubeIframeAPIReady() {
       'autoplay': 1,
       'playsinline': 1,
       'modestbranding': 1,
-      'rel': 0
+      'rel': 0,
+      'origin': window.location.origin
     },
     events: {
       'onStateChange': onPlayerStateChange,
+      'onReady': () => setStatus("Player Ready")
     }
   });
 }
@@ -60,7 +64,7 @@ function playPrev() {
 }
 
 function setStatus(msg) {
-  els.status.textContent = msg;
+  if (els.status) els.status.textContent = msg;
 }
 
 function escapeHtml(s) {
@@ -128,6 +132,7 @@ function buildRegionTabs() {
 }
 
 function playItem(item) {
+  if (!item) return;
   const id = extractVideoId(item.VideoID);
   if (!id) return;
   
@@ -144,10 +149,11 @@ function playItem(item) {
 
   els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   
-  const viewCount = item.Views ? `${Number(item.Views.toString().replace(/,/g, '')).toLocaleString()} views` : "";
+  const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
   const date = item.PublishDate ? ` • ${item.PublishDate}` : "";
-  els.npMeta.textContent = `${viewCount}${date}`;
+  els.npMeta.textContent = `${views}${date}`;
   
+  // Highlight active card in grid
   document.querySelectorAll('.card').forEach(c => {
     c.classList.toggle('active', c.getAttribute('data-id') === id);
   });
@@ -157,16 +163,15 @@ function loadRegion(regionId) {
   activeRegion = regionId;
   buildRegionTabs();
 
-  // Filter and Sort current data based on CSV strings
+  // Filter based on the 'Region' column in CSV
   currentList = rows
     .filter(r => r.Region === regionId)
     .sort((a, b) => (parseInt(a.Rank) || 999) - (parseInt(b.Rank) || 999));
 
-  // Clear and Re-render the grid
   els.grid.innerHTML = "";
   
   if (currentList.length === 0) {
-    els.grid.innerHTML = `<div style="padding: 20px; opacity: 0.5;">No data found for region: ${regionId}</div>`;
+    els.grid.innerHTML = `<div style="padding:20px;opacity:0.5">No results found for ${regionId}</div>`;
     return;
   }
 
@@ -177,7 +182,7 @@ function loadRegion(regionId) {
     card.setAttribute("data-id", id);
     card.onclick = () => playItem(r);
     card.innerHTML = `
-      <img src="${r.Thumbnail}" alt="">
+      <img src="${r.Thumbnail}" onerror="this.src='https://via.placeholder.com/320x180?text=No+Thumb'">
       <div class="cardBody">
         <div class="cardRank">#${r.Rank}</div>
         <div class="cardTitle">${escapeHtml(r.Title)}</div>
@@ -186,25 +191,25 @@ function loadRegion(regionId) {
     els.grid.appendChild(card);
   });
 
-  // Automatically refresh view and play the top track of the new region
+  // Auto-play the first item of the new region
   playItem(currentList[0]);
   els.grid.scrollTo({ left: 0, behavior: 'smooth' });
 }
 
 window.addEventListener("keydown", (e) => {
-  if (currentList.length === 0) return;
   if (e.key === "ArrowRight") playNext();
   if (e.key === "ArrowLeft") playPrev();
 });
 
+// Load CSV Data
 fetch(CSV_FILE)
-  .then(r => r.text())
-  .then(t => {
-    const allRows = parseCSV(t);
-    rows = allRows.filter(r => r.VideoID && r.Region);
-    activeRegion = "All Regions";
-    buildRegionTabs();
+  .then(res => res.text())
+  .then(text => {
+    rows = parseCSV(text).filter(r => r.VideoID && r.Region);
     loadRegion(activeRegion);
-    setStatus("Ready");
+    setStatus("Data Loaded");
   })
-  .catch(err => setStatus("Error loading CSV"));
+  .catch(err => {
+    console.error(err);
+    setStatus("Error loading CSV");
+  });

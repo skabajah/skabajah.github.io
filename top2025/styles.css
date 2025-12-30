@@ -120,9 +120,8 @@ html, body {
 }
 
 .playerFrameWrap {
-  position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  height: 30vh; /* Exactly 30% of the window height */
   background: #000;
   border-radius: var(--radius);
   overflow: hidden;
@@ -130,12 +129,11 @@ html, body {
   box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.8);
 }
 
+.playerFrameWrap iframe, 
 .playerFrameWrap div#player {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100% !important;
   height: 100% !important;
+  display: block;
 }
 
 .list {
