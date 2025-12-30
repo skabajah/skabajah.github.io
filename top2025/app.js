@@ -1,17 +1,11 @@
 const CSV_FILE = "Top_Arabic_2025_All_Regions.csv";
 
 const els = {
-  regions: document.getElementById("regions"),
   grid: document.getElementById("grid"),
   npTitle: document.getElementById("npTitle"),
   npMeta: document.getElementById("npMeta"),
   status: document.getElementById("status"),
 };
-
-// Hide navigation as requested
-if (els.regions) {
-  els.regions.style.display = "none";
-}
 
 let bgBackdrop = document.getElementById("bgBackdrop");
 let activeVideoId = null;
@@ -29,8 +23,7 @@ function onYouTubeIframeAPIReady() {
       'autoplay': 1,
       'playsinline': 1,
       'modestbranding': 1,
-      'rel': 0,
-      'origin': window.location.origin
+      'rel': 0
     },
     events: {
       'onStateChange': (e) => { 
@@ -127,9 +120,7 @@ function playItem(item) {
     bgBackdrop.style.backgroundImage = `url(${item.Thumbnail})`;
   }
 
-  const rankNum = item.Rank || (currentIndex + 1);
-  els.npTitle.innerHTML = `<span>${rankNum}</span> ${escapeHtml(item.Title)}`;
-  
+  els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
   els.npMeta.textContent = `${views} • ${item.PublishDate || ""}`;
   
