@@ -1,12 +1,12 @@
 const CSV_FILE = "Master_Arabic_Top_2025.csv";
-const TOP_N = 20;
 
-const REGION_LABELS = {
-  "g_egypt_sudan": "Egypt & Sudan",
-  "g_gulf": "Gulf",
-  "g_levant": "Levant",
-  "g_north_africa": "North Africa"
-};
+const REGIONS = [
+  { id: "All Regions", label: "Global Top 20" },
+  { id: "egypt_sudan", label: "Egypt & Sudan" },
+  { id: "gulf", label: "Gulf" },
+  { id: "levant", label: "Levant" },
+  { id: "north_africa", label: "North Africa" }
+];
 
 const els = {
   regions: document.getElementById("regions"),
@@ -50,15 +50,13 @@ function onPlayerStateChange(event) {
 function playNext() {
   if (currentList.length === 0) return;
   const next = (currentIndex + 1) % currentList.length;
-  const item = currentList[next];
-  play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+  playItem(currentList[next]);
 }
 
 function playPrev() {
   if (currentList.length === 0) return;
   const prev = (currentIndex - 1 + currentList.length) % currentList.length;
-  const item = currentList[prev];
-  play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+  playItem(currentList[prev]);
 }
 
 function setStatus(msg) {
@@ -120,76 +118,77 @@ function extractVideoId(val) {
 }
 
 function buildRegionTabs() {
-  const regionOrder = ["g_egypt_sudan", "g_gulf", "g_levant", "g_north_africa"];
-  els.regions.innerHTML = regionOrder
-    .map(r => {
-      const label = REGION_LABELS[r] || r;
-      return `<button class="${r === activeRegion ? "active" : ""}" onclick="loadRegion('${r}')">${label}</button>`;
-    })
+  els.regions.innerHTML = REGIONS
+    .map(r => `
+      <button class="${r.id === activeRegion ? "active" : ""}" 
+              onclick="loadRegion('${r.id}')">
+        ${r.label}
+      </button>`)
     .join("");
 }
 
-function play(videoId, title, views, rank, thumb, publishDate) {
-  const id = extractVideoId(videoId);
+function playItem(item) {
+  const id = extractVideoId(item.VideoID);
   if (!id) return;
-  activeVideoId = id;
   
-  currentIndex = currentList.findIndex(item => extractVideoId(item.VideoID) === id);
+  activeVideoId = id;
+  currentIndex = currentList.findIndex(r => extractVideoId(r.VideoID) === id);
 
   if (ytPlayer && ytPlayer.loadVideoById) {
     ytPlayer.loadVideoById(id);
   }
 
-  if (bgBackdrop) bgBackdrop.style.backgroundImage = `url(${thumb})`;
+  if (bgBackdrop && item.Thumbnail) {
+    bgBackdrop.style.backgroundImage = `url(${item.Thumbnail})`;
+  }
 
-  els.npTitle.innerHTML = `<span>${rank}</span> ${escapeHtml(title)}`;
+  els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   
-  const viewCount = views ? `${Number(views.toString().replace(/,/g, '')).toLocaleString()} views` : "";
-  const date = publishDate ? ` • ${publishDate}` : "";
+  const viewCount = item.Views ? `${Number(item.Views.toString().replace(/,/g, '')).toLocaleString()} views` : "";
+  const date = item.PublishDate ? ` • ${item.PublishDate}` : "";
   els.npMeta.textContent = `${viewCount}${date}`;
   
   document.querySelectorAll('.card').forEach(c => {
     c.classList.toggle('active', c.getAttribute('data-id') === id);
-    if (c.getAttribute('data-id') === id) {
-      c.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    }
   });
 }
 
-function loadRegion(region) {
-  activeRegion = region;
+function loadRegion(regionId) {
+  activeRegion = regionId;
   buildRegionTabs();
 
-  // Strict region filtering and ranking sort
+  // Filter and Sort current data based on CSV strings
   currentList = rows
-    .filter(r => r.Region === region)
-    .sort((a, b) => {
-      const rA = parseInt(a.Rank) || 999;
-      const rB = parseInt(b.Rank) || 999;
-      return rA - rB;
-    })
-    .slice(0, TOP_N);
+    .filter(r => r.Region === regionId)
+    .sort((a, b) => (parseInt(a.Rank) || 999) - (parseInt(b.Rank) || 999));
 
-  els.grid.innerHTML = currentList
-    .map(r => {
-      const id = extractVideoId(r.VideoID);
-      return `
-      <div class="card ${id === activeVideoId ? "active" : ""}" 
-           data-id="${id}"
-           onclick="play('${id}','${escapeHtml(r.Title)}','${r.Views}', '${r.Rank}', '${r.Thumbnail}', '${r.PublishDate}')">
-        <img src="${r.Thumbnail}" alt="">
-        <div class="cardBody">
-          <div class="cardRank">#${r.Rank}</div>
-          <div class="cardTitle">${escapeHtml(r.Title)}</div>
-        </div>
-      </div>`;
-    })
-    .join("");
-
-  if (currentList.length > 0) {
-    const r = currentList[0];
-    play(r.VideoID, r.Title, r.Views, r.Rank, r.Thumbnail, r.PublishDate);
+  // Clear and Re-render the grid
+  els.grid.innerHTML = "";
+  
+  if (currentList.length === 0) {
+    els.grid.innerHTML = `<div style="padding: 20px; opacity: 0.5;">No data found for region: ${regionId}</div>`;
+    return;
   }
+
+  currentList.forEach(r => {
+    const id = extractVideoId(r.VideoID);
+    const card = document.createElement("div");
+    card.className = `card ${id === activeVideoId ? "active" : ""}`;
+    card.setAttribute("data-id", id);
+    card.onclick = () => playItem(r);
+    card.innerHTML = `
+      <img src="${r.Thumbnail}" alt="">
+      <div class="cardBody">
+        <div class="cardRank">#${r.Rank}</div>
+        <div class="cardTitle">${escapeHtml(r.Title)}</div>
+      </div>
+    `;
+    els.grid.appendChild(card);
+  });
+
+  // Automatically refresh view and play the top track of the new region
+  playItem(currentList[0]);
+  els.grid.scrollTo({ left: 0, behavior: 'smooth' });
 }
 
 window.addEventListener("keydown", (e) => {
@@ -203,8 +202,9 @@ fetch(CSV_FILE)
   .then(t => {
     const allRows = parseCSV(t);
     rows = allRows.filter(r => r.VideoID && r.Region);
-    activeRegion = "g_egypt_sudan";
+    activeRegion = "All Regions";
     buildRegionTabs();
     loadRegion(activeRegion);
     setStatus("Ready");
-  });
+  })
+  .catch(err => setStatus("Error loading CSV"));

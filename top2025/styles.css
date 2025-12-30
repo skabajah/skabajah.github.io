@@ -49,10 +49,10 @@ html, body {
 
 .regions {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 10px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -122,7 +122,7 @@ html, body {
 .playerFrameWrap {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* Fixed 16:9 ratio */
+  padding-top: 56.25%;
   background: #000;
   border-radius: var(--radius);
   overflow: hidden;
@@ -153,13 +153,12 @@ html, body {
   gap: 12px;
   overflow-x: auto;
   padding-bottom: 10px;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-border) transparent;
 }
 
-.grid::-webkit-scrollbar { display: none; }
-
 .card {
-  flex: 0 0 180px;
+  flex: 0 0 200px;
   display: flex;
   flex-direction: column;
   gap: 8px;
