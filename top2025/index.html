@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arabic Top 2025</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Arabic Top 2025</h1>
+
+    <nav class="regions" id="regions">
+      <!-- buttons injected by JS -->
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="player">
+      <div class="playerFrameWrap">
+        <iframe
+          id="playerFrame"
+          title="YouTube Player"
+          loading="lazy"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="nowPlaying" id="nowPlaying">
+        <div class="npTitle" id="npTitle">Select a video</div>
+        <div class="npMeta" id="npMeta"></div>
+      </div>
+    </section>
+
+    <section class="list">
+      <div class="listHeader">
+        <div class="listTitle" id="listTitle">Top 20</div>
+        <div class="listHint">Click a card to play (autoplay in iframe).</div>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- cards injected by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="status">Loading…</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
