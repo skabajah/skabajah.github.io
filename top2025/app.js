@@ -24,7 +24,6 @@ let currentIndex = 0;
 let currentList = [];
 let ytPlayer = null;
 
-// Initialize YouTube Player
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player('player', {
     height: '100%',
@@ -38,14 +37,11 @@ function onYouTubeIframeAPIReady() {
     },
     events: {
       'onStateChange': onPlayerStateChange,
-      'onError': (e) => console.error("YT Player Error:", e)
     }
   });
 }
 
-// Listen for video end
 function onPlayerStateChange(event) {
-  // YT.PlayerState.ENDED is 0
   if (event.data === YT.PlayerState.ENDED) {
     playNext();
   }
@@ -135,12 +131,11 @@ function buildRegionTabs() {
 
 function play(videoId, title, views, rank, thumb, publishDate) {
   const id = extractVideoId(videoId);
-  if (!id || id === "undefined") return;
+  if (!id) return;
   activeVideoId = id;
   
   currentIndex = currentList.findIndex(item => extractVideoId(item.VideoID) === id);
 
-  // Use API to load video instead of iframe src
   if (ytPlayer && ytPlayer.loadVideoById) {
     ytPlayer.loadVideoById(id);
   }
@@ -165,12 +160,13 @@ function loadRegion(region) {
   activeRegion = region;
   buildRegionTabs();
 
+  // Strict region filtering and ranking sort
   currentList = rows
     .filter(r => r.Region === region)
     .sort((a, b) => {
-      const rankA = parseInt(a.Rank?.toString().replace(/,/g, '')) || 999;
-      const rankB = parseInt(b.Rank?.toString().replace(/,/g, '')) || 999;
-      return rankA - rankB;
+      const rA = parseInt(a.Rank) || 999;
+      const rB = parseInt(b.Rank) || 999;
+      return rA - rB;
     })
     .slice(0, TOP_N);
 
@@ -190,7 +186,7 @@ function loadRegion(region) {
     })
     .join("");
 
-  if (currentList[0]) {
+  if (currentList.length > 0) {
     const r = currentList[0];
     play(r.VideoID, r.Title, r.Views, r.Rank, r.Thumbnail, r.PublishDate);
   }
@@ -198,11 +194,8 @@ function loadRegion(region) {
 
 window.addEventListener("keydown", (e) => {
   if (currentList.length === 0) return;
-  if (e.key === "ArrowRight") {
-    playNext();
-  } else if (e.key === "ArrowLeft") {
-    playPrev();
-  }
+  if (e.key === "ArrowRight") playNext();
+  if (e.key === "ArrowLeft") playPrev();
 });
 
 fetch(CSV_FILE)
@@ -214,8 +207,4 @@ fetch(CSV_FILE)
     buildRegionTabs();
     loadRegion(activeRegion);
     setStatus("Ready");
-  })
-  .catch(err => {
-    console.error(err);
-    setStatus("Error loading CSV");
   });
