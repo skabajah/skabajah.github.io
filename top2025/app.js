@@ -40,7 +40,6 @@ function onYouTubeIframeAPIReady() {
       'onReady': () => {
         isPlayerReady = true;
         setStatus("Ready");
-        // If data is already loaded, start the first video
         if (currentList.length > 0 && !activeVideoId) {
           playItem(currentList[0]);
         }
@@ -99,6 +98,13 @@ function parseCSV(text) {
   });
 }
 
+function formatMillions(val) {
+  if (!val) return "";
+  const num = Number(val.replace(/,/g, ''));
+  if (isNaN(num)) return "";
+  return (num / 1000000).toFixed(1) + "M";
+}
+
 function extractVideoId(val) {
   if (!val) return null;
   if (val.includes("v=")) return val.split("v=")[1].split("&")[0];
@@ -114,7 +120,6 @@ function playItem(item) {
   activeVideoId = id;
   currentIndex = currentList.findIndex(r => extractVideoId(r.VideoID) === id);
 
-  // Use loadVideoById only if player is fully ready
   if (isPlayerReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
     ytPlayer.loadVideoById(id);
   }
@@ -140,7 +145,7 @@ async function init() {
     const text = await res.text();
     
     currentList = parseCSV(text)
-      .filter(r => r.VideoID && r.VideoID.length > 5) // Basic validation
+      .filter(r => r.VideoID && r.VideoID.length > 5)
       .sort((a, b) => (parseInt(a.Rank) || 999) - (parseInt(b.Rank) || 999));
 
     if (currentList.length === 0) {
@@ -150,6 +155,7 @@ async function init() {
     els.grid.innerHTML = "";
     currentList.forEach(r => {
       const id = extractVideoId(r.VideoID);
+      const viewCount = formatMillions(r.Views);
       const card = document.createElement("div");
       card.className = "card";
       card.setAttribute("data-id", id);
@@ -157,13 +163,12 @@ async function init() {
       card.innerHTML = `
         <img src="${r.Thumbnail}" onerror="this.src='https://via.placeholder.com/320x180?text=No+Thumb'">
         <div class="cardBody">
-          <div class="cardRank">#${r.Rank}</div>
+          <div class="cardRank">#${r.Rank} <span style="font-size: 0.8em; opacity: 0.6; margin-left: 4px;">• ${viewCount}</span></div>
           <div class="cardTitle">${escapeHtml(r.Title)}</div>
         </div>`;
       els.grid.appendChild(card);
     });
 
-    // Try to play if player is already ready
     if (isPlayerReady) {
       playItem(currentList[0]);
     }
@@ -171,12 +176,7 @@ async function init() {
   } catch (err) {
     console.error("Init Error:", err);
     setStatus("Load Error");
-    els.grid.innerHTML = `
-      <div style="padding:40px; color:#ff4444; text-align:center;">
-        <p><strong>Failed to load playlist.</strong></p>
-        <p style="font-size:0.8em; opacity:0.7;">Error: ${err.message}</p>
-        <p style="font-size:0.8em; margin-top:10px;">Make sure <strong>${CSV_FILE}</strong> is in the same folder.</p>
-      </div>`;
+    els.grid.innerHTML = `<div style="padding:40px; color:#ff4444; text-align:center;">Error: ${err.message}</div>`;
   }
 }
 
@@ -185,5 +185,4 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") playPrev();
 });
 
-// Start the loading process
 init();
