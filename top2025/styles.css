@@ -175,6 +175,8 @@ html, body {
 .card.active {
   background: var(--glass-heavy);
   border-color: var(--glass-border);
+  background: rgb(237 237 237 / 84%); 
+  color: black;
 }
 
 .card img {
