@@ -118,6 +118,7 @@ html, body {
   color: var(--muted);
   margin-top: -5px;
   color: #bebebe;
+  padding: 1em 0 0 0;
 }
 
 .playerFrameWrap {
