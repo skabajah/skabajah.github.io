@@ -1,31 +1,69 @@
 const CSV_FILE = "Master_Arabic_Top_2025.csv";
 const TOP_N = 20;
 
+const REGION_LABELS = {
+  "g_egypt_sudan": "Egypt & Sudan",
+  "g_gulf": "Gulf",
+  "g_levant": "Levant",
+  "g_north_africa": "North Africa"
+};
+
 const els = {
   regions: document.getElementById("regions"),
   grid: document.getElementById("grid"),
-  playerFrame: document.getElementById("playerFrame"),
   npTitle: document.getElementById("npTitle"),
   npMeta: document.getElementById("npMeta"),
-  listTitle: document.getElementById("listTitle"),
   status: document.getElementById("status"),
 };
 
-// Create or get background elements for the cinematic effect
 let bgBackdrop = document.getElementById("bgBackdrop");
-if (!bgBackdrop) {
-  bgBackdrop = document.createElement("div");
-  bgBackdrop.id = "bgBackdrop";
-  bgBackdrop.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; z-index:-2; background-size:cover; background-position:center; filter: blur(60px) brightness(0.4); transition: background-image 0.8s ease-in-out; transform: scale(1.1);";
-  document.body.prepend(bgBackdrop);
-}
-
 let rows = [];
-let regions = [];
 let activeRegion = null;
 let activeVideoId = null;
 let currentIndex = 0;
 let currentList = [];
+let ytPlayer = null;
+
+// Initialize YouTube Player
+function onYouTubeIframeAPIReady() {
+  ytPlayer = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    videoId: '',
+    playerVars: {
+      'autoplay': 1,
+      'playsinline': 1,
+      'modestbranding': 1,
+      'rel': 0
+    },
+    events: {
+      'onStateChange': onPlayerStateChange,
+      'onError': (e) => console.error("YT Player Error:", e)
+    }
+  });
+}
+
+// Listen for video end
+function onPlayerStateChange(event) {
+  // YT.PlayerState.ENDED is 0
+  if (event.data === YT.PlayerState.ENDED) {
+    playNext();
+  }
+}
+
+function playNext() {
+  if (currentList.length === 0) return;
+  const next = (currentIndex + 1) % currentList.length;
+  const item = currentList[next];
+  play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+}
+
+function playPrev() {
+  if (currentList.length === 0) return;
+  const prev = (currentIndex - 1 + currentList.length) % currentList.length;
+  const item = currentList[prev];
+  play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+}
 
 function setStatus(msg) {
   els.status.textContent = msg;
@@ -48,14 +86,12 @@ function parseCSVLine(line) {
     const ch = line[i];
     if (ch === '"') {
       if (inQuotes && line[i + 1] === '"') {
-        cur += '"';
-        i++;
+        cur += '"'; i++;
       } else {
         inQuotes = !inQuotes;
       }
     } else if (ch === "," && !inQuotes) {
-      out.push(cur);
-      cur = "";
+      out.push(cur); cur = "";
     } else {
       cur += ch;
     }
@@ -88,8 +124,12 @@ function extractVideoId(val) {
 }
 
 function buildRegionTabs() {
-  els.regions.innerHTML = regions
-    .map(r => `<button class="${r === activeRegion ? "active" : ""}" onclick="loadRegion('${r}')">${r}</button>`)
+  const regionOrder = ["g_egypt_sudan", "g_gulf", "g_levant", "g_north_africa"];
+  els.regions.innerHTML = regionOrder
+    .map(r => {
+      const label = REGION_LABELS[r] || r;
+      return `<button class="${r === activeRegion ? "active" : ""}" onclick="loadRegion('${r}')">${label}</button>`;
+    })
     .join("");
 }
 
@@ -97,33 +137,28 @@ function play(videoId, title, views, rank, thumb, publishDate) {
   const id = extractVideoId(videoId);
   if (!id || id === "undefined") return;
   activeVideoId = id;
+  
   currentIndex = currentList.findIndex(item => extractVideoId(item.VideoID) === id);
 
-  const origin = window.location.origin;
-  els.playerFrame.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=0&playsinline=1&enablejsapi=1&origin=${origin}`;
+  // Use API to load video instead of iframe src
+  if (ytPlayer && ytPlayer.loadVideoById) {
+    ytPlayer.loadVideoById(id);
+  }
 
-  // Cinematic Background
-  bgBackdrop.style.backgroundImage = `url(${thumb})`;
+  if (bgBackdrop) bgBackdrop.style.backgroundImage = `url(${thumb})`;
 
-  // Update Metadata with large Rank
-  els.npTitle.innerHTML = `<span style="font-size: 5rem; font-weight: 900; opacity: 0.5; margin-right: 20px; line-height: 1;">${rank}</span> ${escapeHtml(title)}`;
+  els.npTitle.innerHTML = `<span>${rank}</span> ${escapeHtml(title)}`;
   
   const viewCount = views ? `${Number(views.toString().replace(/,/g, '')).toLocaleString()} views` : "";
   const date = publishDate ? ` • ${publishDate}` : "";
   els.npMeta.textContent = `${viewCount}${date}`;
   
-  // Highlight card in list
   document.querySelectorAll('.card').forEach(c => {
     c.classList.toggle('active', c.getAttribute('data-id') === id);
+    if (c.getAttribute('data-id') === id) {
+      c.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
   });
-}
-
-function handleThumbError(img, videoId) {
-  const id = extractVideoId(videoId);
-  if (!img.dataset.triedFallback && id) {
-    img.dataset.triedFallback = "true";
-    img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-  }
 }
 
 function loadRegion(region) {
@@ -132,10 +167,12 @@ function loadRegion(region) {
 
   currentList = rows
     .filter(r => r.Region === region)
-    .sort((a, b) => Number(a.Rank?.toString().replace(/,/g, '') || 0) - Number(b.Rank?.toString().replace(/,/g, '') || 0))
+    .sort((a, b) => {
+      const rankA = parseInt(a.Rank?.toString().replace(/,/g, '')) || 999;
+      const rankB = parseInt(b.Rank?.toString().replace(/,/g, '')) || 999;
+      return rankA - rankB;
+    })
     .slice(0, TOP_N);
-
-  els.listTitle.textContent = `${region} — Top ${currentList.length}`;
 
   els.grid.innerHTML = currentList
     .map(r => {
@@ -144,7 +181,7 @@ function loadRegion(region) {
       <div class="card ${id === activeVideoId ? "active" : ""}" 
            data-id="${id}"
            onclick="play('${id}','${escapeHtml(r.Title)}','${r.Views}', '${r.Rank}', '${r.Thumbnail}', '${r.PublishDate}')">
-        <img src="${r.Thumbnail}" alt="" onerror="handleThumbError(this, '${id}')">
+        <img src="${r.Thumbnail}" alt="">
         <div class="cardBody">
           <div class="cardRank">#${r.Rank}</div>
           <div class="cardTitle">${escapeHtml(r.Title)}</div>
@@ -159,44 +196,26 @@ function loadRegion(region) {
   }
 }
 
-// Keyboard Navigation
 window.addEventListener("keydown", (e) => {
   if (currentList.length === 0) return;
-  
   if (e.key === "ArrowRight") {
-    const next = (currentIndex + 1) % currentList.length;
-    const item = currentList[next];
-    play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+    playNext();
   } else if (e.key === "ArrowLeft") {
-    const prev = (currentIndex - 1 + currentList.length) % currentList.length;
-    const item = currentList[prev];
-    play(item.VideoID, item.Title, item.Views, item.Rank, item.Thumbnail, item.PublishDate);
+    playPrev();
   }
 });
 
 fetch(CSV_FILE)
-  .then(r => {
-    if (!r.ok) throw new Error(`Fetch failed: ${r.status}`);
-    return r.text();
-  })
+  .then(r => r.text())
   .then(t => {
     const allRows = parseCSV(t);
-    rows = allRows.filter(r => {
-      const comms = parseInt(r.Comments?.toString().replace(/,/g, '')) || 0;
-      const likes = parseInt(r.Likes?.toString().replace(/,/g, '')) || 0;
-      return comms > 0 && likes > 0 && r.VideoID && r.Region;
-    });
-    regions = [...new Set(rows.map(r => r.Region))].filter(Boolean);
-    if (regions.length > 0) {
-      activeRegion = regions[0];
-      buildRegionTabs();
-      loadRegion(activeRegion);
-      setStatus("Loaded");
-    } else {
-      setStatus("No rows matched filters");
-    }
+    rows = allRows.filter(r => r.VideoID && r.Region);
+    activeRegion = "g_egypt_sudan";
+    buildRegionTabs();
+    loadRegion(activeRegion);
+    setStatus("Ready");
   })
-  .catch(e => {
-    console.error(e);
-    setStatus("Error: " + e.message);
+  .catch(err => {
+    console.error(err);
+    setStatus("Error loading CSV");
   });
