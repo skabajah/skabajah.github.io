@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arabic Music | Top 2025</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bgBackdrop"></div>
+
+  <header class="topbar">
+    <h1>Arabic Top 2025</h1>
+    <nav class="regions" id="regions"></nav>
+  </header>
+
+  <main class="layout">
+    <section class="nowPlaying" id="nowPlaying">
+      <div class="npTitle" id="npTitle">Select a video</div>
+      <div class="npMeta" id="npMeta"></div>
+    </section>
+
+    <section class="player">
+      <div class="playerFrameWrap">
+        <div id="player"></div>
+      </div>
+    </section>
+
+    <section class="list">
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <nav class="footer-links">
+          <a href="#">YouTube</a>
+          <a href="#">Twitter / X</a>
+          <a href="#">Instagram</a>
+        </nav>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Information</h3>
+        <nav class="footer-links">
+          <a href="#">Sources & Methodology</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </div>
+
+      <div class="footer-section">
+        <h3>Status</h3>
+        <div id="status" class="status-badge">Initializing...</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Arabic Top Music. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
+</html>

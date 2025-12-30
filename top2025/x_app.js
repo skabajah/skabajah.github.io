@@ -20,6 +20,7 @@ let currentList = [];
 let ytPlayer = null;
 let isPlayerReady = false;
 
+// YouTube API Callback
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player('player', {
     height: '100%',
@@ -127,9 +128,7 @@ function playItem(item) {
     bgBackdrop.style.backgroundImage = `url(${item.Thumbnail})`;
   }
 
-  const rankNum = item.Rank || (currentIndex + 1);
-  els.npTitle.innerHTML = `<span>${rankNum}</span> ${escapeHtml(item.Title)}`;
-  
+  els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
   els.npMeta.textContent = `${views} • ${item.PublishDate || ""}`;
   
@@ -150,23 +149,21 @@ async function init() {
       .sort((a, b) => (parseInt(a.Rank) || 999) - (parseInt(b.Rank) || 999));
 
     if (currentList.length === 0) {
-      throw new Error("No videos found.");
+      throw new Error("CSV parsed but no valid videos found.");
     }
 
     els.grid.innerHTML = "";
-
-    currentList.forEach((r, idx) => {
+    currentList.forEach(r => {
       const id = extractVideoId(r.VideoID);
       const viewCount = formatMillions(r.Views);
       const card = document.createElement("div");
       card.className = "card";
       card.setAttribute("data-id", id);
       card.onclick = () => playItem(r);
-      
       card.innerHTML = `
         <img src="${r.Thumbnail}" onerror="this.src='https://via.placeholder.com/320x180?text=No+Thumb'">
         <div class="cardBody">
-          <div class="cardRank">#${r.Rank || (idx + 1)} <span>• ${viewCount}</span></div>
+          <div class="cardRank">#${r.Rank} <span style="font-size: 0.8em; opacity: 0.6; margin-left: 4px;">• ${viewCount}</span></div>
           <div class="cardTitle">${escapeHtml(r.Title)}</div>
         </div>`;
       els.grid.appendChild(card);
