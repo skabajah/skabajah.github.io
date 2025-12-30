@@ -8,7 +8,7 @@ const els = {
   status: document.getElementById("status"),
 };
 
-// Hide the navigation container as requested
+// Hide navigation as requested
 if (els.regions) {
   els.regions.style.display = "none";
 }
@@ -18,7 +18,9 @@ let activeVideoId = null;
 let currentIndex = 0;
 let currentList = [];
 let ytPlayer = null;
+let isPlayerReady = false;
 
+// YouTube API Callback
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player('player', {
     height: '100%',
@@ -28,11 +30,25 @@ function onYouTubeIframeAPIReady() {
       'autoplay': 1,
       'playsinline': 1,
       'modestbranding': 1,
-      'rel': 0
+      'rel': 0,
+      'origin': window.location.origin
     },
     events: {
-      'onStateChange': (e) => { if (e.data === YT.PlayerState.ENDED) playNext(); },
-      'onReady': () => setStatus("Ready")
+      'onStateChange': (e) => { 
+        if (e.data === YT.PlayerState.ENDED) playNext(); 
+      },
+      'onReady': () => {
+        isPlayerReady = true;
+        setStatus("Ready");
+        // If data is already loaded, start the first video
+        if (currentList.length > 0 && !activeVideoId) {
+          playItem(currentList[0]);
+        }
+      },
+      'onError': (e) => {
+        console.error("YouTube Player Error:", e.data);
+        setStatus("Playback Error");
+      }
     }
   });
 }
@@ -59,7 +75,7 @@ function escapeHtml(s) {
 
 function parseCSV(text) {
   const lines = text.trim().split(/\r?\n/);
-  if (lines.length === 0) return [];
+  if (lines.length <= 1) return [];
   
   const parseLine = (line) => {
     const out = []; let cur = ""; let inQuotes = false;
@@ -98,26 +114,38 @@ function playItem(item) {
   activeVideoId = id;
   currentIndex = currentList.findIndex(r => extractVideoId(r.VideoID) === id);
 
-  if (ytPlayer?.loadVideoById) ytPlayer.loadVideoById(id);
-  if (bgBackdrop && item.Thumbnail) bgBackdrop.style.backgroundImage = `url(${item.Thumbnail})`;
+  // Use loadVideoById only if player is fully ready
+  if (isPlayerReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
+    ytPlayer.loadVideoById(id);
+  }
+  
+  if (bgBackdrop && item.Thumbnail) {
+    bgBackdrop.style.backgroundImage = `url(${item.Thumbnail})`;
+  }
 
   els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
   const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
   els.npMeta.textContent = `${views} • ${item.PublishDate || ""}`;
   
-  document.querySelectorAll('.card').forEach(c => c.classList.toggle('active', c.getAttribute('data-id') === id));
+  document.querySelectorAll('.card').forEach(c => {
+    c.classList.toggle('active', c.getAttribute('data-id') === id);
+  });
 }
 
 async function init() {
-  setStatus("Loading Top 20...");
+  setStatus("Loading Data...");
   try {
     const res = await fetch(CSV_FILE);
-    if (!res.ok) throw new Error("CSV file not found");
+    if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
     const text = await res.text();
     
     currentList = parseCSV(text)
-      .filter(r => r.VideoID)
+      .filter(r => r.VideoID && r.VideoID.length > 5) // Basic validation
       .sort((a, b) => (parseInt(a.Rank) || 999) - (parseInt(b.Rank) || 999));
+
+    if (currentList.length === 0) {
+      throw new Error("CSV parsed but no valid videos found.");
+    }
 
     els.grid.innerHTML = "";
     currentList.forEach(r => {
@@ -135,12 +163,20 @@ async function init() {
       els.grid.appendChild(card);
     });
 
-    if (currentList.length > 0) playItem(currentList[0]);
-    setStatus("Ready");
+    // Try to play if player is already ready
+    if (isPlayerReady) {
+      playItem(currentList[0]);
+    }
+    
   } catch (err) {
-    console.error(err);
-    setStatus("Error loading data");
-    els.grid.innerHTML = `<div style="padding:20px; color:red;">Could not load ${CSV_FILE}</div>`;
+    console.error("Init Error:", err);
+    setStatus("Load Error");
+    els.grid.innerHTML = `
+      <div style="padding:40px; color:#ff4444; text-align:center;">
+        <p><strong>Failed to load playlist.</strong></p>
+        <p style="font-size:0.8em; opacity:0.7;">Error: ${err.message}</p>
+        <p style="font-size:0.8em; margin-top:10px;">Make sure <strong>${CSV_FILE}</strong> is in the same folder.</p>
+      </div>`;
   }
 }
 
@@ -149,4 +185,5 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") playPrev();
 });
 
+// Start the loading process
 init();
