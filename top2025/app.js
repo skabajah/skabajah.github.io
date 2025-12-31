@@ -121,8 +121,11 @@ function playItem(item) {
   }
 
   els.npTitle.innerHTML = `<span>${item.Rank}</span> ${escapeHtml(item.Title)}`;
-  const views = item.Views ? `${Number(item.Views.replace(/,/g, '')).toLocaleString()} views` : "";
-  els.npMeta.textContent = `Views: ${views} • Published: ${item.PublishDate || ""}`;
+  
+  // EDITED LINES BELOW:
+  const views = item.Views ? `Views: ${Number(item.Views.replace(/,/g, '')).toLocaleString()}` : "";
+  const published = item.PublishDate ? `Published: ${item.PublishDate}` : "";
+  els.npMeta.textContent = `${views} • ${published}`;
   
   document.querySelectorAll('.card').forEach(c => {
     c.classList.toggle('active', c.getAttribute('data-id') === id);
