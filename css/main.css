@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
 
 
+:root {
+    --sk-shadow: -2px -6px 20px 0px rgb(0 0 0 / 15%); 
+
+}
 
 /* Add this at the very top of your g2.css file */
 html {
@@ -117,8 +121,11 @@ nav a { /* This rule now applies to links inside .nav-links and .nav-brand */
 }
 
 nav a:hover {
-  background-color: #dedede50;
+  /*background-color: #dedede50;*/
+    background-color: #7e67ba;
+    color: #ffffff;
 }
+
 
 
 
@@ -142,7 +149,7 @@ nav a:hover {
 .examples.active + .sub-nav {
   display: flex; /* or block */
   justify-content: space-evenly;
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 1);
 }
 
 .sub-nav.open {
@@ -293,7 +300,7 @@ a.subnav-link:hover {
 }
 
 #description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.8;
   max-width: 800px;
   color: black;
@@ -404,9 +411,23 @@ img.project-gif {
 }
 
 .project-info a {
-  color: #007bff;
+  color: #363636;
   text-decoration: none;
   font-weight: 500;
+  border-radius: 18px;
+  width: fit-content;
+  align-self: center;
+  padding: 4px 10px;
+  border:  solid 1px #4285f4;
+  background: #d5e4fd;
+  margin: 4px;
+
+}
+.project-info a:hover { 
+  background: gold;
+  color: #434343;
+  box-shadow: 1px 2px 4px 0px rgb(0 0 0 / 40%); 
+  border:  solid 1px white;
 }
  
 /*SVG line*/
@@ -545,7 +566,8 @@ img.footerpng {
   transform: translateY(-4px);
   /*filter: grayscale(0%);*/
   opacity: 1;
-  background: #0f9d582b; 
+  /*background: #0f9d582b; */
+  background: gold;
 }
 
 
@@ -577,6 +599,8 @@ h6 {
 
 #goUp:hover {
   transform: translateY(-5px);
+  stroke: gold;
+  /*box-shadow: var(--sk-shadow);*/
 }
 
 /* --- Responsive adjustments --- */
@@ -594,7 +618,7 @@ h6 {
     position: absolute; /* Position relative to nav */
     top: 100%; /* Below the nav bar */
     left: 0;
-    background: rgba(255, 255, 255, 0.90);  
+    background: white ;   /*rgba(255, 255, 255, 0.90);  */
     /*box-shadow: 0 5px 10px var(--color-shadow-light);*/
     padding: 4rem 0;
     z-index: 999; /* Below hamburger, above content */
@@ -602,6 +626,10 @@ h6 {
 
   .nav-links.active {
     display: flex; /* Show navigation links when active */
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    background: #fafafa;
+
   }
 
   .nav-links a {
@@ -609,6 +637,14 @@ h6 {
     text-align: left; /* Align text left in dropdown */
     width: 100%; /* Make links take full width of dropdown */
   }
+
+  .examples.active + .sub-nav {
+    background: #fafafa;
+    position: relative;
+    top: 1em;
+  }
+
+
 
   .hamburger {
     display: flex; /* Show hamburger icon on small screens */
@@ -626,7 +662,7 @@ h6 {
   }
  
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h2 {
     font-size: 1.8rem;
