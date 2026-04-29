@@ -1,418 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <title>skabajah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Big Data Analytics, SQL, Snowflake, Tableau, Web Development; JavaScript, jQuery, HTML, CSS & More!" />
-  <meta name="author" content="skabajah" />
-	
-	<meta name="google-site-verification" content="wg8ibK6xxObBq031M_wuhjg9JPP0mNW10Ia7UsB1vPg" />
- 
-  <link rel="stylesheet" href="css/main.css">
- 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
+    <meta charset="utf-8" />
+    <title>shadi kabajah | systems of truth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto+Condensed:wght@300;400;700&display=swap'); 
 
+        :root {
+            --accent: #374151;
+            --text-main: #1a1a1a;
+            --text-muted: #6b7280;
+            --bg-offset: #fafafa;
+        }
 
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: var(--text-main);
+            background: #ffffff;
+            margin: 0;
+            text-transform: lowercase;
+        }
 
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem 2rem;  
+            z-index: 1000;
+            display: flex;  
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-left: 1.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        #intro {
+            padding: 6rem 2rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .intro-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-sub {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 240px;
+        }
+
+        .project-card:hover {
+            background: var(--bg-offset);
+            border-color: var(--text-main);
+        }
+
+        .btn-link {
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .tech-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            border: 1px solid #e5e7eb;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        /* Skills Section Styles */
+        .skills-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .skill-group {
+            border-top: 1px solid #f3f4f6;
+            padding: 2rem 0;
+        }
+
+        .skill-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            row-gap: 0.75rem;
+        }
+
+        .skill-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-item::after {
+            content: "/";
+            margin-left: 2rem;
+            color: #e5e7eb;
+            font-weight: 300;
+        }
+
+        .skill-item:last-child::after {
+            content: "";
+        }
+
+        .section-header {
+            max-width: 1100px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
-
 <body>
 
-  <nav>
-    <button class="hamburger" aria-label="Toggle navigation menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <div class="nav-links">
-      <a href="#intro" class="intro">intro</a>
-
-      <div class="nav-dropdown">
-        <a href="#examples" class="examples">
-          showcase
-          <span class="chevron">
-            <!-- <i class="fas fa-chevron-down"></i> -->
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          </span>
-        </a>
-        <div class="sub-nav">
-          <a href="#examples-projects" class="subnav-link">AI</a>
-          <a href="#examples-prototyping" class="subnav-link">prototyping</a>
-          <a href="#examples-financial-modeling" class="subnav-link">financial modeling</a>
-          <a href="#examples-tableau-viz" class="subnav-link">data viz</a>
-          <a href="#examples-handcrafted-art" class="subnav-link">freehand</a>
+    <nav>
+        <div class="font-extrabold text-sm tracking-tighter">sk.</div>
+        <div class="flex">
+            <a href="#showcase" class="nav-link">work</a>
+            <a href="https://linkedin.com/in/skabajah" target="_blank" class="nav-link">linkedin</a>
+            <a href="mailto:shadi.kabajah@gmail.com" class="nav-link">contact</a>
         </div>
-      </div>
+    </nav>
 
-      <a href="#tech" class="tech">technologies</a>
+    <section id="intro">
+        <h1 class="intro-title">shadi kabajah</h1>
+        <p class="intro-sub">building systems of truth.</p>
+        <div class="space-y-4">
+            <p class="text-sm leading-relaxed max-w-xl text-slate-600">
+                18+ years across big tech, energy, and telecom. i bridge the gap between complex engineering and executive strategy, currently enforcing data integrity for global operations at <span class="text-black font-semibold">google</span>.
+            </p>
+            <p class="text-xs italic text-slate-400">
+                developing algorithms to day trade the market—because data is better when it generates value.
+            </p>
+        </div>
+    </section>
 
-    </div>
-  </nav>
- 
+    <div class="section-header">selected work</div>
+    <section id="showcase">
+        <div class="project-grid grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <div class="project-card">
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2">skim it + ai suite</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-4">bilingual summarizer ecosystem. uses llama 3 to condense web content and gemini-powered gmail add-ons to prioritize inbox action items.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">llama 3</span>
+                        <span class="tech-tag">gemini api</span>
+                        <span class="tech-tag">chrome ext</span>
+                    </div>
+                </div>
+                <a href="https://skim-it.studio/" class="btn-link">visit studio</a>
+            </div>
 
- <!-- SPLIT --> 
+            <div class="project-card">
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2">tactile analytics</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">data art and visualizations—from lego-based election tracking to "dear data" style freehand personal health logs.</p>
+                </div>
+                <a href="https://public.tableau.com/app/profile/skabajah" class="btn-link">tableau gallery</a>
+            </div>
 
-<section id="intro">
-  <div id="logo_div"><span id="logo2">SK</span></div>
-  <div id="intro_text">
-    <h1>Shadi Kabajah</h1>
-    
-    <div id="description">
-      <p style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">
-        I build systems of truth.
-      </p>
+            <div class="project-card">
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2">integrity architecture</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">architecting data governance frameworks for snowflake and bigquery. solving for fragmentation at the source.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tech-tag">snowflake</span>
+                    <span class="tech-tag">python</span>
+                    <span class="tech-tag">bigquery</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
-      <p>
-        With 18+ years of experience across Big Tech, energy, and telecom, I specialize in transforming fragmented, high-volume data into actionable executive strategy. Whether I'm enforcing data integrity for global programs at <span>Google</span> or architecting <span>Snowflake</span> infrastructure, I bridge the critical gap between complex engineering and business objectives.
-      </p>
+    <section class="skills-section">
+        <div class="skill-group">
+            <div class="skill-label">stack</div>
+            <div class="skill-list">
+                <span class="skill-item">python</span>
+                <span class="skill-item">sql / postgresql</span>
+                <span class="skill-item">snowflake</span>
+                <span class="skill-item">bigquery</span>
+                <span class="skill-item">llama 3 / gemini api</span>
+                <span class="skill-item">tableau</span>
+                <span class="skill-item">appsscript</span>
+                <span class="skill-item">r</span>
+                <span class="skill-item">aws s3</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <div class="skill-label">experience</div>
+            <div class="skill-list">
+                <span class="skill-item">data integrity</span>
+                <span class="skill-item">executive strategy</span>
+                <span class="skill-item">governance frameworks</span>
+                <span class="skill-item">financial modeling</span>
+                <span class="skill-item">product prototyping</span>
+                <span class="skill-item">tactile data art</span>
+            </div>
+        </div>
+    </section>
 
-      <p>
-        This portfolio offers a glimpse into the tools I build when I’m exploring the cutting edge. These range from AI-powered productivity apps to text summarizers and Tableau-based data art.
-      </p>
-
-      <p>
-        In the meantime, I’m developing an algorithm to day trade the market <br>
-        <i>because data is more cool when it makes you money!!</i>
-      </p>
-    </div>
-
-    <div class="social">
-      <div>
-        <a href="mailto:shadi.kabajah@gmail.com" target="_blank" rel="noopener noreferrer">
-          <img alt="email" class="footerpng" src="img/email.svg" />
-        </a>
-        <h4>Email</h4>
-      </div>
-
-      <div>
-        <a href="https://www.linkedin.com/in/skabajah" target="_blank" rel="noopener noreferrer">
-          <img alt="linkedin" class="footerpng" src="img/in.svg" />
-        </a>
-        <h4>LinkedIn</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- SPLIT --> 
-
-
- 
-
-<section id="examples">
-  <h2>showcase</h2>
-  <h5>And this is what I can do with those technologies:</h5>
-
-  <!-- AI | Chrome Extensions -->
-<div class="group-block" data-group-id="ai-extensions" id="examples-projects">
-    <h3 class="group-title">AI | text summarizer</h3>
-
-
-
-    <div class="project-row ">
-      <div class="project-img">
-        <img src="https://lh3.googleusercontent.com/HyhrR50xdDsFwMeCZA9Qig_wW65cVZbzyEuP7zv4j8IuXnuk_5FL1Uy9G-FSUeIkxjoeh8s5JrvcvAeN1ewVroOC_iM=s1600-w1600-h1000" alt="Gemini on the Side"  class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-      <h4>skim it - Chrome & Firefox Extension</h4>
-        <p>Highlight text, right-click, and choose "skim it" - or click the toolbar icon to skim the whole page. AI summarization powered by Llama 3. Choose your summary length (small, medium, or large), adjust font size, and skim in English or Arabic. Only what you see gets skimmed - no hidden content, no repeated words. Perfect for long articles, emails, or job descriptions.</p>
-        View on:
-        <a href="https://skim-it.studio/" target="_blank">skim-it.studio</a>
-        <!-- <a href="https://chromewebstore.google.com/detail/imjpiilkbkpmibjjgbecmglmpggcnjfc" target="_blank">Chrome Web Store</a> -->
-        <!-- <a href="https://addons.mozilla.org/en-US/firefox/addon/skim-it/" target="_blank">Firefox Add-ons</a> -->
-      </div>
-    </div>
-
-  <div class="project-row">
-    <img src="img/line.png" alt="line" class="svg-line reverse-line " /> 
-  </div>
-
-
-
-    <div class="project-row  ">
-      <div class="project-img">
-        <img src="media/skim-it-gmail.png" alt="Gemini Gmail Add-on"  class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h4>Gmail Add-on</h4>
-        <p>I developed a Gmail sidebar add-on powered by Gemini’s AI that scans incoming emails to identify tasks specifically assigned to me. It then extracts and presents these tasks as concise bullet-point summaries, allowing me to quickly understand which emails require my attention and which can be deferred. This streamlined approach improves inbox management by helping me prioritize actionable items and stay organized.</p>
-        <!-- <a href="media/gmailaddon.png" target="_blank">View Larger</a> -->
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Park Smart Project -->
-<div class="group-block" data-group-id="prototyping" id="examples-prototyping">
-    <h3 class="group-title">Prototyping</h3>
-
-    <div class="project-row  ">
-      <div class="project-img">
-        <img src="gif/park.gif" alt="Park Smart Prototype" class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h4>From Wireframes to Prototype</h4>
-        <p>Created a prototype for Park Smart, a conceptual mobile app developed as part of a product development course. The app is designed to help drivers in Washington, D.C. find available and legal parking spots, showing key details like restrictions, pricing, and distance to their destination. The prototype illustrates the full user journey-from setting up a vehicle profile to selecting parking times and using filters to find the best options. This project deepened my experience in product thinking, UX design, and prototyping.</p>
-        <a href="gif/park.gif" target="_blank">View Prototype</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Financial Modeling | NPV Analysis -->
-<div class="group-block" data-group-id="financial-modeling" id="examples-financial-modeling">
-  <h3 class="group-title">Financial Modeling</h3>
-
-  <div class="project-row reverse ">
-    <div class="project-img">
-      <img src="gif/npv.gif" alt="NPV Model and Scenarios" class="project-gif" loading="lazy">
-    </div>
-    <div class="project-info">
-      <h4>NPV Analysis Project</h4>
-      <p>As part of my MBA consulting experience, I collaborated with a client to develop expansion scenarios for their production operations. I built a detailed financial model incorporating key assumptions and conducted an NPV analysis to evaluate investment viability. I also created presentation slides summarizing the findings, which I presented to the CEO. An animated GIF visualizes the model and scenario comparisons, making complex insights clear and actionable.</p>
-    </div>
-  </div>
-</div>
-
- 
-
-  <!-- Tableau | Visualizations -->
-<div class="group-block" data-group-id="tableau-viz" id="examples-tableau-viz">
-    <h3 class="group-title">Data Visualizations | Tableau</h3>
-
-    <div class="project-row    ">
-      <div class="project-img">
-        <img src="gif/lego.gif" alt="Elections LEGO" class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h4>Elections LEGO</h4>
-        <p>This visualization uses LEGO bricks and dots to represent U.S. presidential elections from 2012, 2016, and 2020. Each dot corresponds to an electoral vote, arranged by state and year, with color coding for party affiliation. The stacked LEGO pieces create a tactile, intuitive way to compare electoral outcomes across three election cycles, highlighting shifts in voter support and the evolving political landscape over time. 
-      </p>
-        <a href="https://public.tableau.com/app/profile/skabajah/viz/USElections2020/2020" target="_blank">View on Tableau</a>
-      </div>
-    </div>
-
-
-
-
-  <div class="project-row">
-    <img src="img/line.png" alt="line" class="svg-line reverse-line" /> 
-  </div>
-
-
-
-    <div class="project-row ">
-      <div class="project-img">
-        <img src="gif/sankey.gif" alt="sankey"
-        class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info ">
-        <h4>California Gubernatorial Election, 2018</h4>
-        <p>This Tableau Sankey chart visualizes how California counties voted in the 2018 gubernatorial election. Each flow represents the shift in voter support from previous trends to the final outcome, with band width showing relative county size. By focusing on movement rather than geography, the viz reveals regional voting patterns and highlights where shifts in party support occurred across the state.</p>
-        <a href="https://public.tableau.com/app/profile/skabajah/viz/CaliforniaGubernatorialElection2018/California2018" target="_blank">View on Tableau</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Handcrafted | Data Art -->
-<div class="group-block" data-group-id="handcrafted-art" id="examples-handcrafted-art">
-    <h3 class="group-title">Data Visualizations | Freehand</h3>
-
-    <div class="project-row  " >
-      <div class="project-img">
-        <img src="gif/deardata.gif" alt="Dear Data"  class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h4>Dear Data</h4>
-        <p>Inspired by “Dear Data,” I created a handcrafted project to track and visualize my experience with gout. Over several weeks, I manually logged meals, hydration, medication, pain levels, and sleep - translating each into a visual language of symbols and color. The result was a series of postcards that revealed patterns and correlations I wouldn’t have seen in a traditional dashboard, turning personal health data into a tool for reflection and insight.</p>
-        <!-- <a href="media/deardata_full.JPG" target="_blank">View Larger</a> -->
-      </div>
-    </div>
-
-
-  <div class="project-row">
-    <img src="img/line.png" alt="line" class="svg-line  reverse-line" /> 
-  </div>
-
-
-
-    <div class="project-row  ">
-      <div class="project-img">
-        <img src="media/TwoNumbers.png" alt="Two Numbers" class="project-gif" >
-      </div>
-      <div class="project-info">
-        <h4>Two Numbers</h4>
-        <p>
-        This project explores how far creativity can go with strict constraints. I challenged myself to create six entirely different visualizations using only two numbers: 37 and 75. Through manual sketches, playful layouts, and minimal tools, I reimagined their relationship as ratios, distances, intersections, and contrasts. What began as a curiosity exercise turned into a meditation on structure, meaning, and the beauty of limitations in design.
+    <footer class="py-20 text-center">
+        <div class="flex justify-center gap-8 mb-6 opacity-40">
+            <a href="https://linkedin.com/in/skabajah" target="_blank"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://github.com/skabajah" target="_blank"><i data-lucide="github" class="w-4 h-4"></i></a>
+        </div>
+        <p class="text-[8px] uppercase tracking-[0.3em] text-slate-400">
+            &copy; 2014 - 2025 shadi kabajah<br>
+            all trademarks and logos are property of their respective owners
         </p>
-        <!-- <a href="media/TwoNumbers.png" target="_blank">View Larger</a> -->
-      </div>
-    </div>
+    </footer>
 
-
-
-      <!-- SQL
-  <div class="group-block" data-group-id="analytics-automation">
-    <h3 class="group-title">Search Bar</h3>
-
-    
-
-    <div class="project-row  ">
-      <div class="project-img">
-        <img src="gif/sql.gif" alt="ZIP Code Lookup Tool"  class="project-gif" loading="lazy">
-      </div>
-      <div class="project-info">
-        <h4>ZIP Code Lookup Tool</h4>
-        <p>A php web app that lets users input one or multiple U.S. ZIP codes and instantly query a MySQL database for city, state, and location type. Designed the front end using Bootstrap for responsive layout and clean UX. Deployed on a free PHP hosting service with full backend integration. Data sourced from data.gov.</p>
-        <a href="gif/sql.gif" target="_blank">View Demo</a>
-      </div>
-    </div>
-  </div>
-  -->
-
-
-  </div>
-</section>
-
-
-
-
-<!-- SPLIT --> 
-
-<!-- 
-
-  <section id="footer">
-    <h2>contacts</h2>
-    <h5>Whether you have a question, a project in mind, or just want to connect, I’d love to hear from you!</h5>
-    <div class="social">
-      <div>
-        <a href="mailto:skabajah@icloud.com" target="_blank" rel="noopener noreferrer">
-          <img alt="email" class="footerpng" src="img/email.svg" />
-        </a>
-        <h4>Email</h4>
-      </div>
-      <div>
-        <a href="https://www.linkedin.com/in/skabajah" target="_blank" rel="noopener noreferrer">
-          <img alt="linkedin" class="footerpng" src="img/in.svg" />
-        </a>
-        <h4>LinkedIn</h4>
-      </div>
-      <div>
-        <a href="https://public.tableau.com/app/profile/skabajah" target="_blank" rel="noopener noreferrer">
-          <img alt="tableau" class="footerpng" src="img/tableau.svg" />
-        </a>
-        <h4>Tableau Public</h4>
-      </div>
-    </div>
-  </section> -->
-
- <!-- SPLIT --> 
-
-  <section id="tech">
-    <h2>technologies</h2>
-    <h5>Some of the technologies that I know:</h5>
-    <div class="tech-grid">
-
-      <div class="tech-item">
-        <h4>Tableau</h4>
-        <img alt="tableau logo" src="img/tableau.svg" />
-      </div>
-
-
-      <div class="tech-item">
-        <h4>PostgreSQL</h4>
-        <img alt="python logo" src="img/postgresql.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>Snowflake</h4>
-        <img alt="Snowflake logo" src="img/snowflake.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>Python</h4>
-        <img alt="python logo" src="img/python.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>R</h4>
-        <img alt="R logo" src="img/r.svg" />
-      </div> 
-
-      <div class="tech-item">
-        <h4>AWS/S3</h4>
-        <img alt="AWS S3 logo" src="img/s3.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>AppsScript</h4>
-        <img alt="R logo" src="img/apps_script.svg" />
-      </div> 
-
-      <div class="tech-item">
-        <h4>JavaScript</h4>
-        <img alt="javascript logo" src="img/js.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>HTML</h4>
-        <img alt="html5 logo" src="img/html.svg" />
-      </div>
-
-      <div class="tech-item">
-        <h4>CSS</h4>
-        <img alt="css3 logo" src="img/css.svg" />
-      </div>
- 
-
-    </div>
-  </section>
-
-
-<!-- SPLIT --> 
-
-
-  <section id="signature">
-    <a href="#intro" title="Back to top" aria-label="Back to top">
-      <svg id="goUp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#0a9396" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="16 12 12 8 8 12" />
-        <line x1="12" y1="16" x2="12" y2="8" />
-      </svg>
-    </a>
-    <h6>
-      Copyright &copy; 2014 - 2025 Shadi Kabajah<br />
-      All rights reserved<br />
-      All trademarks, logos, and brand names are the property of their respective owners.<br>
-      <a href="/tos" style="color: #0a9396; text-decoration: underline;">Privacy Policy & Terms of Use</a>
-
-    </h6>
-  </section>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/g2.js"></script>
-
-  	<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
-
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-TP21R0VPV9');
-		</script>
-			
-			
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
