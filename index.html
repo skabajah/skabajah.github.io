@@ -6,239 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Big Data Analytics, SQL, Snowflake, Tableau, Web Development; JavaScript, jQuery, HTML, CSS & More!" />
     <meta name="author" content="Shadi Kabajah" />
-
     <meta name="google-site-verification" content="wg8ibK6xxObBq031M_wuhjg9JPP0mNW10Ia7UsB1vPg" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto+Condensed:wght@300;400;700&display=swap'); 
-
-        :root {
-            --gold: #FFD700;
-            --gold-muted: #E6C200;
-            --slate-black: #121212;
-            --text-main: #000000;
-            --text-muted: #4B5563;
-            --bg-offset: #FAFAFA;
-        }
-
-        body {
-            font-family: 'Roboto Condensed', sans-serif;
-            color: var(--text-main);
-            background: #ffffff;
-            margin: 0;
-            text-transform: lowercase;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: -0.03em;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1.5rem 2rem;  
-            z-index: 1000;
-            display: flex;  
-            justify-content: space-between; 
-            align-items: center;
-            border-bottom: 1px solid #f3f4f6;
-        }
-
-        .nav-link {
-            font-weight: 400;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-left: 1.5rem;
-            transition: all 0.2s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--gold-muted);
-        }
-
-        #intro {
-            padding: 6rem 2rem 6rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .intro-title {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            color: var(--slate-black);
-            line-height: 1;
-        }
-
-        .project-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border: 1px solid #eeeeee;
-            padding: 2rem;
-            border-radius: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 280px;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.2);
-        }
-
-        .btn-link {
-            font-weight: 800;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            background: var(--slate-black);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 1.5rem;
-            display: inline-block;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .btn-link:hover {
-            background: var(--gold);
-            color: var(--slate-black);
-            box-shadow: 0 0 15px var(--gold);
-        }
-
-        .tech-tag {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--slate-black);
-            background: #f3f4f6;
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            border: 1px solid transparent;
-        }
-
-        .project-card:hover .tech-tag {
-            background: #fffbeb;
-            border-color: var(--gold);
-        }
-
-        /* Skills Section Styles - Concise & Focused */
-        .skills-section {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        .skill-group {
-            border-top: 1px solid #f3f4f6;
-            padding: 2rem 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .skill-group {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .skill-label {
-                width: 150px;
-                margin-bottom: 0;
-            }
-        }
-
-        .skill-label {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--gold-muted);
-        }
-
-        .skill-list {
-            font-size: 1.1rem;
-            color: var(--slate-black);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem 1.25rem;
-            flex: 1;
-        }
-
-        .skill-item {
-            font-weight: 400;
-            white-space: nowrap;
-        }
-
-        .skill-item:not(:last-child)::after {
-            content: "•";
-            margin-left: 1.25rem;
-            color: var(--gold);
-            font-weight: 900;
-            opacity: 0.8;
-        }
-
-        .section-header {
-            max-width: 1100px;
-            margin: 0 auto 2rem;
-            padding: 0 2rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--text-muted);
-        }
-
-        .project-image-container {
-            width: 100%;
-            height: 140px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            border: 1px solid #f3f4f6;
-        }
-
-        .project-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-image-container img {
-            opacity: 1;
-        }
-        footer {
-            background: #4e4e4e ;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-
 <body>
 
     <nav>
-        <div class="font-extrabold text-lg tracking-tighter flex items-center gap-1">
-            <span class="text-slate-black">sk</span><span class="text-gold text-2xl">.</span>
+        <div class="logo">
+            <span class="logo-text">sk</span><span class="logo-dot">.</span>
         </div>
-        <div class="flex">
+        <div class="nav-links">
             <a href="#showcase" class="nav-link">work</a>
             <a href="https://linkedin.com/in/skabajah" target="_blank" class="nav-link">linkedin</a>
             <a href="mailto:shadi.kabajah@gmail.com" class="nav-link">contact</a>
@@ -246,12 +23,12 @@
     </nav>
 
     <section id="intro">
-        <h1 class="intro-title">shadi kabajah<span class="text-gold">.</span></h1>
+        <h1 class="intro-title">shadi kabajah<span class="gold-dot">.</span></h1>
     </section>
 
     <div class="section-header">selected work</div>
     <section id="showcase">
-        <div class="project-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="project-grid">
             
             <!-- Skim It + AI Suite -->
             <div class="project-card">
@@ -259,9 +36,9 @@
                     <div class="project-image-container">
                         <img src="https://lh3.googleusercontent.com/HyhrR50xdDsFwMeCZA9Qig_wW65cVZbzyEuP7zv4j8IuXnuk_5FL1Uy9G-FSUeIkxjoeh8s5JrvcvAeN1ewVroOC_iM=s1600-w1600-h1000" alt="Skim It Interface">
                     </div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2 text-slate-black">skim it + ai suite</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-4">bilingual summarizer ecosystem. uses llama 3 to condense web content and gemini-powered gmail add-ons to prioritize inbox action items.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <h4 class="project-title">skim it + ai suite</h4>
+                    <p class="project-description">bilingual summarizer ecosystem. uses llama 3 to condense web content and gemini-powered gmail add-ons to prioritize inbox action items.</p>
+                    <div class="tech-tags">
                         <span class="tech-tag">llama</span>
                         <span class="tech-tag">gemini</span>
                         <span class="tech-tag">appsscript</span>
@@ -273,12 +50,12 @@
             <!-- Tactile Analytics -->
             <div class="project-card">
                 <div>
-                    <div class="project-image-container flex items-center justify-center bg-slate-50">
-                        <img src="gif/lego.gif" alt="Tableau Public">
+                    <div class="project-image-container bg-slate-50 flex-center">
+                        <img src="media/lego.png" alt="Tableau Public">
                     </div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2 text-slate-black">tactile analytics</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">data art and visualizations—from lego-based election tracking to "dear data" style freehand personal health logs.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <h4 class="project-title">tactile analytics</h4>
+                    <p class="project-description">data art and visualizations—from lego-based election tracking to "dear data" style freehand personal health logs.</p>
+                    <div class="tech-tags">
                         <span class="tech-tag">tableau</span>
                         <span class="tech-tag">datastudio</span> 
                         <span class="tech-tag">javascript</span> 
@@ -290,12 +67,12 @@
             <!-- Integrity Architecture -->
             <div class="project-card">
                 <div>
-                    <div class="project-image-container flex items-center justify-center bg-slate-900">
-                        <img src="media/data_pipeline.png">
+                    <div class="project-image-container bg-slate-900 flex-center">
+                        <img src="media/data_pipeline.png" alt="Data Pipeline">
                     </div>
-                    <h4 class="font-bold text-sm uppercase tracking-widest mb-2 text-slate-black">integrity architecture</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">architecting data governance frameworks for snowflake and bigquery. solving for fragmentation at the source.</p>
-                    <div class="flex flex-wrap gap-2 mt-4">
+                    <h4 class="project-title">integrity architecture</h4>
+                    <p class="project-description">architecting data governance frameworks for snowflake and bigquery. solving for fragmentation at the source.</p>
+                    <div class="tech-tags">
                         <span class="tech-tag">sql</span>
                         <span class="tech-tag">snowflake</span>
                         <span class="tech-tag">python</span>
@@ -333,25 +110,24 @@
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-gray-100">
-        <div class="flex justify-center gap-8 mb-6">
-            <a href="https://linkedin.com/in/skabajah" target="_blank" class="text-slate-400 hover:text-gold transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-            <a href="https://github.com/skabajah" target="_blank" class="text-slate-400 hover:text-gold transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/skabajah" target="_blank" class="social-link">in</a>
+            <a href="https://github.com/skabajah" target="_blank" class="social-link">gh</a>
         </div>
-        <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 font-bold">
-            &copy; 2014 - 2026 shadi kabajah
+        <p class="copyright">
+            © 2014 - 2026 shadi kabajah
         </p>
-    </footer> 
+    </footer>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TP21R0VPV9');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP21R0VPV9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TP21R0VPV9');
+    </script>
 
 </body>
 </html>
