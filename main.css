@@ -173,7 +173,7 @@ nav {
 .project-title {
     font-weight: 700;
     font-size: 0.875rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
     color: var(--slate-black);
@@ -212,7 +212,7 @@ nav {
 .btn-link {
     font-weight: 800;
     font-size: 0.75rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 0.1em;
     background: var(--dark-gray);
     color: white;
@@ -269,7 +269,7 @@ nav {
 }
 
 .skill-list {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--slate-black);
     display: flex;
     flex-wrap: wrap;
