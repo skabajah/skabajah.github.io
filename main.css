@@ -142,9 +142,10 @@ nav {
 }
 
 .project-card:hover {
-    /*border-color: var(--gold);*/
+    border-color: var(--gold);
     /*transform: translateY(-4px);*/
     box-shadow: 0 10px 30px -10px rgba(56, 56, 56, 0.2);
+    background: #ebe3d1b0;
 }
 
 .project-image-container {
