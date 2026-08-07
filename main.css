@@ -265,12 +265,13 @@ nav {
 .skill-label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--gold-muted);
     text-align: right;
     align-self: center;
+    padding-right: 2rem;
 }
 
 .skill-list {
