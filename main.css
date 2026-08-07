@@ -15,6 +15,7 @@
     --bg-offset: #FAFAFA;
     --dark-gray:  #545454;
     --light-gray: #f3f4f6;
+    --card-gray:  #f5f7fb;
 }
 
 body {
@@ -128,7 +129,7 @@ nav {
 }
 
 .project-card {
-    background: white;
+    background: var(--card-gray);
     border: 1px solid #eeeeee;
     padding: 2rem;
     border-radius: 4px;
