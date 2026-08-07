@@ -34,13 +34,13 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: #f3f4f6;
     padding: 1.5rem 2rem;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .logo {
@@ -130,7 +130,7 @@ nav {
     background: white;
     border: 1px solid #eeeeee;
     padding: 2rem;
-    /*border-radius: 4px;*/
+    border-radius: 4px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
@@ -217,7 +217,7 @@ nav {
     background: var(--dark-gray);
     color: white;
     padding: 0.75rem 1.5rem;
-    /*border-radius: 6px;*/
+    border-radius: 2px;
     text-decoration: none;
     margin-top: 1.5rem;
     display: inline-block;
