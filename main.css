@@ -269,6 +269,8 @@ nav {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--gold-muted);
+    text-align: right;
+    align-self: center;
 }
 
 .skill-list {
