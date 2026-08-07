@@ -14,6 +14,7 @@
     --text-muted: #4B5563;
     --bg-offset: #FAFAFA;
     --dark-gray:  #545454;
+    --light-gray: #f3f4f6;
 }
 
 body {
@@ -34,7 +35,7 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background: #f3f4f6;
+    background: var(--light-gray);
     padding: 1.5rem 2rem;
     z-index: 1000;
     display: flex;
@@ -235,9 +236,9 @@ nav {
 
 /* Skills Section */
 .skills-section {
-    max-width: 1100px;
-    margin: 3rem auto;
-    padding: 0 2rem;
+    margin: 3rem 0 0;
+    padding: 3rem 10rem;
+    background: var(--light-gray);
 }
 
 .skill-group {
