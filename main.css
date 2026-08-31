@@ -364,3 +364,25 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+
+@media (max-width: 768px) {
+    .skill-list {
+        flex-direction: column;
+    }
+    .skill-item:not(:last-child)::after {
+        display: none;
+    }
+    .skill-item::before {
+        content: "•";
+        margin-right: 1rem;
+        color: var(--gold);
+        font-weight: 900;
+        opacity: 0.8;
+    }
+    .skill-label { 
+        align-self: flex-start;
+    }
+
+ }
+
