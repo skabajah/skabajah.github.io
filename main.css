@@ -289,8 +289,9 @@ nav {
     color: var(--slate-black);
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     flex: 1;
+    gap: 1rem;
+    grid-row-gap: 4px;
 }
 
 .skill-item {
