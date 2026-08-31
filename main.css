@@ -246,7 +246,8 @@ nav {
 /* Skills Section */
 .skills-section {
     margin: 3rem 0 0;
-    padding: 3rem 10rem;
+    padding: 3rem 15%;
+    /*padding: 3rem 10rem;*/
     background: var(--light-gray);
 }
 
